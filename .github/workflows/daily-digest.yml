@@ -1,0 +1,68 @@
+name: Täglicher Frankfurt-Überblick
+
+on:
+  schedule:
+    # 05:00 UTC täglich (06:00/07:00 deutscher Zeit, je nach Sommerzeit)
+    - cron: "0 5 * * *"
+  workflow_dispatch: # erlaubt manuelle Läufe aus dem Actions-Tab zum Testen
+
+permissions:
+  contents: write # die Ausgabe des Tages als JSON zurück ins Repo committen
+  pages: write # auf GitHub Pages veröffentlichen
+  id-token: write # von actions/deploy-pages zur Prüfung des Deployments verlangt
+
+# Niemals zwei Läufe gleichzeitig auf Pages deployen lassen, einen laufenden
+# aber zu Ende bringen statt ihn mitten im Deployment abzubrechen.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Abhängigkeiten installieren
+        run: pip install -r requirements.txt
+
+      - name: Ausgabe und Website bauen
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MODEL: ${{ vars.MODEL }}
+        run: python main.py
+
+      - name: Ausgabe des Tages committen
+        # Das gespeicherte JSON ist zugleich Archiv und Zustand der
+        # Wiederholungssperre, es muss den Runner also überleben. An einem
+        # ruhigen Tag gibt es nichts zu committen.
+        # `git add -A` staged auch die Löschungen, die der KEEP_DIGESTS-Schnitt
+        # aus configuration.py macht, damit das Archiv im Repo mitschrumpft.
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A digests
+          if git diff --staged --quiet; then
+            echo "Keine neue Ausgabe zum Committen."
+          else
+            git commit -m "Ausgabe vom $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
