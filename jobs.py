@@ -1,51 +1,61 @@
-"""Neu ausgeschriebene Stellen bei deutschen Arbeitgebern in China.
+"""Neu ausgeschriebene Stellen in China, aus offenen Bewerbermanagement-APIs.
 
 Die einzige Quelle in dieser Anwendung, die kein RSS ist. Für Stellenanzeigen
 gibt es schlicht keine Feeds mehr: LinkedIn hat sein RSS abgeschaltet (404),
 Indeed sperrt automatisierte Abrufe (403), StackOverflow Jobs ist eingestellt,
-51job und eChinacities bieten keinen Feed an. Google News beantwortet solche
-Suchen mit Presseartikeln über den Arbeitsmarkt, nicht mit Ausschreibungen.
+51job und theBeijinger bieten keinen Feed an, StepStone rendert vollständig im
+Browser. Google News beantwortet solche Suchen mit Presseartikeln über den
+Arbeitsmarkt, nicht mit Ausschreibungen.
 
-Was es stattdessen gibt, ist die **öffentliche API von SmartRecruiters** — dem
-Bewerbermanagementsystem, über das ein Teil der deutschen Industrie ihre
-Stellen ausschreibt. Sie ist dokumentiert, verlangt keinen Schlüssel und
-liefert JSON:
+Was es stattdessen gibt, sind die **offenen APIs der Bewerbermanagementsysteme**
+selbst. Beide hier genutzten sind dokumentiert, verlangen keinen Schlüssel und
+liefern JSON:
 
-    https://api.smartrecruiters.com/v1/companies/<firma>/postings?country=cn
+    SmartRecruiters  api.smartrecruiters.com/v1/companies/<firma>/postings
+    Greenhouse       boards-api.greenhouse.io/v1/boards/<board>/jobs
 
 Die Ergebnisse gehen als Kandidaten in dieselbe Pipeline wie die RSS-Beiträge:
 Das Modell wählt aus, fasst zusammen und ordnet ein, die Wiederholungssperre
-sorgt dafür, dass eine Ausschreibung genau einmal erscheint. Die Rubrik zeigt
-also **neu ausgeschriebene** Stellen, keinen dauerhaften Stellenmarkt.
+sorgt dafür, dass eine Ausschreibung genau einmal erscheint.
 
-ERWARTUNGEN — gemessen, damit niemand rätselt, und ernüchternd:
+DAS ZEITFENSTER IST BEWUSST SEHR BREIT
+--------------------------------------
+Stellenanzeigen sind keine Nachrichten. Eine Ausschreibung von vor vier Monaten
+ist, solange sie offen steht, genauso gültig wie die von gestern — Riot Games
+etwa führt China-Stellen, die seit über einem Jahr ausgeschrieben sind. Ein
+30-Tage-Fenster warf davon 13 von 14 fachlich passenden Treffern weg.
 
-    1289 Ausschreibungen in China insgesamt
-     199 davon in den letzten 30 Tagen
-      15 davon DevOps- oder Backend-nah
-       0 davon mit lateinischem Titel
-       0 davon in Peking
+Deshalb blickt diese Rubrik ein Jahr zurück und überlässt die Entdopplung
+allein der Wiederholungssperre: Beim ersten Lauf erscheint der gesamte offene
+Bestand, danach nur noch, was neu hinzugekommen ist.
 
-Zwei Befunde stecken darin. Erstens sitzt die deutsche Industrie in China im
-Jangtse-Delta und nicht in der Hauptstadt — die 15 Treffer lagen in Suzhou (6),
-Shanghai (3), Wuxi (3), Hangzhou und Jinan. Deshalb steht CITIES unten leer,
-also ohne Ortsfilter; eine Eingrenzung auf Peking räumt die Rubrik leer.
+WARUM ZWEI QUELLEN, UND WARUM DIESE
+-----------------------------------
+Anfangs standen hier nur deutsche Arbeitgeber über SmartRecruiters. Das war zu
+eng gedacht — gesucht ist Arbeit in China, nicht Arbeit bei einer deutschen
+Firma. Vor allem aber war es das schlechtere Feld: Von 30 fachlich passenden
+Bosch-Ausschreibungen der letzten 30 Tage waren **zwei** international
+ausgeschrieben, der Rest richtete sich rein chinesisch an den lokalen
+Arbeitsmarkt, 16 davon als Hochschulrekrutierung für Absolventen.
 
-Zweitens, und das wiegt schwerer: Alle 15 waren ausschließlich auf Chinesisch
-ausgeschrieben. Solche Stellen richten sich an den lokalen Arbeitsmarkt und
-setzen in aller Regel fließendes Mandarin voraus. Für einen Bewerber mit nur
-rudimentären Chinesischkenntnissen ist diese Quelle deshalb strukturell dünn —
-sie bleibt drin, weil eine international ausgeschriebene Stelle jederzeit
-auftauchen kann und dann sofort sichtbar ist, aber sie ersetzt keine eigene
-Suche. Was stattdessen trägt, steht in der README unter "Was diese Rubrik
-nicht leisten kann".
+Greenhouse deckt internationale Technologieunternehmen ab, deren Arbeitssprache
+Englisch ist — das passt zu einem Bewerber mit rudimentärem Chinesisch weit
+besser. Gemessen beim Bau:
 
-Nur Bosch und Continental fanden sich unter 52 geprüften deutschen Namen bei
-SmartRecruiters; SAP, Siemens, BMW, Mercedes, BASF, Bayer, Henkel, Infineon,
-ZF, Schaeffler und Lufthansa nutzen andere Systeme (SuccessFactors, Workday,
-Phenom), die jeweils einen eigenen Adapter bräuchten. COMPANIES zu erweitern
-ist dagegen gratis: ein unbekannter Name liefert `totalFound: 0` statt eines
-Fehlers.
+    Riot Games   50 Stellen in China (u.a. Cloud Infrastructure and
+                 Security Engineer, Shanghai)
+    Airbnb       10 Stellen in China, teils Peking
+    Epic Games    4 Stellen, Shanghai
+    MongoDB       3 Stellen (Vertrieb)
+    Databricks    1 Stelle (Vertrieb)
+
+Lever und Ashby wurden ebenfalls geprüft — mit 43 getesteten Kennungen, darunter
+die großen Krypto- und Handelsfirmen, ergaben sie keinen einzigen China-Treffer
+und sind deshalb nicht eingebaut. Bei SmartRecruiters brachten 131 geprüfte
+Kennungen nur Bosch, Continental und Grab.
+
+Eine Kennung aufzunehmen ist gratis: Ein unbekannter Name liefert eine leere
+Liste oder einen 404, den `_safe` abfängt, und niemals einen Abbruch.
 """
 
 import json
@@ -57,37 +67,63 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
-API = "https://api.smartrecruiters.com/v1/companies/{company}/postings"
+# ---------------------------------------------------------------------------
+# Arbeitgeber
+# ---------------------------------------------------------------------------
 
-# SmartRecruiters-Firmenkennungen. Groß-/Kleinschreibung zählt. Ein unbekannter
-# Name ist ungefährlich: die API antwortet mit 200 und totalFound 0.
-COMPANIES = [
+# SmartRecruiters-Firmenkennungen. Groß-/Kleinschreibung zählt.
+SMARTRECRUITERS = [
     "BoschGroup",
     "Continental",
+    "Grab",
 ]
 
-# Städte, die zählen — kleingeschrieben verglichen, Teiltreffer erlaubt.
-# LEERE LISTE heißt: ganz China, kein Ortsfilter. So ist es eingestellt, weil
-# eine Eingrenzung auf Peking die Rubrik leerräumt: Von den 15 DevOps- und
-# Backend-Treffern der letzten 30 Tage lag KEINER in Peking, sondern in Suzhou
-# (6), Shanghai (3), Wuxi (3), Hangzhou und Jinan. Deutsche Industrie sitzt in
-# China im Jangtse-Delta, nicht in der Hauptstadt.
+# Greenhouse-Board-Kennungen, in aller Regel der Firmenname kleingeschrieben.
+# Geprüft und gültig. hashicorp, confluent, unity, atlassian und canva standen
+# hier ebenfalls und antworten mit 404 — sie liegen nicht (mehr) auf Greenhouse.
+# Die verbleibenden ohne heutige China-Stelle bleiben absichtlich drin: Der
+# Abruf kostet einen Request, und wer erst nächsten Monat in Shanghai
+# ausschreibt, wird dann von selbst sichtbar.
+GREENHOUSE = [
+    "riotgames",
+    "airbnb",
+    "epicgames",
+    "mongodb",
+    "databricks",
+    "elastic",
+    "cloudflare",
+    "datadog",
+    "gitlab",
+    "roblox",
+]
+
+# ---------------------------------------------------------------------------
+# Zuschnitt
+# ---------------------------------------------------------------------------
+
+# Was als "in China" gilt. SmartRecruiters kann serverseitig nach Land filtern,
+# Greenhouse nicht — dort steht der Ort als freier Text ("Shanghai, China",
+# "Beijing; Shanghai; Shenzhen", schlicht "China"). Deshalb dieser Ausdruck.
+CHINA_RE = re.compile(
+    r"china|beijing|peking|shanghai|shenzhen|guangzhou|hangzhou|suzhou|wuxi|"
+    r"chengdu|nanjing|wuhan|xi'?an|dalian|tianjin|qingdao|chongqing|changsha|"
+    r"jinan|ningbo|xiamen|zhuhai|taicang",
+    re.I,
+)
+
+# Optionale Eingrenzung auf einzelne Städte, kleingeschrieben. LEER heißt: ganz
+# China. So ist es eingestellt, und zwar aus Messung: Von den fachlich
+# passenden Ausschreibungen der letzten 30 Tage lag bei den deutschen
+# Arbeitgebern KEINE in Peking — sie liegen in Suzhou, Shanghai und Wuxi, weil
+# die deutsche Industrie in China im Jangtse-Delta sitzt. Eine Eingrenzung auf
+# die Hauptstadt räumt die Rubrik leer.
 CITIES = []
 
-# Ländercode der API. "cn" ist Festlandchina.
-COUNTRY = "cn"
-
-# Wie viele Ausschreibungen je Firma höchstens geholt werden. Die API liefert
-# 100 je Seite; Bosch allein hat über 1200 in China, ohne Deckel wären das 13
-# Abrufe für eine Rubrik, die am Ende drei Einträge zeigt.
-MAX_PER_COMPANY = 1500
-PAGE = 100
-
-# Fachlicher Zuschnitt: DevOps zuerst, Backend daneben. Bewusst weit gefasst
-# und nur eine Vorauswahl — über die Eignung entscheidet das Modell im
-# SYSTEM_PROMPT, das das Profil des Lesers kennt. Die chinesischen Begriffe
-# sind nötig, weil der größte Teil der Ausschreibungen ausschließlich auf
-# Chinesisch betitelt ist (运维 Betrieb/DevOps, 后端 Backend, 云 Cloud).
+# Fachlicher Zuschnitt: DevOps zuerst, Backend daneben. Bewusst weit gefasst und
+# nur eine Vorauswahl — über die Eignung entscheidet das Modell im
+# SYSTEM_PROMPT, das das Profil kennt. Die chinesischen Begriffe sind nötig,
+# weil ein großer Teil der Ausschreibungen ausschließlich chinesisch betitelt
+# ist (运维 Betrieb/DevOps, 后端 Backend, 云 Cloud, 平台 Plattform).
 ROLE_RE = re.compile(
     r"devops|sre|site reliability|platform engineer|kubernetes|k8s|docker|"
     r"ci/cd|cicd|jenkins|terraform|ansible|cloud|infrastructure|infrastruktur|"
@@ -97,28 +133,48 @@ ROLE_RE = re.compile(
     re.I,
 )
 
-# Deutschkenntnisse sind der Vorteil des Lesers; eine Ausschreibung, die sie
-# nennt, ist deshalb wertvoller als eine ohne. Nur ein Hinweis für das Modell,
-# kein Filter.
-GERMAN_RE = re.compile(r"german|deutsch|德语|德国", re.I)
+# ---------------------------------------------------------------------------
+# Hinweise, die dem Modell die Einordnung ermöglichen
+# ---------------------------------------------------------------------------
+# Keiner davon filtert. Sie landen im Kandidatentext, und der SYSTEM_PROMPT
+# sortiert danach — Sprache vor Fachlichkeit, weil rudimentäres Chinesisch die
+# harte Grenze ist und nicht die Rolle.
 
-# Der Leser spricht Deutsch und Englisch, Chinesisch nur rudimentär. Das dreht
-# die übliche Bewertung um: Eine Ausschreibung mit lateinischem Titel ist in
-# aller Regel international ausgeschrieben und damit überhaupt erreichbar, eine
-# rein chinesische richtet sich an den lokalen Arbeitsmarkt und setzt fast
-# immer fließendes Mandarin voraus. Auch das ist nur ein Hinweis; entscheiden
-# soll das Modell, nicht ein Filter hier.
+GERMAN_RE = re.compile(r"german|deutsch|德语|德国", re.I)
+ENGLISH_RE = re.compile(r"english|englisch|英语", re.I)
+
+# Rein chinesisch betitelte Stellen richten sich an den lokalen Arbeitsmarkt und
+# setzen fast immer fließendes Mandarin voraus.
 CJK_RE = re.compile(r"[一-鿿]")
 
 # Hochschulrekrutierung. 校招 ist der feste Ausdruck für den Jahrgangsantritt
-# ("届校招" mit vorangestelltem Abschlussjahr), 实习 ist ein Praktikum. Beides
-# richtet sich an Studierende und ist für einen Bewerber mit mehrjähriger
-# Berufserfahrung gegenstandslos — es machte beim Test aber die Mehrheit der
-# Treffer aus, taucht also als Hinweis in der Zusammenfassung auf.
+# ("届校招" mit vorangestelltem Abschlussjahr), 实习 ein Praktikum. Beides
+# richtet sich an Studierende und ist für einen Berufserfahrenen gegenstandslos
+# — es machte beim Test aber die Mehrheit der Bosch-Treffer aus.
 CAMPUS_RE = re.compile(r"校招|实习|campus|graduate program|intern\b|trainee", re.I)
 
+# Greenhouse führt bei manchen Arbeitgebern Metadaten zu Visum und Umzug. Für
+# jemanden, der aus Deutschland zuzieht, ist das die wertvollste Einzelangabe
+# in der ganzen Ausschreibung.
+VISA_FIELDS = re.compile(r"visa|sponsor|relocation|umzug", re.I)
+
+# Höchstzahl je Arbeitgeber, dasselbe Prinzip wie "per_feed" bei den RSS-Feeds:
+# Bosch schrieb im Test an einem einzigen Tag 16 Absolventenstellen aus und
+# verdrängte damit sämtliche international ausgeschriebenen Treffer aus dem
+# Kandidatenbudget. Ohne diesen Deckel bestimmt der lauteste Arbeitgeber die
+# ganze Rubrik.
+MAX_PER_EMPLOYER = 6
+
+# Hochschulrekrutierung ganz aussortieren statt nur zu kennzeichnen. Sie
+# richtet sich an Studierende und ist für einen Bewerber mit mehrjähriger
+# Berufserfahrung gegenstandslos, machte im Test aber die Mehrheit aller
+# Treffer aus. Auf False setzen, um sie nur zu markieren.
+SKIP_CAMPUS = True
+
 TIMEOUT = 20
-WORKERS = 4
+WORKERS = 8
+PAGE = 100
+MAX_PER_COMPANY = 1500
 USER_AGENT = (
     "allgemeine-news/1.0 (+https://github.com/topics/rss; "
     "taeglicher persoenlicher Ueberblick)"
@@ -133,109 +189,185 @@ def _get(url: str):
         return json.loads(response.read())
 
 
-def _postings(company: str) -> list:
-    """Alle Ausschreibungen einer Firma im Zielland, seitenweise.
+def _safe(label: str, call, *args):
+    """Einen Abruf ausführen und jeden Fehler in eine leere Liste verwandeln.
 
-    Wirft nie. Eine unerreichbare oder umgebaute API darf den Tageslauf so
-    wenig abbrechen wie ein toter RSS-Feed — die Rubrik bleibt dann leer und
-    der Lauf sagt, warum.
+    Eine unerreichbare oder umgebaute API darf den Tageslauf so wenig
+    abbrechen wie ein toter RSS-Feed. Die Rubrik bleibt dann eben leer, und das
+    Protokoll sagt, warum.
     """
+    try:
+        return call(*args)
+    except (urllib.error.URLError, socket.timeout, json.JSONDecodeError,
+            OSError, ValueError, KeyError, TypeError) as exc:
+        print(f"WARNUNG: Stellen von {label} nicht abrufbar: {exc}", file=sys.stderr)
+        return []
+
+
+def _parse_date(raw: str):
+    try:
+        return datetime.fromisoformat(str(raw).replace("Z", "+00:00"))
+    except (ValueError, TypeError):
+        return None
+
+
+# ---------------------------------------------------------------------------
+# Adapter: SmartRecruiters
+# ---------------------------------------------------------------------------
+
+
+def _smartrecruiters(company: str) -> list:
+    base = f"https://api.smartrecruiters.com/v1/companies/{company}/postings"
     collected, offset = [], 0
     while offset < MAX_PER_COMPANY:
-        url = f"{API.format(company=company)}?country={COUNTRY}&limit={PAGE}&offset={offset}"
-        try:
-            payload = _get(url)
-        except (urllib.error.URLError, socket.timeout, json.JSONDecodeError, OSError) as exc:
-            print(f"WARNUNG: Stellen von {company} nicht abrufbar: {exc}", file=sys.stderr)
-            return collected
+        payload = _get(f"{base}?country=cn&limit={PAGE}&offset={offset}")
         page = payload.get("content") or []
         collected.extend(page)
         offset += PAGE
         if not page or offset >= (payload.get("totalFound") or 0):
             break
-    return collected
+
+    items = []
+    for posting in collected:
+        location = posting.get("location") or {}
+        items.append({
+            "employer": (posting.get("company") or {}).get("name") or company,
+            "title": str(posting.get("name") or "").strip(),
+            "where": location.get("fullLocation") or location.get("city") or "China",
+            "city": str(location.get("city") or ""),
+            # Geprüft: liefert 200 und ist ohne Konto lesbar, anders als der
+            # API-Pfad, der in "ref" steht.
+            "url": f"https://jobs.smartrecruiters.com/{company}/{posting.get('id')}",
+            "published": _parse_date(posting.get("releasedDate")),
+            "level": (posting.get("experienceLevel") or {}).get("label") or "",
+            "team": (posting.get("department") or {}).get("label") or "",
+            "blob": json.dumps(posting, ensure_ascii=False),
+            "visa": "",
+        })
+    return items
 
 
-def _released(posting: dict):
-    raw = str(posting.get("releasedDate") or "")
-    try:
-        return datetime.fromisoformat(raw.replace("Z", "+00:00"))
-    except ValueError:
-        return None
+# ---------------------------------------------------------------------------
+# Adapter: Greenhouse
+# ---------------------------------------------------------------------------
 
 
-def _in_scope(posting: dict) -> bool:
+def _greenhouse(board: str) -> list:
+    payload = _get(f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs")
+    items = []
+    for job in payload.get("jobs") or []:
+        where = str((job.get("location") or {}).get("name") or "")
+        if not CHINA_RE.search(where):
+            continue
+        # Visum und Umzugspaket stehen bei manchen Arbeitgebern in den
+        # Metadaten. Für einen Zuzug aus Deutschland ist das die wertvollste
+        # Einzelangabe überhaupt, deshalb wird sie eigens herausgezogen.
+        visa = []
+        for field in job.get("metadata") or []:
+            name, value = str(field.get("name") or ""), field.get("value")
+            if value in (None, "", []) or not VISA_FIELDS.search(name):
+                continue
+            visa.append(f"{name}: {value if not isinstance(value, list) else ', '.join(map(str, value))}")
+        items.append({
+            "employer": job.get("company_name") or board,
+            "title": str(job.get("title") or "").strip(),
+            "where": where,
+            "city": where,
+            "url": job.get("absolute_url") or "",
+            "published": _parse_date(job.get("first_published") or job.get("updated_at")),
+            "level": "",
+            "team": "",
+            "blob": json.dumps(job, ensure_ascii=False),
+            "visa": "; ".join(visa),
+        })
+    return items
+
+
+# ---------------------------------------------------------------------------
+# Zusammenführen
+# ---------------------------------------------------------------------------
+
+
+def _in_scope(item: dict) -> bool:
     """Ortsfilter. Leeres CITIES heißt: ganz China, alles zählt."""
     if not CITIES:
         return True
-    city = str((posting.get("location") or {}).get("city") or "").strip().lower()
-    return any(city == wanted or wanted in city for wanted in CITIES)
+    city = item["city"].strip().lower()
+    return any(wanted in city for wanted in CITIES)
+
+
+def _describe(item: dict) -> str:
+    """Der Kandidatentext, aus dem das Modell die Einordnung zieht."""
+    parts = [f"Ausgeschrieben in {item['where']}."]
+    if item["team"]:
+        parts.append(f"Bereich: {item['team']}.")
+    if item["level"]:
+        parts.append(f"Erfahrungsstufe: {item['level']}.")
+
+    title = item["title"]
+    if CJK_RE.search(title):
+        parts.append("Nur auf Chinesisch ausgeschrieben, richtet sich also "
+                     "voraussichtlich an den lokalen Arbeitsmarkt.")
+    else:
+        parts.append("International ausgeschrieben (lateinischer Titel).")
+
+    blob = item["blob"]
+    if GERMAN_RE.search(blob):
+        parts.append("Die Ausschreibung erwähnt Deutsch.")
+    if ENGLISH_RE.search(blob):
+        parts.append("Die Ausschreibung erwähnt Englisch.")
+    if CAMPUS_RE.search(title):
+        parts.append("Hochschulrekrutierung für Absolventen, nicht für Berufserfahrene.")
+    if item["visa"]:
+        parts.append(f"Angaben zu Visum/Umzug — {item['visa']}.")
+    return " ".join(parts)
 
 
 def fetch(max_age_hours: int, max_items: int = 30) -> list:
-    """Neu ausgeschriebene Stellen als Kandidaten im Format von main.fetch_items.
+    """Neu ausgeschriebene Stellen im Format von main.fetch_items.
 
     Gleiche Schlüssel wie ein RSS-Kandidat (source, feed, title, link,
     published, summary), damit der Rest der Pipeline — Wiederholungssperre,
     URL-Prüfung, Herausgeberzuordnung — ohne Sonderfall damit umgehen kann.
     """
-    if not COMPANIES:
+    tasks = ([("SmartRecruiters", _smartrecruiters, c) for c in SMARTRECRUITERS]
+             + [("Greenhouse", _greenhouse, b) for b in GREENHOUSE])
+    if not tasks:
         return []
 
-    cutoff = datetime.now(timezone.utc) - timedelta(hours=max_age_hours)
-    items = []
-
     with ThreadPoolExecutor(max_workers=WORKERS) as pool:
-        results = list(pool.map(_postings, COMPANIES))
+        results = list(pool.map(
+            lambda t: (t[0], _safe(f"{t[0]}/{t[2]}", t[1], t[2])), tasks
+        ))
 
-    for company, postings in zip(COMPANIES, results):
-        for posting in postings:
-            if not _in_scope(posting):
-                continue
-            released = _released(posting)
-            if released is None or released < cutoff:
-                continue
-            title = str(posting.get("name") or "").strip()
-            if not title or not ROLE_RE.search(title):
-                continue
-            posting_id = str(posting.get("id") or "").strip()
-            if not posting_id:
-                continue
-
-            location = posting.get("location") or {}
-            department = (posting.get("department") or {}).get("label") or ""
-            experience = (posting.get("experienceLevel") or {}).get("label") or ""
-            hints = []
-            if GERMAN_RE.search(json.dumps(posting, ensure_ascii=False)):
-                hints.append("Die Ausschreibung nennt Deutschkenntnisse.")
-            hints.append(
-                "Nur auf Chinesisch ausgeschrieben, richtet sich also"
-                " voraussichtlich an den lokalen Arbeitsmarkt."
-                if CJK_RE.search(title) else
-                "International ausgeschrieben (lateinischer Titel)."
-            )
-            if CAMPUS_RE.search(title):
-                hints.append(
-                    "Hochschulrekrutierung fuer Absolventen, nicht fuer "
-                    "Berufserfahrene."
-                )
-            hint = " " + " ".join(hints)
-
-            items.append({
-                "source": posting.get("company", {}).get("name") or company,
-                "feed": "SmartRecruiters",
-                "title": title,
-                # Die öffentliche Anzeigenseite. Geprüft: liefert 200 und ist
-                # ohne Konto lesbar, anders als der API-Pfad in "ref".
-                "link": f"https://jobs.smartrecruiters.com/{company}/{posting_id}",
-                "published": released,
-                "summary": (
-                    f"Ausgeschrieben in {location.get('fullLocation') or location.get('city')}."
-                    f"{f' Bereich: {department}.' if department else ''}"
-                    f"{f' Erfahrungsstufe: {experience}.' if experience else ''}"
-                    f"{hint}"
-                ).strip(),
-            })
-
-    items.sort(key=lambda item: item["published"], reverse=True)
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=max_age_hours)
+    items, seen, per_employer = [], set(), {}
+    # Neueste zuerst, dann je Arbeitgeber deckeln — so behält jeder Arbeitgeber
+    # seine aktuellsten Ausschreibungen statt zufälliger.
+    flat = sorted(
+        ((s, r) for s, batch in results for r in batch
+         if r["title"] and r["url"] and r["published"]),
+        key=lambda pair: pair[1]["published"], reverse=True,
+    )
+    for source, raw in flat:
+        title, url, published = raw["title"], raw["url"], raw["published"]
+        if published < cutoff or not _in_scope(raw) or not ROLE_RE.search(title):
+            continue
+        if SKIP_CAMPUS and CAMPUS_RE.search(title):
+            continue
+        if url in seen:
+            continue
+        employer = raw["employer"]
+        if per_employer.get(employer, 0) >= MAX_PER_EMPLOYER:
+            continue
+        per_employer[employer] = per_employer.get(employer, 0) + 1
+        seen.add(url)
+        items.append({
+            "source": employer,
+            "feed": source,
+            "title": title,
+            "link": url,
+            "published": published,
+            "summary": _describe(raw),
+        })
     return items[:max_items]

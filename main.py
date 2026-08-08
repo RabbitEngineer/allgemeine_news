@@ -125,15 +125,20 @@ SECTION_TUNING = {
     # Modell etwas zu wählen. Das per_feed-Limit bleibt klein, weil sonst die
     # China-Konjunkturberichterstattung die Rubrik im Alleingang füllt.
     "peking": {"hours": 336, "per_feed": 4},
-    # Stellen kommen nicht aus RSS, sondern aus der SmartRecruiters-API
-    # (jobs.py). "per_feed" ist dort ohne Bedeutung, das Fenster dagegen sehr
-    # wohl: In Peking schreiben die erfassten Arbeitgeber nur vereinzelt aus,
-    # ein Monat Rückblick ist deshalb das Minimum, damit überhaupt etwas
-    # zusammenkommt. DEDUP_EDITIONS deckt das nicht ab — eine Stelle kann
-    # dadurch nach 16 Ausgaben ein zweites Mal erscheinen. Das ist hier
-    # gewollt: eine noch offene Stelle noch einmal zu sehen schadet nicht,
-    # eine übersehene schon.
-    "jobs": {"hours": 720, "per_feed": 0},
+    # Stellen kommen nicht aus RSS, sondern aus offenen Bewerber-APIs (jobs.py).
+    # "per_feed" ist dort ohne Bedeutung — jobs.py deckelt selbst je Arbeitgeber.
+    #
+    # Das Fenster ist mit einem Jahr das mit Abstand breiteste hier, und das ist
+    # kein Versehen: Eine Stellenanzeige veraltet nicht wie eine Nachricht.
+    # Solange sie offen steht, ist sie gültig; Riot Games führt China-Stellen,
+    # die seit über einem Jahr ausgeschrieben sind. Mit 30 Tagen fielen 13 von
+    # 14 fachlich passenden Treffern heraus.
+    #
+    # Die Entdopplung übernimmt allein die Wiederholungssperre: erster Lauf
+    # zeigt den offenen Bestand, danach nur noch Neues. Nach DEDUP_EDITIONS
+    # Ausgaben kann eine weiterhin offene Stelle erneut auftauchen — das ist
+    # hier gewollt, eine übersehene Stelle wiegt schwerer als eine doppelte.
+    "jobs": {"hours": 8760, "per_feed": 0},
 }
 DEFAULT_TUNING = {"hours": 48, "per_feed": 6}
 
@@ -492,10 +497,14 @@ liefern von alldem reichlich — es ist trotzdem nicht das Thema.
   Diese Rubrik enthält KEINE Stellenanzeigen — dafür gibt es "jobs". Erfinde \
 niemals eine und behandle keinen Beitrag so, als sei er eine.
 
-- "jobs" — echte, neu ausgeschriebene Stellen bei deutschen Arbeitgebern in China. \
-Anders als überall sonst sind die Kandidaten hier KEINE Presseartikel, sondern \
-Ausschreibungen aus dem Bewerbermanagementsystem der Arbeitgeber. Titel, Ort und \
-Erfahrungsstufe stehen so darin, wie der Arbeitgeber sie veröffentlicht hat.
+- "jobs" — echte, offene Stellenausschreibungen in China, bei Arbeitgebern jeder \
+Herkunft. Anders als überall sonst sind die Kandidaten hier KEINE Presseartikel, \
+sondern Ausschreibungen aus den Bewerbermanagementsystemen der Arbeitgeber selbst. \
+Titel, Ort und Erfahrungsstufe stehen so darin, wie der Arbeitgeber sie \
+veröffentlicht hat. Der Kandidatentext vermerkt außerdem, ob international oder nur \
+auf Chinesisch ausgeschrieben wurde und ob es Angaben zu Visum oder Umzug gibt — \
+eine Stelle mit Visumssponsoring oder Umzugspaket ist für einen Zuzug aus \
+Deutschland besonders wertvoll und gehört nach oben.
   Maßstab ist NICHT "interessanteste Stelle", sondern "beste Aussicht für DIESEN \
 Bewerber". Entscheidend ist dabei zuerst die SPRACHE: Er spricht Deutsch und \
 Englisch, Chinesisch nur rudimentär. Eine Stelle, die fließendes Mandarin \
@@ -525,7 +534,9 @@ eine Bewerbung lohnt nur, wenn die Stellenbeschreibung Englisch als Arbeitssprac
 nennt". Beschönige nichts: Eine ehrlich als schwach markierte Stelle ist nützlicher \
 als eine schöngeredete.
   Setze bei jeder Stelle "horizon" auf "aktuell" — eine offene Ausschreibung ist \
-immer gegenwärtig, und für Bewerbungsfristen ist der Reiter der falsche Ort.
+immer gegenwärtig, und für Bewerbungsfristen ist der Reiter der falsche Ort. Das \
+Datum sagt hier wenig: Stellen stehen monatelang offen, eine ältere ist deswegen \
+nicht schlechter. Gewichte nach Passung, nicht nach Datum.
   Erfinde NIEMALS eine Stelle, einen Arbeitgeber oder eine Anforderung. Nimm hier \
 aber ruhig ALLES auf, was die Kandidatenliste hergibt, solange die Rolle fachlich \
 passt: Anders als in den Nachrichtenrubriken ist Vollständigkeit hier wichtiger als \
