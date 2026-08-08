@@ -1,4 +1,4 @@
-name: Täglicher Frankfurt-Überblick
+name: Täglicher Nachrichtenüberblick
 
 on:
   schedule:

@@ -54,37 +54,85 @@ OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
 _GN = "https://news.google.com/rss/search?q={}&hl=de&gl=DE&ceid=DE:de"
 
-# Neubau- und Immobilienprojekte. Bewusst auf Vorhaben für Privatkunden
-# ausgerichtet — der Prompt in main.py wirft Büro-, Logistik- und
-# Investorenmeldungen wieder raus. SkylineAtlas verfolgt Frankfurter
-# Bauprojekte von der Planung bis zur Fertigstellung und ist die einzige
-# echte Fachquelle, die ausschließlich über diese Stadt schreibt.
+# Neubau- und Immobilienprojekte — ausschließlich Frankfurt am Main. Bewusst
+# auf Vorhaben für Privatkunden ausgerichtet; der Prompt in main.py wirft
+# Büro-, Logistik- und Investorenmeldungen wieder raus. SkylineAtlas verfolgt
+# Frankfurter Bauprojekte von der Planung bis zur Fertigstellung und ist die
+# einzige echte Fachquelle, die ausschließlich über diese Stadt schreibt.
+#
+# Kein überregionaler Fachdienst mehr: immobilienmanager stand hier und lieferte
+# Logistikhallen in Köln, ESG-Übernahmen und Bilanzen von Projektentwicklern.
+# Der Prompt verwarf davon zuverlässig alles, aber der Feed belegte mit seinem
+# per_feed-Limit von 6 vorher zwei Drittel des Kandidatenbudgets der Rubrik.
 IMMOBILIEN_FEEDS = [
     ("SkylineAtlas", "https://skylineatlas.de/feed/"),
-    ("immobilienmanager", "https://www.immobilienmanager.de/rss.xml"),
     ("Neubau Frankfurt", _GN.format("Frankfurt+Neubau+Wohnungen")),
     ("Neubauprojekte", _GN.format("Frankfurt+Neubauprojekt")),
     ("Wohnquartiere", _GN.format("Frankfurt+Wohnquartier+OR+Wohnbauprojekt")),
     ("Hochhausbau", _GN.format("Frankfurt+Hochhaus+Bauprojekt")),
     ("Wohnungsmarkt", _GN.format("Frankfurt+Immobilienmarkt+Wohnung+kaufen")),
     ("Eigentumswohnungen", _GN.format("Frankfurt+Eigentumswohnung+Preise")),
+    ("Mietwohnungen", _GN.format("Frankfurt+Mietwohnungen+Vermietungsstart")),
 ]
 
-# Konzerte, Kino, Comedy, Bühne. Die Hallen einzeln abzufragen bringt mehr als
-# eine allgemeine Suche: Ankündigungen nennen fast immer den Spielort, und so
-# tauchen auch Auftritte auf, die kein Lokalmedium als Nachricht behandelt.
+# Konzerte, Kino, Comedy, Bühne — deutschlandweit, aber nur die großen
+# internationalen Namen. Die Rubrik ist die einzige, die Frankfurt verlässt:
+# Wer für Rosalía nach Köln oder für ein K-Pop-Konzert nach Berlin fährt, muss
+# den Vorverkaufstermin trotzdem rechtzeitig sehen. Welche Namen groß genug
+# sind, entscheidet der Prompt in main.py, nicht diese Liste.
+#
+# Die großen Arenen einzeln abzufragen bringt mehr als eine allgemeine Suche:
+# Ankündigungen nennen fast immer den Spielort, und so tauchen auch Auftritte
+# auf, die kein Medium als Nachricht behandelt. Frankfurter Spielorte stehen
+# weiter vorn — die Stadt bleibt der Wohnort des Lesers.
 EVENT_FEEDS = [
-    ("Festhalle", _GN.format("Festhalle+Frankfurt+Konzert")),
-    ("Jahrhunderthalle & Batschkapp",
-     _GN.format("Jahrhunderthalle+Frankfurt+OR+Batschkapp")),
-    ("Deutsche Bank Park", _GN.format("Deutsche+Bank+Park+Konzert")),
-    ("Konzerte", _GN.format("Konzert+Frankfurt+Tour")),
-    ("Tickets & Vorverkauf", _GN.format("Frankfurt+Konzert+Tickets+Vorverkauf")),
-    ("K-Pop", _GN.format("K-Pop+Konzert+Deutschland+Tour")),
-    ("Comedy", _GN.format("Comedy+OR+Kabarett+Frankfurt")),
-    ("Kino", _GN.format("Kino+Frankfurt+Filmstart")),
-    ("Alte Oper", _GN.format("Alte+Oper+Frankfurt+Programm")),
-    ("Musical & Show", _GN.format("Musical+OR+Show+Frankfurt+Premiere")),
+    ("Tourneen Deutschland",
+     _GN.format("Welttournee+OR+Tournee+Deutschland+Konzert+angekuendigt")),
+    ("Vorverkaufsstart",
+     _GN.format("Konzert+Deutschland+Tickets+Vorverkauf+startet")),
+    ("K-Pop", _GN.format("K-Pop+Konzert+Deutschland+OR+Europa+Tour")),
+    ("Asiatische Stars",
+     _GN.format("Japan+OR+Korea+Star+Konzert+Deutschland+Tour")),
+    ("US-Stars", _GN.format("US-Star+OR+Superstar+Konzert+Deutschland+Arena")),
+    ("Grosse Arenen",
+     _GN.format("Lanxess+Arena+OR+Uber+Arena+OR+Barclays+Arena+Konzert")),
+    ("Festhalle Frankfurt", _GN.format("Festhalle+Frankfurt+Konzert")),
+    ("Stadionkonzerte",
+     _GN.format("Stadionkonzert+Deutschland+OR+Deutsche+Bank+Park+Konzert")),
+    ("US-Comedians",
+     _GN.format("US-Comedian+OR+Stand-up+Comedy+Deutschland+Tour")),
+    ("Comedy Frankfurt", _GN.format("Comedy+OR+Kabarett+Frankfurt")),
+    ("Kinostarts", _GN.format("Kinostart+Deutschland+Blockbuster")),
+    ("Kino Frankfurt", _GN.format("Kino+Frankfurt+Filmstart")),
+]
+
+# Sport — internationale Damenturniere in Tennis und Volleyball, und zwar nur
+# solche in Deutschland. Der Zweck der Rubrik ist Ticketkauf, nicht
+# Sportberichterstattung: Termin, Austragungsort und Vorverkaufsstart zählen,
+# Ergebnisse und Tabellen nicht (das trennt der Prompt in main.py).
+#
+# Deutschland allein ist ein schmales Feld — im Tennis im Wesentlichen
+# Stuttgart, Berlin und Bad Homburg, dazu Volleyball-Bundesliga, Pokalfinale
+# und Länderspiele. Die Rubrik bleibt deshalb an vielen Tagen leer und liest
+# sich dann als "Nichts in diesem Zeitraum". Ihr Zeitfenster in main.py ist
+# mit 14 Tagen das breiteste, damit eine Ankündigung nicht durchrutscht.
+SPORT_FEEDS = [
+    ("WTA Deutschland", _GN.format("WTA+Turnier+Deutschland+Damen+Tennis")),
+    ("Stuttgart & Berlin",
+     _GN.format("Porsche+Tennis+Grand+Prix+OR+WTA+Berlin+Tickets")),
+    ("Bad Homburg", _GN.format("Bad+Homburg+Open+Tennis+Damen")),
+    ("Tennis-Tickets",
+     _GN.format("Damen+Tennis+Turnier+Deutschland+Tickets+Vorverkauf")),
+    # "Spielplan" stand hier einmal als Suchwort und zog fast nur automatisch
+    # erzeugte Tabellen- und Ergebnisseiten an ("TV Dingolfing: Spielplan &
+    # Ergebnisse 2. Bundesliga Süd"). Die sind keine Nachricht und für den
+    # Kartenkauf wertlos. Gesucht wird deshalb nach Karten und Terminen.
+    ("Volleyball Damen",
+     _GN.format("Volleyball+Bundesliga+Frauen+Tickets+OR+Heimspiel")),
+    ("Volleyball national",
+     _GN.format("Volleyball+Nationalmannschaft+Frauen+Deutschland+Laenderspiel")),
+    ("Volleyball-Turniere",
+     _GN.format("Volleyball+Frauen+Turnier+in+Deutschland+Termin")),
 ]
 
 # Messen und Stadtfeste. Publikumsmessen zählen mehr als reine Fachmessen —
@@ -101,8 +149,9 @@ MESSE_FEEDS = [
     ("Saisonmaerkte", _GN.format("Frankfurt+Weihnachtsmarkt+OR+Sommerfest")),
 ]
 
-# Alles, was den Alltag in der Stadt betrifft. Hier stehen echte Redaktionen
-# statt Suchfeeds, weil es für Lokalnachrichten gute eigene Feeds gibt.
+# Frankfurt und seine Infrastruktur — alles, was den Alltag in der Stadt
+# betrifft. Ausschließlich Frankfurt. Hier stehen echte Redaktionen statt
+# Suchfeeds, weil es für Lokalnachrichten gute eigene Feeds gibt.
 # hessenschau deckt ganz Hessen ab, liefert also viel, was nicht Frankfurt ist —
 # der Prompt sortiert das aus, deshalb ist das Limit pro Feed in main.py wichtig.
 STADT_FEEDS = [
@@ -113,6 +162,8 @@ STADT_FEEDS = [
     ("hessenschau Kultur", "https://www.hessenschau.de/kultur/index.rss"),
     ("Stadtpolitik", _GN.format("Frankfurt+am+Main+Stadt")),
     ("Verkehr & Baustellen", _GN.format("Frankfurt+Verkehr+OR+VGF+OR+Baustelle")),
+    ("Nahverkehr", _GN.format("Frankfurt+S-Bahn+OR+U-Bahn+Sperrung+OR+Ausbau")),
+    ("Infrastruktur", _GN.format("Frankfurt+Bruecke+OR+Strassenbau+OR+Sanierung")),
     ("Museen & Ausstellungen", _GN.format("Frankfurt+Museum+Ausstellung")),
     ("Gastronomie", _GN.format("Frankfurt+am+Main+Restaurant+Eroeffnung")),
 ]
@@ -122,6 +173,7 @@ STADT_FEEDS = [
 FEEDS = {
     "immobilien": IMMOBILIEN_FEEDS,
     "events": EVENT_FEEDS,
+    "sport": SPORT_FEEDS,
     "messen": MESSE_FEEDS,
     "stadt": STADT_FEEDS,
 }

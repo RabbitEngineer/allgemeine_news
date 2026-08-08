@@ -1,23 +1,45 @@
-# Frankfurt Kompakt
+# Allgemeine News
 
-Ein täglicher Nachrichtenüberblick über Frankfurt am Main, veröffentlicht als
-**kostenlose GitHub-Pages-Website**, die sich jeden Morgen selbst neu baut.
+Ein täglicher Nachrichtenüberblick für jemanden, der in Frankfurt am Main wohnt,
+veröffentlicht als **kostenlose GitHub-Pages-Website**, die sich jeden Morgen
+selbst neu baut.
 
 Oben stehen drei Reiter nach Zeithorizont — **Aktuell**, **In den nächsten
-Wochen**, **In den nächsten Monaten**. Unter jedem Reiter liegen dieselben vier
+Wochen**, **In den nächsten Monaten**. Unter jedem Reiter liegen dieselben fünf
 Rubriken, gefüllt mit den Beiträgen dieses Zeitraums:
 
-1. **Neubau & Immobilien** — Bauvorhaben in Frankfurt, die für Privatkunden
+1. **Neubau & Immobilien in Frankfurt** — Bauvorhaben, die für Privatkunden
    zählen: Eigentumswohnungen, neue Mietwohnungen, ganze Wohnquartiere, mit
    Stadtteil, Wohnungszahl, Preisen und Zeitplan, soweit die Quelle sie nennt.
-2. **Konzerte, Kino & Comedy** — Auftritte internationaler Pop-Acts und K-Pop in
-   Frankfurt, Comedy und Kabarett, Filmstarts, Musicals und Bühne. Mit Termin,
-   Spielort und Vorverkaufsstart.
-3. **Messen & Feste** — Publikumsmessen, Buchmesse, Dippemess, Wäldchestag,
-   Museumsuferfest, Weihnachtsmärkte, dazu die großen Fachmessen, weil sie die
-   Stadt für eine Woche verändern.
-4. **Frankfurt allgemein** — was den Alltag hier betrifft: Verkehr, Baustellen,
-   Stadtpolitik mit praktischen Folgen, Museen, Neueröffnungen.
+2. **Konzerte, Kino & Comedy in Deutschland** — internationale Pop-Acts, K-Pop,
+   bekannte Stars aus Asien, US-Comedians, Filmstarts und große Tourneen. Mit
+   Termin, **Stadt**, Spielort und Vorverkaufsstart.
+3. **Sport** — internationale Damenturniere in Tennis und Volleyball, die in
+   Deutschland stattfinden, damit man rechtzeitig Karten bekommt.
+4. **Messen & Feste in Frankfurt** — Publikumsmessen, Buchmesse, Dippemess,
+   Wäldchestag, Museumsuferfest, Weihnachtsmärkte, dazu die großen Fachmessen,
+   weil sie die Stadt für eine Woche verändern.
+5. **Frankfurt & Infrastruktur** — was den Alltag hier betrifft: Verkehr,
+   Baustellen, Nahverkehr, Stadtpolitik mit praktischen Folgen, Museen,
+   Neueröffnungen.
+
+## Die Radien sind je Rubrik verschieden
+
+Das ist die wichtigste Entwurfsentscheidung und der Grund, warum die Seite nicht
+mehr „Frankfurt Kompakt" heißt:
+
+| Rubrik | Radius | warum |
+|---|---|---|
+| Neubau & Immobilien | nur Frankfurt | man wohnt an einem Ort |
+| Messen & Feste | nur Frankfurt | man geht dort hin, wo man wohnt |
+| Frankfurt & Infrastruktur | nur Frankfurt | betrifft den täglichen Weg |
+| Konzerte, Kino & Comedy | ganz Deutschland | für einen Weltstar fährt man nach Köln oder Berlin |
+| Sport | nur Deutschland | Karten kauft man für das, was erreichbar ist |
+
+Bei den deutschlandweiten Rubriken kommt eine Qualitätsschwelle dazu: Konzerte
+nur bei **großen internationalen Namen**, nicht bei regionalen Bands oder
+Clubkonzerten. Der Maßstab im Prompt lautet: Würde jemand dafür in eine andere
+Stadt fahren und Monate vorher eine Karte kaufen? Wenn nein, fällt es raus.
 
 Läuft kostenlos auf GitHub Actions. Der einzige Kostenpunkt ist ein LLM-Aufruf
 pro Tag — mit dem Standardmodell etwa **1,50 bis 2,80 US-Dollar im Jahr**.
@@ -29,11 +51,17 @@ pro Tag — mit dem Standardmodell etwa **1,50 bis 2,80 US-Dollar im Jahr**.
    - *Lokalpresse mit eigenem Feed*: FAZ Frankfurt, Frankfurter Rundschau,
      Frankfurter Neue Presse, hessenschau (Nachrichten und Kultur).
    - *Fachquelle*: [SkylineAtlas](https://skylineatlas.de) verfolgt Frankfurter
-     Bauprojekte von der Planung bis zur Fertigstellung, dazu
-     immobilienmanager für den überregionalen Rahmen.
-   - *Google-News-Suchfeeds* für alles Übrige — Festhalle, Jahrhunderthalle,
-     Batschkapp, Deutsche Bank Park, K-Pop, Comedy, Kino, Alte Oper, Messe
-     Frankfurt, Buchmesse, Stadtfeste, Verkehr, Gastronomie.
+     Bauprojekte von der Planung bis zur Fertigstellung.
+   - *Google-News-Suchfeeds* für alles Übrige — Tourneen und Vorverkäufe,
+     K-Pop, asiatische und US-Stars, die großen Arenen, US-Comedians, Kinostarts,
+     WTA-Turniere, Damenvolleyball, Messe Frankfurt, Buchmesse, Stadtfeste,
+     Verkehr, Nahverkehr, Infrastruktur, Gastronomie.
+
+   **Kein überregionaler Immobilien-Fachdienst mehr.** `immobilienmanager` stand
+   hier und lieferte Logistikhallen in Köln, ESG-Übernahmen und Bilanzen von
+   Projektentwicklern. Der Prompt verwarf davon zuverlässig alles — aber der Feed
+   belegte mit seinem Limit von 6 vorher zwei Drittel des Kandidatenbudgets der
+   Rubrik, sodass echte Frankfurter Bauvorhaben gar nicht erst zur Auswahl kamen.
 
    Warum so viele Suchfeeds: Für Frankfurter Nischenthemen gibt es schlicht keine
    eigenen Feeds. Journal Frankfurt und Frankfurt-Tipp wären naheliegend, liefern
@@ -42,8 +70,8 @@ pro Tag — mit dem Standardmodell etwa **1,50 bis 2,80 US-Dollar im Jahr**.
    genau die Lokalmedien, die man einzeln nicht abonnieren kann. Keine Meldung
    erscheint in zwei Rubriken.
 
-2. **Entdoppeln** — alles, was die letzten 9 Ausgaben schon gebracht haben, fällt
-   raus. Eine Meldung erscheint einmal, auch wenn das Zeitfenster eine Woche
+2. **Entdoppeln** — alles, was die letzten 16 Ausgaben schon gebracht haben, fällt
+   raus. Eine Meldung erscheint einmal, auch wenn das Zeitfenster zwei Wochen
    umspannt.
 3. **Auswählen und zusammenfassen** — alle verbliebenen Kandidaten (bis zu 30 je
    Rubrik) gehen in einen einzigen LLM-Aufruf, der strukturiertes JSON
@@ -69,8 +97,9 @@ trotzdem alles Übrige. Zielwert sind **drei bis vier Minuten Lesezeit**.
 |---|---|---|
 | Neubau & Immobilien | bis zu 4 | bis zu 5 |
 | Konzerte, Kino & Comedy | bis zu 5 | bis zu 6 |
+| Sport | bis zu 3 | bis zu 4 |
 | Messen & Feste | bis zu 3 | bis zu 4 |
-| Frankfurt allgemein | bis zu 4 | bis zu 6 |
+| Frankfurt & Infrastruktur | bis zu 4 | bis zu 6 |
 
 Das sind Deckel, keine Zielvorgaben — der Prompt verbietet das Auffüllen, ein
 Beitrag muss sich seinen Platz also verdienen, und ein ruhiger Tag ergibt eine
@@ -79,11 +108,18 @@ ehrlich kurze Ausgabe.
 **„Außerdem notiert“ ist keine reine Überschriftenliste** — jeder Eintrag trägt
 einen Satz dazu, was der Beitrag tatsächlich meldet, und einen eigenen Link.
 
-**Die vier Rubriken sind fest und unabhängig.** Alle vier erscheinen in jedem
+**Die fünf Rubriken sind fest und unabhängig.** Alle fünf erscheinen in jedem
 Reiter, in derselben Reihenfolge. Eine Rubrik ohne Beiträge in diesem Zeitraum
 liest sich schlicht als *„Nichts in diesem Zeitraum.“* statt zu verschwinden —
 sonst bliebe offen, ob es nichts gibt oder ob etwas kaputt ist. Rubriken borgen
 nicht voneinander, jede wird nur an ihren eigenen Kandidaten gemessen.
+
+**Sport wird oft leer sein, und das ist beabsichtigt.** Damentennis und
+-volleyball in Deutschland sind ein schmales Feld — im Tennis im Wesentlichen
+Stuttgart, Berlin und Bad Homburg, dazu Volleyball-Bundesliga, Pokalfinale und
+Länderspiele. Der Prompt verbietet ausdrücklich, ein Auslandsturnier oder einen
+Ergebnisbericht aufzunehmen, nur damit dort etwas steht. Eine leere Sportrubrik
+ist das ehrliche Ergebnis, keine Störung.
 
 Die Seite folgt der Hell-/Dunkel-Einstellung des Systems und ist auf dem Handy
 lesbar.
@@ -105,7 +141,9 @@ Bei Immobilien zählt der **nächste Schritt, der den Leser betrifft**: Ein
 Verkaufsstart nächste Woche steht unter „Aktuell“, auch wenn die Wohnungen erst
 2029 bezugsfertig sind. Bei Konzerten zählt der Auftrittstermin — ein Vorverkauf,
 der in den nächsten Tagen startet, zieht den Beitrag aber nach „Aktuell“, weil
-dann gehandelt werden muss.
+dann gehandelt werden muss. Im Sport gilt dasselbe; dort liegt der Schwerpunkt
+naturgemäß auf **„In den nächsten Monaten“**, denn genau dafür gibt es die
+Rubrik — ein Turnier im nächsten Frühjahr will früh gebucht werden.
 
 Die Zahl neben jedem Reiter zeigt, wie viele Beiträge dort liegen. Voreingestellt
 ist der erste Reiter, der überhaupt etwas enthält — an einem Tag ohne aktuelle
@@ -139,8 +177,9 @@ Rubriküberschrift, 4px-Kante der Karte, Linkfarbe:
 |---|---|---|
 | Neubau & Immobilien | `#9e4a48` | `#d1817f` |
 | Konzerte, Kino & Comedy | `#8a5273` | `#c79ab4` |
+| Sport | `#3f6b5e` | `#8fbdae` |
 | Messen & Feste | `#8a6a3d` | `#c2a577` |
-| Frankfurt allgemein | `#4f4f4f` | `#c8c8c8` |
+| Frankfurt & Infrastruktur | `#4f4f4f` | `#c8c8c8` |
 
 **Die Tag-Plaketten sind neutral grau.** Vorher hatte jedes der 13 Tags eine
 eigene Farbe — grün, bernstein, türkis, violett, blau —, was zusammen mit den
@@ -168,7 +207,7 @@ GitHub-Konto und etwa 5 € OpenRouter-Guthaben für das erste Jahr.
    **5 € reichen reichlich.** (OpenRouter berechnet beim Aufladen ~5,5 %, aus 5 €
    werden also etwa 4,72 € nutzbares Guthaben.)
 3. Auf [openrouter.ai/keys](https://openrouter.ai/keys) → **Create Key**, Name
-   zum Beispiel `frankfurt-digest`, und den Wert kopieren. Er beginnt mit
+   zum Beispiel `allgemeine-news`, und den Wert kopieren. Er beginnt mit
    `sk-or-v1-`.
 
    **Jetzt kopieren** — OpenRouter zeigt einen Key genau einmal. Ist er weg,
@@ -176,23 +215,18 @@ GitHub-Konto und etwa 5 € OpenRouter-Guthaben für das erste Jahr.
 
 ### Schritt 2 — Den Code in ein eigenes GitHub-Repository legen
 
-> Dieses Verzeichnis zeigt mit `git remote` noch auf das Repository des
-> Vorgängerprojekts (`ai_news_aggregator`). Vor dem ersten Push also ein leeres
-> Repository anlegen und die Adresse umbiegen, sonst landet der Frankfurt-Code
-> im falschen Projekt:
->
-> ```bash
-> git remote set-url origin https://github.com/<benutzername>/<repo>.git
-> ```
-
 Ein leeres Repository auf GitHub anlegen (**New repository**, ohne README, ohne
 .gitignore), dann aus diesem Ordner:
 
 ```bash
+git remote set-url origin https://github.com/<benutzername>/<repo>.git
 git add -A
-git commit -m "Frankfurt Kompakt"
+git commit -m "Initial commit"
 git push -u origin main
 ```
+
+> Zeigt `git remote -v` noch auf ein anderes Repository, ist die erste Zeile
+> Pflicht — sonst landet der Code im falschen Projekt.
 
 **Das Repository öffentlich machen.** Im kostenlosen GitHub-Plan funktioniert
 Pages nur aus öffentlichen Repositories; aus einem privaten zu veröffentlichen
@@ -233,14 +267,14 @@ bereitstellt.
 
 ### Schritt 5 — Einmal von Hand starten
 
-Tab **Actions** → **Täglicher Frankfurt-Überblick** in der linken Spalte →
+Tab **Actions** → **Täglicher Nachrichtenüberblick** in der linken Spalte →
 **Run workflow** → **Run workflow**.
 
 Das dauert etwa eine Minute. Ein gesundes Protokoll sieht so aus:
 
 ```
 Verwendetes Modell: openai/gpt-5.6-luna
-Gesammelt: 9 Neubau & Immobilien, 7 Konzerte, Kino & Comedy, 14 Messen & Feste, 26 Frankfurt allgemein
+Gesammelt: 3 Neubau & Immobilien, 12 Konzerte, Kino & Comedy, 7 Sport, 14 Messen & Feste, 25 Frankfurt & Infrastruktur
 LLM-Aufruf: model=openai/gpt-5.6-luna rein=8500 raus=2100 Token
 digests/2026-08-08.json gespeichert
 site/ mit 1 Ausgabe(n) gebaut
@@ -297,7 +331,7 @@ gerechnet aus Zeichenzahlen mit den Listenpreisen von OpenRouter:
 | `openai/gpt-5` | ~14,00 | Spitzenpreis für eine Zusammenfassungsaufgabe |
 
 Die Spanne reicht von einem typischen Tag bis zu einer randvollen Ausgabe. Sie
-liegt über den Werten des Vorgängerprojekts, weil vier Rubriken statt drei mehr
+liegt über den Werten des Vorgängerprojekts, weil fünf Rubriken statt drei mehr
 Kandidaten und mehr Ausgabetext bedeuten und deutscher Text je Zeichen mehr Token
 braucht als englischer.
 
@@ -317,16 +351,19 @@ alle Rubriken hielte die halbe Seite dauerhaft leer.
 |---|---|---|
 | Neubau & Immobilien | 168 h (7 Tage) | Bauvorhaben werden selten gemeldet; ein Wochenfenster fängt sie ein |
 | Konzerte, Kino & Comedy | 120 h (5 Tage) | Ankündigungen kommen schubweise, oft am Wochenanfang |
+| Sport | 336 h (14 Tage) | das schmalste Feld überhaupt — eine Turnierankündigung darf nicht durchrutschen |
 | Messen & Feste | 168 h (7 Tage) | stark saisonal — monatelang nichts, dann viel |
-| Frankfurt allgemein | 24 h | vier Redaktionen liefern täglich mehr als genug |
+| Frankfurt & Infrastruktur | 24 h | vier Redaktionen liefern täglich mehr als genug |
 
 Die Entdoppelung sorgt dafür, dass ein weiteres Fenster nichts wiederholt — es
 fügt nur Abdeckung hinzu. Ändern lässt sich das ohne Codeänderung über
 Repository-Variablen: `MAX_AGE_HOURS_IMMOBILIEN`, `MAX_AGE_HOURS_EVENTS`,
-`MAX_AGE_HOURS_MESSEN`, `MAX_AGE_HOURS_STADT`.
+`MAX_AGE_HOURS_SPORT`, `MAX_AGE_HOURS_MESSEN`, `MAX_AGE_HOURS_STADT`.
 
-Geht man über 7 Tage hinaus, muss `DEDUP_EDITIONS` in `main.py` (9) mitwachsen,
-sonst tauchen alte Beiträge wieder auf.
+**`DEDUP_EDITIONS` in `main.py` muss mehr Tage abdecken als das breiteste
+Fenster.** Das ist Sport mit 14 Tagen, der Wert steht deshalb auf 16 (früher 9).
+Wer ein Fenster weiter aufzieht, muss ihn mitziehen, sonst erscheint ein Beitrag
+nach Ablauf der Sperre ein zweites Mal.
 
 **Ausgefallene Läufe werden automatisch aufgeholt.** Geplante Actions-Läufe
 verzögern sich manchmal oder fallen unter Last aus. Fehlt die Ausgabe von
@@ -428,19 +465,19 @@ Nur einfache Werte, kein Code, dort kann also nichts kaputtgehen.
 | Ändern | Einstellung in `configuration.py` |
 |---|---|
 | Das Modell | `MODEL` |
-| Welche Feeds gelesen werden | `IMMOBILIEN_FEEDS`, `EVENT_FEEDS`, `MESSE_FEEDS`, `STADT_FEEDS` und die Zuordnung `FEEDS` |
+| Welche Feeds gelesen werden | `IMMOBILIEN_FEEDS`, `EVENT_FEEDS`, `SPORT_FEEDS`, `MESSE_FEEDS`, `STADT_FEEDS` und die Zuordnung `FEEDS` |
 | Wie viele Ausgaben bleiben | `KEEP_DIGESTS` (30) |
 
 Alles Weitere steht neben dem Code, der es benutzt:
 
 | Ändern | Wo |
 |---|---|
-| Was als interessant gilt, das Leserprofil, der Ortsbezug | `SYSTEM_PROMPT` in `main.py` |
+| Was als interessant gilt, das Leserprofil, der Radius je Rubrik | `SYSTEM_PROMPT` in `main.py` — der Block `RADIUS:` |
 | Wie viele Beiträge je Rubrik | der Block `Umfang:` innerhalb von `SYSTEM_PROMPT` |
 | Wo die Grenzen zwischen den Reitern liegen | der Block `ZEITHORIZONT:` innerhalb von `SYSTEM_PROMPT` |
 | Wie weit jede Rubrik zurückblickt | `SECTION_TUNING` oben in `main.py` |
 | Wie viele Kandidaten das Modell erreichen | derselbe Block — `MAX_CANDIDATES_PER_SECTION`, `per_feed` |
-| Wie weit die Entdoppelung zurückreicht | derselbe Block — `DEDUP_EDITIONS` (9) |
+| Wie weit die Entdoppelung zurückreicht | derselbe Block — `DEDUP_EDITIONS` (16) |
 | Seitenname, Rubriknamen, Tag-Beschriftungen | oben in `render.py` — `SITE_TITLE`, `SECTIONS`, `TAG_LABELS` |
 | Namen und Reihenfolge der Reiter | `HORIZONS` in `render.py` |
 | Farben, Schrift, Layout | die Konstante `CSS` in `render.py` |
@@ -451,10 +488,11 @@ Drei Dinge, die man wissen sollte:
   das LLM entscheidet über Relevanz, im schlimmsten Fall wird eine neue Quelle
   also nie ausgewählt. Für ein neues Thema reicht eine weitere
   Google-News-Zeile mit anderem Suchbegriff.
-- **Eine Rubrik hinzuzufügen berührt drei Dateien**: einen Eintrag in `SECTIONS`
-  (`render.py`), eine Farbregel `.section.<schlüssel>` samt Custom-Property im
-  `CSS`-Block darunter, einen Eintrag in `FEEDS` (`configuration.py`), einen in
-  `SECTION_TUNING` (`main.py`) und einen Absatz im `SYSTEM_PROMPT`. Der Rest der
+- **Eine Rubrik hinzuzufügen berührt drei Dateien** — so ist „Sport“ entstanden:
+  einen Eintrag in `SECTIONS` (`render.py`), eine Farbregel `.section.<schlüssel>`
+  samt Custom-Property im `CSS`-Block darunter, einen Eintrag in `FEEDS`
+  (`configuration.py`), einen in `SECTION_TUNING` (`main.py`) und einen Absatz im
+  `SYSTEM_PROMPT` samt Zeile in der JSON-Form und den Obergrenzen. Der Rest der
   Pipeline läuft über `SECTIONS` und passt sich von selbst an; `preflight()`
   meldet fehlende Feeds, bevor Arbeit anfällt.
 - **Einen Reiter hinzuzufügen ist einfacher**: ein Eintrag in `HORIZONS`
@@ -462,7 +500,7 @@ Drei Dinge, die man wissen sollte:
   CSS für den Reiter erzeugt `_horizon_css()` aus der Liste. Der erste Eintrag
   muss der Reiter für die Gegenwart bleiben — er ist der Rückfall für jeden
   Beitrag, den das Modell nicht einordnet.
-- **Ein Fenster über 7 Tage hinaus verlangt ein größeres `DEDUP_EDITIONS`**
+- **Ein Fenster über 14 Tage hinaus verlangt ein größeres `DEDUP_EDITIONS`**
   (beides in `main.py`), sonst tauchen alte Beiträge wieder auf.
 
 Ein vollständiger Neubau läuft jeden Tag, eine Gestaltungs- oder Promptänderung
@@ -475,6 +513,6 @@ verschwinden beim nächsten Lauf von der Archivseite. Änderbar über
 `KEEP_DIGESTS` in `configuration.py` (oder eine gleichnamige
 Repository-Variable); `0` behält alles für immer.
 
-Der Wert sollte deutlich über `DEDUP_EDITIONS` (9, in `main.py`) liegen. Die
+Der Wert sollte deutlich über `DEDUP_EDITIONS` (16, in `main.py`) liegen. Die
 Entdoppelung liest die gespeicherten Ausgaben, eine gelöschte Ausgabe kann eine
 Wiederholung also nicht mehr verhindern.

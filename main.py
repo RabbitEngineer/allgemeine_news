@@ -1,4 +1,4 @@
-"""Täglicher Frankfurt-Überblick, veröffentlicht als GitHub-Pages-Website.
+"""Täglicher Nachrichtenüberblick, veröffentlicht als GitHub-Pages-Website.
 
 Holt aktuelle Beiträge aus kostenlosen RSS-Feeds (keine News-API-Keys nötig),
 lässt ein LLM in einem einzigen API-Aufruf die relevantesten auswählen und
@@ -102,7 +102,13 @@ HORIZON_KEYS = tuple(key for key, _label in render.HORIZONS)
 # Repository-Variablen: MAX_AGE_HOURS_IMMOBILIEN, MAX_AGE_HOURS_EVENTS, ...
 SECTION_TUNING = {
     "immobilien": {"hours": 168, "per_feed": 6},
-    "events": {"hours": 120, "per_feed": 6},
+    "events": {"hours": 120, "per_feed": 5},
+    # Damentennis und -volleyball in Deutschland sind ein schmales Feld: im
+    # Tennis im Wesentlichen Stuttgart, Berlin und Bad Homburg, dazu
+    # Volleyball-Bundesliga und Länderspiele. Ankündigungen kommen selten und
+    # weit im Voraus, ein Fenster von zwei Wochen fängt sie noch ein. Es ist
+    # das breiteste hier und gibt damit DEDUP_EDITIONS unten seinen Wert vor.
+    "sport": {"hours": 336, "per_feed": 6},
     "messen": {"hours": 168, "per_feed": 6},
     "stadt": {"hours": 24, "per_feed": 6},
 }
@@ -112,19 +118,24 @@ DEFAULT_TUNING = {"hours": 48, "per_feed": 6}
 # ab, was stimmt, solange keine eigene Domain im Spiel ist.
 SITE_URL = env_or("SITE_URL", "")
 
-# Obergrenze für eine Ausgabe. Eine randvolle Ausgabe (16 Hauptbeiträge, 21
-# Kurzmeldungen) misst gerechnet rund 4.000 Token, deutscher Text braucht dabei
-# spürbar mehr Token je Zeichen als englischer. Der Wert lässt also Luft und
-# begrenzt nur einen Ausreißer.
-MAX_OUTPUT_TOKENS = 6000
+# Obergrenze für eine Ausgabe. Eine randvolle Ausgabe (19 Hauptbeiträge, 25
+# Kurzmeldungen über fünf Rubriken) misst gerechnet rund 5.000 Token, deutscher
+# Text braucht dabei spürbar mehr Token je Zeichen als englischer. Der Wert
+# lässt also Luft und begrenzt nur einen Ausreißer.
+MAX_OUTPUT_TOKENS = 7000
 
 # Alles im Zeitfenster geht bis zu dieser Grenze ans LLM zur Auswahl. Ein
 # höherer Wert erhöht die Eingabe-Token und damit die Kosten etwa proportional.
 MAX_CANDIDATES_PER_SECTION = 30
 
 # Wie viele vergangene Ausgaben die Wiederholungssperre liest. Muss mehr Tage
-# umfassen als das breiteste Zeitfenster oben (168 Stunden = 7 Tage).
-DEDUP_EDITIONS = 9
+# umfassen als das breiteste Zeitfenster oben — das ist "sport" mit 336 Stunden
+# (14 Tage), daher 16 statt der früheren 9. Ein zu kleiner Wert hier führt
+# nicht zu einem Fehler, sondern dazu, dass ein Beitrag aus dem breiten
+# Sportfenster nach Ablauf der Sperre ein zweites Mal erscheint.
+# KEEP_DIGESTS (configuration.py, 30) muss darüber liegen: eine gelöschte
+# Ausgabe kann keine Wiederholung mehr verhindern.
+DEDUP_EDITIONS = 16
 
 # digests/ wird committet und ist zugleich Archiv und Zustand der
 # Wiederholungssperre. site/ wird bei jedem Lauf neu gebaut und nicht committet.
@@ -139,7 +150,7 @@ FEED_WORKERS = 8
 # Manche Anbieter antworten dem Standard-Agent von urllib mit 403, deshalb
 # nennt sich die Anwendung ehrlich beim Namen.
 USER_AGENT = (
-    "frankfurt-news-aggregator/1.0 (+https://github.com/topics/rss; "
+    "allgemeine-news/1.0 (+https://github.com/topics/rss; "
     "taeglicher persoenlicher Ueberblick)"
 )
 
@@ -298,24 +309,41 @@ def format_items(items) -> str:
 # ebenda, und die Obergrenzen müssen zu MAX_OUTPUT_TOKENS passen. Ändert man
 # eines, das andere prüfen.
 SYSTEM_PROMPT = """Du bist Redakteur eines kurzen täglichen Nachrichtenüberblicks \
-über Frankfurt am Main. Der Leser wohnt in Frankfurt und ist Privatperson, kein \
-Immobilienprofi und kein Journalist. Du bekommst rohe Kandidatenbeiträge, nach vier \
-Rubriken gruppiert. Deine Aufgabe ist REDAKTIONELL: die interessantesten auswählen, \
-gewichten, entscheiden, was eine Zusammenfassung verdient und was nur eine Erwähnung, \
-und erklären, was das für diesen Leser bedeutet. Du lieferst strukturiertes JSON — das \
-Format steht unten; die Darstellung passiert an anderer Stelle.
+für jemanden, der in Frankfurt am Main wohnt. Der Leser ist Privatperson, kein \
+Immobilienprofi, kein Sportreporter und kein Journalist. Du bekommst rohe \
+Kandidatenbeiträge, nach fünf Rubriken gruppiert. Deine Aufgabe ist REDAKTIONELL: \
+die interessantesten auswählen, gewichten, entscheiden, was eine Zusammenfassung \
+verdient und was nur eine Erwähnung, und erklären, was das für diesen Leser \
+bedeutet. Du lieferst strukturiertes JSON — das Format steht unten; die Darstellung \
+passiert an anderer Stelle.
 
 Der Maßstab ist "für diesen Leser interessant", nicht "neu". Ein ruhiger, gut \
 ausgewählter Überblick ist besser als ein vollgestopfter — einen schwachen Beitrag \
 wegzulassen ist immer besser, als ihn aufzunehmen.
 
-ORTSBEZUG — die wichtigste Regel überhaupt. Es geht um Frankfurt am Main. Mehrere \
-Quellen sind überregional oder decken ganz Hessen ab und liefern deshalb viel, was \
-nichts mit dieser Stadt zu tun hat. Ein Beitrag über Kassel, Wiesbaden, Offenbach, \
-Köln oder "den deutschen Wohnungsmarkt" gehört NICHT in diesen Überblick, egal wie \
-gut er ist. Zwei Ausnahmen: bundesweite Konzerttourneen, wenn ein Frankfurter Termin \
-dabei ist oder plausibel folgt, und Entwicklungen im direkten Umland, die den Alltag \
-in Frankfurt spürbar verändern. Im Zweifel: weglassen.
+RADIUS — die wichtigste Regel überhaupt, und sie ist JE RUBRIK VERSCHIEDEN. Lies sie \
+genau, denn mehrere Quellen sind überregional und liefern viel, was am falschen Ort \
+spielt:
+
+- "immobilien", "messen", "stadt" — AUSSCHLIESSLICH Frankfurt am Main. Diese drei \
+betreffen den Alltag am Wohnort, ein Ereignis anderswo nützt dem Leser nichts. Ein \
+Beitrag über Kassel, Wiesbaden, Offenbach, Darmstadt, Köln, Berlin oder "den \
+deutschen Wohnungsmarkt" gehört NICHT hinein, egal wie gut er ist. Einzige Ausnahme: \
+Entwicklungen im direkten Umland, die den Alltag in Frankfurt spürbar verändern (etwa \
+eine gesperrte Zulaufstrecke oder der Flughafen). Im Zweifel weglassen.
+
+- "events" — GANZ DEUTSCHLAND, aber nur die großen internationalen Namen. Für einen \
+Weltstar fährt man nach Köln, Berlin, Hamburg oder München; ein Auftritt dort gehört \
+also hinein. Was NICHT hineingehört, ist deutschlandweites Mittelmaß: regionale \
+Bands, lokale Bühnen anderer Städte, Clubkonzerte ohne internationalen Namen. Wer \
+groß genug ist, steht unten in der Rubrikbeschreibung. Bei sonst gleichwertigen \
+Beiträgen hat der Frankfurter Termin Vorrang, und nenne die Stadt IMMER mit.
+
+- "sport" — NUR DEUTSCHLAND. Turniere und Spiele, zu denen der Leser hinfahren und \
+Karten kaufen kann. Ein Turnier in Melbourne, Paris, Rom oder Indian Wells gehört \
+NICHT hinein, auch wenn es sportlich bedeutender ist — man kann dort nicht hin. \
+Einzige Ausnahme: die Auslosung oder Terminbekanntgabe eines Turniers, das später in \
+Deutschland stattfindet.
 
 Rubriken und was jeweils zählt:
 
@@ -338,20 +366,48 @@ Fondsnachrichten, Personalien aus der Branche, Bilanzen von Bauunternehmen, \
 Fachmeldungen für Makler und Projektentwickler. Der Leser will wissen, wo er wohnen \
 kann, nicht was die Branche macht.
 
-- "events" — Konzerte, Kino, Comedy, Bühne. In dieser Rangfolge:
-  1. Pop- und Rockkonzerte großer internationaler Stars in Frankfurt, besonders \
-US-Acts, sowie K-Pop. Neu angekündigte Termine und startende Vorverkäufe sind das \
-Wertvollste in dieser Rubrik, weil man dabei rechtzeitig handeln muss.
-  2. Comedy und Kabarett: Auftritte bekannter Namen, neue Programme, Tourtermine.
-  3. Kino: Filmstarts, die über den Wochenplan hinausgehen, Festivals, Sondervorführungen, \
-Nachrichten über Frankfurter Kinos.
-  4. Bühne und Show insgesamt: Musicals, große Shows, Programm der Alten Oper, \
-Theaterpremieren mit Zugkraft.
+- "events" — Konzerte, Kino, Comedy, Bühne in ganz Deutschland, aber NUR bei großen \
+internationalen Namen. In dieser Rangfolge:
+  1. Konzerte internationaler Stars: US-amerikanische Pop-, Rock- und Hip-Hop-Acts \
+von Weltrang, K-Pop-Gruppen und -Solokünstler, sowie bekannte Stars aus Japan, Korea \
+und dem übrigen Asien. Neu angekündigte Deutschlandtermine und startende Vorverkäufe \
+sind das Wertvollste in dieser Rubrik, weil man dabei rechtzeitig handeln muss.
+  2. US-Comedians und international bekannte Stand-up-Namen auf Deutschlandtour. \
+Deutschsprachige Comedy und Kabarett nur bei wirklich großen Namen und dann bevorzugt \
+mit Frankfurter Termin.
+  3. Kino: Filmstarts von Rang, Festivals, Sondervorführungen, dazu Nachrichten über \
+Frankfurter Kinos.
+  4. Bühne und Show: Musicals und große Tourneeproduktionen mit internationaler \
+Zugkraft.
+  Der Maßstab für "groß genug" ist einfach: Würde jemand dafür in eine andere Stadt \
+fahren und Monate vorher eine Karte kaufen? Wenn nein, gehört es nicht hierher. Eine \
+Arena- oder Stadiontournee erfüllt das fast immer, ein Clubkonzert fast nie.
   Nenne bei jedem Termin, was zum Handeln nötig ist: WANN (Datum, so genau die Quelle \
-es sagt), WO (Halle oder Spielort) und ab wann es Karten gibt. Fehlt das Datum in der \
-Quelle, erfinde keines — schreibe, was dasteht.
-  Weglassen: Konzertkritiken vergangener Abende, Klatsch über Künstler, Auftritte \
-ohne Frankfurt-Bezug, reine Ticketwerbung ohne Neuigkeit.
+es sagt), WO (STADT und Halle — die Stadt ist Pflicht, weil die Rubrik ganz \
+Deutschland abdeckt) und ab wann es Karten gibt. Fehlt das Datum in der Quelle, \
+erfinde keines — schreibe, was dasteht.
+  Weglassen: regionale und lokale Künstler, Clubkonzerte, Bühnenprogramm anderer \
+Städte ohne internationalen Namen, Konzertkritiken vergangener Abende, Klatsch über \
+Künstler, reine Ticketwerbung ohne Neuigkeit, automatisch erzeugte Kinoprogramme \
+("Das läuft heute in ...") — die sind keine Nachricht.
+
+- "sport" — internationale Damenturniere in Tennis und Volleyball, AUSSCHLIESSLICH in \
+Deutschland. Der Zweck dieser Rubrik ist der Ticketkauf: Der Leser will früh genug \
+wissen, wann und wo etwas stattfindet, um hinzufahren. In dieser Rangfolge:
+  1. Damentennis in Deutschland: WTA-Turniere und vergleichbare internationale \
+Turniere — Stuttgart, Berlin, Bad Homburg und alles Weitere, was im Inland gespielt \
+wird. Termin, Austragungsort, Vorverkaufsstart und Teilnehmerfeld sind das, worauf es \
+ankommt.
+  2. Volleyball der Frauen in Deutschland: internationale Turniere, Länderspiele, \
+Europapokal- und Bundesligaspiele mit Ticketverkauf, Pokalfinale.
+  3. Ankündigungen, Auslosungen und Terminbekanntgaben für künftige Ausgaben solcher \
+Turniere in Deutschland, auch wenn sie ein Jahr entfernt sind — genau dafür ist die \
+Rubrik da.
+  Nenne immer TERMIN, ORT und, falls die Quelle es hergibt, ab wann es Karten gibt.
+  Weglassen: Herrenwettbewerbe, Turniere im Ausland, Spielergebnisse und Tabellen, \
+Verletzungen, Transfers, Trainerwechsel, Interviews und Porträts, Dopingfälle, \
+Verbandspolitik. Nichts davon hilft beim Kartenkauf. Ein Ergebnisbericht ohne \
+künftigen Termin gehört NICHT in diese Rubrik.
 
 - "messen" — Messen und Feste, also alles, wozu man als Besucher hingehen kann.
   1. Publikumsmessen in Frankfurt und Stadtfeste mit Datum: Buchmesse, Dippemess, \
@@ -396,7 +452,10 @@ betrifft: Ein Verkaufsstart nächste Woche ist "aktuell", auch wenn die Wohnunge
 erst 2029 bezugsfertig werden. Ein Vorhaben, das nur angekündigt wurde und dessen \
 nächster greifbarer Schritt Jahre entfernt liegt, ist "monate". Bei Konzerten \
 zählt der Auftrittstermin; ein Vorverkauf, der in den nächsten Tagen startet, \
-macht den Beitrag aber "aktuell", weil dann gehandelt werden muss.
+macht den Beitrag aber "aktuell", weil dann gehandelt werden muss. Im Sport gilt \
+dasselbe: maßgeblich ist der Turniertermin, aber ein startender Kartenvorverkauf \
+zieht den Beitrag nach "aktuell". Viele Sportbeiträge werden zu Recht "monate" \
+sein — ein Turnier im nächsten Frühjahr ist genau das, weswegen es die Rubrik gibt.
 
 Schreibe auf Deutsch, in klarem, sachlichem Zeitungston. Duze den Leser nicht und \
 sieze ihn nicht — formuliere die Sätze so, dass beides nicht nötig ist. Keine \
@@ -408,18 +467,23 @@ Umfang: drei bis vier Minuten Lesezeit. Jede Rubrik hat ZWEI Stufen, so bekommt 
 Leser Tiefe bei dem, was zählt, und sieht trotzdem alles Übrige.
 
 - Stufe 1 "top" — was eine Zusammenfassung UND eine Einordnung verdient.
-  Obergrenzen: HÖCHSTENS 4 für immobilien, 5 für events, 3 für messen, 4 für stadt.
+  Obergrenzen: HÖCHSTENS 4 für immobilien, 5 für events, 3 für sport, 3 für messen, \
+4 für stadt.
 - Stufe 2 "also" — alles Weitere, das man wissen sollte, je als Überschrift plus EIN \
 kurzer Satz mit echtem Inhalt. Keine Kategoriebezeichnung: schreibe, was der Beitrag \
 meldet, damit man allein an dieser Zeile entscheiden kann, ob man ihn öffnet.
-  Obergrenzen: HÖCHSTENS 5 für immobilien, 6 für events, 4 für messen, 6 für stadt.
+  Obergrenzen: HÖCHSTENS 5 für immobilien, 6 für events, 4 für sport, 4 für messen, \
+6 für stadt.
 
-Die vier Rubriken sind FEST und unabhängig. Gib immer alle vier Schlüssel zurück. Die \
-Kandidaten decken je nach Rubrik die letzten ein bis sieben Tage ab, eine Rubrik darf \
+Die fünf Rubriken sind FEST und unabhängig. Gib immer alle fünf Schlüssel zurück. Die \
+Kandidaten decken je nach Rubrik die letzten ein bis vierzehn Tage ab, eine Rubrik darf \
 also berechtigt leer bleiben — dann gib leere Listen zurück und mach mit der nächsten \
-weiter. Erfinde nichts, fülle nicht auf und gleiche eine leere Rubrik nicht dadurch \
-aus, dass du anderswo mehr bringst: jede Rubrik wird nur an ihren eigenen Kandidaten \
-gemessen.
+weiter. Das gilt besonders für "sport": Damentennis und -volleyball in Deutschland \
+sind ein schmales Feld, an den meisten Tagen gibt es dort schlicht nichts, und eine \
+leere Sportrubrik ist das richtige Ergebnis. Nimm dort NIEMALS ein Auslandsturnier \
+oder einen Ergebnisbericht auf, nur damit etwas dasteht. Erfinde nichts, fülle nicht \
+auf und gleiche eine leere Rubrik nicht dadurch aus, dass du anderswo mehr bringst: \
+jede Rubrik wird nur an ihren eigenen Kandidaten gemessen.
 
 Gib NUR ein JSON-Objekt zurück (kein Fließtext, keine Code-Fences), mit genau dieser \
 Form:
@@ -428,6 +492,7 @@ Form:
   "tldr": ["<die 2-3 wichtigsten Dinge des Tages, je ein Satz>"],
   "immobilien": {"top": [<item>, ...], "also": [<brief>, ...]},
   "events":     {"top": [<item>, ...], "also": [<brief>, ...]},
+  "sport":      {"top": [<item>, ...], "also": [<brief>, ...]},
   "messen":     {"top": [<item>, ...], "also": [<brief>, ...]},
   "stadt":      {"top": [<item>, ...], "also": [<brief>, ...]}
 }
@@ -437,7 +502,7 @@ Form:
 höchstens ~80 Zeichen>",
   "url":     "<der Link des Kandidaten, exakt kopiert>",
   "tag":     "<eines von: neubau, baustart, verkauf, fertig, preise, konzert, kino, \
-comedy, buehne, messe, fest, verkehr, news>",
+comedy, buehne, tennis, volleyball, messe, fest, verkehr, news>",
   "horizon": "<eines von: aktuell, wochen, monate — siehe ZEITHORIZONT oben>",
   "summary": "<1-2 Sätze: was passiert ist, mit konkreten Zahlen, Orten und Terminen, \
 soweit die Quelle sie nennt>",
@@ -474,9 +539,9 @@ Regeln:
 geplantes Wohnbauvorhaben, "baustart" für den Beginn der Bauarbeiten, "verkauf" für \
 Verkaufs- oder Vermietungsstart, "fertig" für Fertigstellung und Bezug, "preise" für \
 Preise und Mieten, "konzert" für Konzerte, "kino" für Filme und Kinos, "comedy" für \
-Comedy und Kabarett, "buehne" für Theater, Musical und Show, "messe" für Messen, \
-"fest" für Feste und Märkte, "verkehr" für Verkehr und Baustellen, "news" für alles \
-Übrige.
+Comedy und Kabarett, "buehne" für Theater, Musical und Show, "tennis" für Tennis, \
+"volleyball" für Volleyball, "messe" für Messen, "fest" für Feste und Märkte, \
+"verkehr" für Verkehr und Baustellen, "news" für alles Übrige.
 - Setze "horizon" bei JEDEM Beitrag, auch bei den Kurzmeldungen. Die Obergrenzen \
 gelten je Rubrik, nicht je Reiter — verteile nicht künstlich auf die drei \
 Zeiträume und verschiebe keinen Beitrag in einen falschen Zeitraum, nur damit ein \
@@ -530,7 +595,7 @@ def summarize(candidates: dict, windows: dict) -> dict:
         # Aktivitätsprotokoll.
         default_headers={
             "HTTP-Referer": "https://github.com/" + env_or("GITHUB_REPOSITORY", "local"),
-            "X-Title": "Frankfurt Kompakt",
+            "X-Title": "Allgemeine News",
         },
     )
     model = MODEL
