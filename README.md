@@ -5,7 +5,7 @@ veröffentlicht als **kostenlose GitHub-Pages-Website**, die sich jeden Morgen
 selbst neu baut.
 
 Oben stehen drei Reiter nach Zeithorizont — **Aktuell**, **In den nächsten
-Wochen**, **In den nächsten Monaten**. Unter jedem Reiter liegen dieselben sechs
+Wochen**, **In den nächsten Monaten**. Unter jedem Reiter liegen dieselben sieben
 Rubriken, gefüllt mit den Beiträgen dieses Zeitraums:
 
 1. **Neubau & Immobilien in Frankfurt** — Bauvorhaben, die für Privatkunden
@@ -24,7 +24,9 @@ Rubriken, gefüllt mit den Beiträgen dieses Zeitraums:
    Neueröffnungen.
 6. **Peking & China** — China als möglicher künftiger Arbeitsort: deutsche
    Arbeitgeber vor Ort, Arbeitserlaubnis und Visum, Arbeitsmarkt für Fachkräfte.
-   **Keine Stellenanzeigen** — warum nicht, steht unten.
+   Nachrichten, keine Ausschreibungen.
+7. **Neue Stellen in Peking** — echte, neu ausgeschriebene Stellen bei deutschen
+   Arbeitgebern, ausgewählt nach Bewerbungsaussicht statt nach Attraktivität.
 
 ## Die Radien sind je Rubrik verschieden
 
@@ -39,6 +41,7 @@ mehr „Frankfurt Kompakt" heißt:
 | Konzerte, Kino & Comedy | ganz Deutschland | für einen Weltstar fährt man nach Köln oder Berlin |
 | Sport | nur Deutschland | Karten kauft man für das, was erreichbar ist |
 | Peking & China | China | ein möglicher künftiger Arbeitsort, kein Alltag |
+| Neue Stellen | Peking | dort will man arbeiten |
 
 Bei den deutschlandweiten Rubriken kommt eine Qualitätsschwelle dazu: Konzerte
 nur bei **großen internationalen Namen**, nicht bei regionalen Bands oder
@@ -105,6 +108,7 @@ trotzdem alles Übrige. Zielwert sind **drei bis vier Minuten Lesezeit**.
 | Messen & Feste | bis zu 3 | bis zu 4 |
 | Frankfurt & Infrastruktur | bis zu 4 | bis zu 6 |
 | Peking & China | bis zu 3 | bis zu 4 |
+| Neue Stellen in Peking | bis zu 3 | bis zu 4 |
 
 Das sind Deckel, keine Zielvorgaben — der Prompt verbietet das Auffüllen, ein
 Beitrag muss sich seinen Platz also verdienen, und ein ruhiger Tag ergibt eine
@@ -113,7 +117,7 @@ ehrlich kurze Ausgabe.
 **„Außerdem notiert“ ist keine reine Überschriftenliste** — jeder Eintrag trägt
 einen Satz dazu, was der Beitrag tatsächlich meldet, und einen eigenen Link.
 
-**Die sechs Rubriken sind fest und unabhängig.** Alle sechs erscheinen in jedem
+**Die sieben Rubriken sind fest und unabhängig.** Alle sieben erscheinen in jedem
 Reiter, in derselben Reihenfolge. Eine Rubrik ohne Beiträge in diesem Zeitraum
 liest sich schlicht als *„Nichts in diesem Zeitraum.“* statt zu verschwinden —
 sonst bliebe offen, ob es nichts gibt oder ob etwas kaputt ist. Rubriken borgen
@@ -164,6 +168,86 @@ Die Obergrenzen aus der Tabelle oben gelten **je Rubrik, nicht je Reiter**. Der
 Prompt verbietet ausdrücklich, Beiträge auf die Zeiträume zu verteilen, damit ein
 Reiter voller wirkt.
 
+## Woher die Stellen kommen — und warum so wenige
+
+Diese eine Rubrik liest kein RSS. **Für Stellenanzeigen gibt es keine Feeds
+mehr**, das wurde vor dem Bau geprüft:
+
+| Quelle | Antwort |
+|---|---|
+| LinkedIn Jobs | 404 — RSS abgeschaltet |
+| Indeed China | 403 — sperrt automatisierte Abrufe |
+| StackOverflow Jobs | 404 — Dienst eingestellt |
+| eChinacities, theBeijinger, 51job | 404 / kein Feed |
+| AHK Greater China | 302, kein nutzbarer Feed |
+| WeWorkRemotely | funktioniert — aber weltweit remote, nicht Peking |
+
+Google-News-Suchen nach „Jobs Peking" antworten zwar mit 200 und 51 Einträgen,
+liefern aber Presseartikel: *„China sanktioniert deutsche…"*, *„Exportkontrollen
+gegen 14 deutsche Firmen"*. Jobbörsen sind keine Presse und syndizieren nicht
+dorthin.
+
+Was es stattdessen gibt, ist die **öffentliche API von SmartRecruiters** — dem
+Bewerbermanagementsystem, über das ein Teil der deutschen Industrie ausschreibt.
+Dokumentiert, ohne Schlüssel, liefert JSON. `jobs.py` fragt sie ab und reicht die
+Treffer als Kandidaten in dieselbe Pipeline wie die RSS-Beiträge.
+
+### Die Ausbeute ist klein, und das liegt an Peking
+
+Gemessen beim Bau:
+
+| | Stellen in China | davon in Peking |
+|---|---|---|
+| Bosch | 1258 | 24 |
+| Continental | 31 | 0 |
+
+**Deutsche Industriearbeitgeber sitzen in China im Jangtse-Delta, nicht in der
+Hauptstadt.** Bei Bosch verteilen sich die Stellen auf Shanghai (345), Suzhou
+(333) und Wuxi (227). Nach dem Filter auf IT-nahe Rollen bleiben in Peking
+**zwei** Ausschreibungen übrig — beide aus der Hydraulikentwicklung.
+
+Nimmt man Shanghai und Suzhou dazu, sind es sofort **30** (der Deckel), darunter
+`AI 软件工程平台工程师` und `ADAS行为决策规划算法工程师`. Das ist eine Zeile in
+`jobs.py`:
+
+```python
+CITIES = ["beijing"]                            # wie ausgeliefert
+CITIES = ["beijing", "shanghai", "suzhou"]      # wo tatsächlich gesucht wird
+```
+
+Das ist der wirksamste Hebel in dieser Datei. Wenn die Rubrik dauerhaft leer
+bleibt, liegt es fast sicher hieran und nicht an einem Fehler.
+
+### Welche Arbeitgeber erfasst sind
+
+Nur **Bosch** und **Continental** — von den geprüften deutschen Namen nutzen nur
+diese beiden SmartRecruiters. SAP, Siemens, BMW, Mercedes, BASF, Bayer, Henkel,
+Infineon und Lufthansa antworten mit `totalFound: 0`, weil sie auf
+SuccessFactors, Workday oder Phenom liegen; jedes davon bräuchte einen eigenen
+Adapter. Einen Namen zu `COMPANIES` hinzuzufügen ist ungefährlich: ein
+unbekannter liefert 0 statt eines Fehlers.
+
+### Wie ausgewählt wird
+
+Nicht nach „interessanteste Stelle", sondern nach **Bewerbungsaussicht**. Der
+Prompt kennt das Profil — in China geboren, Deutsch und Chinesisch fließend,
+IT-Kenntnisse — und sortiert danach:
+
+1. Stellen, die **Deutschkenntnisse** ausdrücklich nennen. Das ist der Vorteil,
+   der vom lokalen Bewerberfeld trennt, und wiegt schwerer als eine spannendere
+   Aufgabe.
+2. IT-, Software-, Daten- und Systemrollen.
+3. Einstiegs- und mittlere Erfahrungsstufen vor Senior- und Führungspositionen.
+
+Die Einordnung unter jeder Stelle sagt ehrlich, ob die Aussicht gut oder mäßig
+ist, statt jede Ausschreibung schönzureden.
+
+Weil die Wiederholungssperre auch hier greift, zeigt die Rubrik **neu
+ausgeschriebene** Stellen — keinen dauerhaften Stellenmarkt. Das Fenster ist mit
+30 Tagen das breiteste der Anwendung und damit bewusst breiter als
+`DEDUP_EDITIONS` (16): Eine noch offene Stelle ein zweites Mal zu sehen schadet
+nicht, eine übersehene schon.
+
 ## Farbschema
 
 Der Aufbau ist von [frankfurtflyer.de](https://frankfurtflyer.de) übernommen
@@ -184,6 +268,7 @@ Rubriküberschrift, 4px-Kante der Karte, Linkfarbe:
 | Konzerte, Kino & Comedy | `#8a5273` | `#c79ab4` |
 | Sport | `#3f6b5e` | `#8fbdae` |
 | Peking & China | `#4a5f85` | `#9db3d4` |
+| Neue Stellen in Peking | `#6b5340` | `#c4a893` |
 | Messen & Feste | `#8a6a3d` | `#c2a577` |
 | Frankfurt & Infrastruktur | `#4f4f4f` | `#c8c8c8` |
 
@@ -337,7 +422,7 @@ gerechnet aus Zeichenzahlen mit den Listenpreisen von OpenRouter:
 | `openai/gpt-5` | ~14,00 | Spitzenpreis für eine Zusammenfassungsaufgabe |
 
 Die Spanne reicht von einem typischen Tag bis zu einer randvollen Ausgabe. Sie
-liegt über den Werten des Vorgängerprojekts, weil sechs Rubriken statt drei mehr
+liegt über den Werten des Vorgängerprojekts, weil sieben Rubriken statt drei mehr
 Kandidaten und mehr Ausgabetext bedeuten und deutscher Text je Zeichen mehr Token
 braucht als englischer.
 
@@ -359,6 +444,7 @@ alle Rubriken hielte die halbe Seite dauerhaft leer.
 | Konzerte, Kino & Comedy | 120 h (5 Tage) | Ankündigungen kommen schubweise, oft am Wochenanfang |
 | Sport | 336 h (14 Tage) | das schmalste Feld überhaupt — eine Turnierankündigung darf nicht durchrutschen |
 | Peking & China | 336 h (14 Tage) | bewegt sich über Wochen; in 7 Tagen blieben nach Abzug der Konjunkturmeldungen kaum drei Kandidaten |
+| Neue Stellen in Peking | 720 h (30 Tage) | in Peking wird nur vereinzelt ausgeschrieben; kürzer wäre die Rubrik immer leer |
 | Messen & Feste | 168 h (7 Tage) | stark saisonal — monatelang nichts, dann viel |
 | Frankfurt & Infrastruktur | 24 h | vier Redaktionen liefern täglich mehr als genug |
 
@@ -474,6 +560,9 @@ Nur einfache Werte, kein Code, dort kann also nichts kaputtgehen.
 |---|---|
 | Das Modell | `MODEL` |
 | Welche Feeds gelesen werden | `IMMOBILIEN_FEEDS`, `EVENT_FEEDS`, `SPORT_FEEDS`, `MESSE_FEEDS`, `STADT_FEEDS`, `PEKING_FEEDS` und die Zuordnung `FEEDS` |
+| In welchen Städten nach Stellen gesucht wird | `CITIES` in `jobs.py` — der wirksamste Hebel dort |
+| Welche Arbeitgeber nach Stellen abgefragt werden | `COMPANIES` in `jobs.py` |
+| Welche Rollen als passend gelten | `ROLE_RE` in `jobs.py` |
 | Wie viele Ausgaben bleiben | `KEEP_DIGESTS` (30) |
 
 Alles Weitere steht neben dem Code, der es benutzt:
@@ -485,6 +574,7 @@ Alles Weitere steht neben dem Code, der es benutzt:
 | Wo die Grenzen zwischen den Reitern liegen | der Block `ZEITHORIZONT:` innerhalb von `SYSTEM_PROMPT` |
 | Wie weit jede Rubrik zurückblickt | `SECTION_TUNING` oben in `main.py` |
 | Wie viele Kandidaten das Modell erreichen | derselbe Block — `MAX_CANDIDATES_PER_SECTION`, `per_feed` |
+| Wonach Stellen sortiert werden | der Absatz `- "jobs"` im `SYSTEM_PROMPT` |
 | Wie weit die Entdoppelung zurückreicht | derselbe Block — `DEDUP_EDITIONS` (16) |
 | Seitenname, Rubriknamen, Tag-Beschriftungen | oben in `render.py` — `SITE_TITLE`, `SECTIONS`, `TAG_LABELS` |
 | Namen und Reihenfolge der Reiter | `HORIZONS` in `render.py` |

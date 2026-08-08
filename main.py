@@ -41,6 +41,7 @@ import feedparser
 from openai import APIStatusError, OpenAI
 
 import configuration as config
+import jobs
 import render
 
 
@@ -90,6 +91,11 @@ SECTION_LABELS = dict(render.SECTIONS)
 # was das Modell nicht oder falsch einordnet.
 HORIZON_KEYS = tuple(key for key, _label in render.HORIZONS)
 
+# Rubriken, die nicht aus RSS kommen, sondern aus einer API. Bisher genau eine:
+# "jobs" holt Stellenausschreibungen über jobs.py. Sie hat deshalb keinen
+# Eintrag in config.FEEDS, und preflight() darf das nicht als Fehler melden.
+API_SECTIONS = {"jobs"}
+
 # Rückblick und Feedlimit je Rubrik. Anders als bei einem Nachrichtenticker ist
 # die Menge hier sehr ungleich verteilt: Lokalpresse liefert täglich, ein neues
 # Bauvorhaben oder eine Konzertankündigung aber nur alle paar Tage. Ein
@@ -119,6 +125,15 @@ SECTION_TUNING = {
     # Modell etwas zu wählen. Das per_feed-Limit bleibt klein, weil sonst die
     # China-Konjunkturberichterstattung die Rubrik im Alleingang füllt.
     "peking": {"hours": 336, "per_feed": 4},
+    # Stellen kommen nicht aus RSS, sondern aus der SmartRecruiters-API
+    # (jobs.py). "per_feed" ist dort ohne Bedeutung, das Fenster dagegen sehr
+    # wohl: In Peking schreiben die erfassten Arbeitgeber nur vereinzelt aus,
+    # ein Monat Rückblick ist deshalb das Minimum, damit überhaupt etwas
+    # zusammenkommt. DEDUP_EDITIONS deckt das nicht ab — eine Stelle kann
+    # dadurch nach 16 Ausgaben ein zweites Mal erscheinen. Das ist hier
+    # gewollt: eine noch offene Stelle noch einmal zu sehen schadet nicht,
+    # eine übersehene schon.
+    "jobs": {"hours": 720, "per_feed": 0},
 }
 DEFAULT_TUNING = {"hours": 48, "per_feed": 6}
 
@@ -321,7 +336,7 @@ für jemanden, der in Frankfurt am Main wohnt. Der Leser ist Privatperson, kein 
 Immobilienprofi, kein Sportreporter und kein Journalist. Er ist in China geboren, \
 spricht Deutsch und Chinesisch, hat IT-Kenntnisse und erwägt, später einmal in \
 Peking zu arbeiten — das ist für die letzte Rubrik wichtig und für die übrigen ohne \
-Belang. Du bekommst rohe Kandidatenbeiträge, nach sechs Rubriken gruppiert. Deine Aufgabe ist REDAKTIONELL: \
+Belang. Du bekommst rohe Kandidatenbeiträge, nach sieben Rubriken gruppiert. Deine Aufgabe ist REDAKTIONELL: \
 die interessantesten auswählen, gewichten, entscheiden, was eine Zusammenfassung \
 verdient und was nur eine Erwähnung, und erklären, was das für diesen Leser \
 bedeutet. Du lieferst strukturiertes JSON — das Format steht unten; die Darstellung \
@@ -472,8 +487,34 @@ abbauen; Börsen- und Konjunkturberichte; Militär und Taiwan; chinesische \
 Innenpolitik ohne Bezug zum Arbeiten dort; Meldungen über den deutschen \
 Arbeitsmarkt; Visums- und Arbeitsmarktnachrichten anderer Länder. Die Suchfeeds \
 liefern von alldem reichlich — es ist trotzdem nicht das Thema.
-  Diese Rubrik enthält KEINE Stellenanzeigen. Erfinde niemals eine und behandle \
-keinen Beitrag so, als sei er eine.
+  Diese Rubrik enthält KEINE Stellenanzeigen — dafür gibt es "jobs". Erfinde \
+niemals eine und behandle keinen Beitrag so, als sei er eine.
+
+- "jobs" — echte, neu ausgeschriebene Stellen bei deutschen Arbeitgebern in China. \
+Anders als überall sonst sind die Kandidaten hier KEINE Presseartikel, sondern \
+Ausschreibungen aus dem Bewerbermanagementsystem der Arbeitgeber. Titel, Ort und \
+Erfahrungsstufe stehen so darin, wie der Arbeitgeber sie veröffentlicht hat.
+  Maßstab ist NICHT "interessanteste Stelle", sondern "beste Aussicht für DIESEN \
+Bewerber". Er ist in China geboren, spricht Deutsch und Chinesisch fließend und hat \
+IT-Kenntnisse. Sortiere danach:
+  1. Stellen, die ausdrücklich Deutschkenntnisse verlangen oder erwünschen — das ist \
+sein größter Vorteil und trennt ihn vom lokalen Bewerberfeld. Solche Ausschreibungen \
+kommen zuerst, auch wenn die Aufgabe weniger spannend klingt.
+  2. IT-, Software-, Daten- und Systemrollen, für die seine Kenntnisse einschlägig \
+sind.
+  3. Einstiegs- und mittlere Erfahrungsstufen vor ausgeschriebenen Führungs- und \
+Senior-Positionen — bei denen ist die Aussicht ohne einschlägige Jahre gering.
+  Nenne in der Zusammenfassung STELLENBEZEICHNUNG, ARBEITGEBER, ORT und, falls \
+angegeben, Bereich und Erfahrungsstufe. In der Einordnung ("why") schreibe ehrlich, \
+warum die Aussicht gut oder eher mäßig ist — etwa "Die Ausschreibung nennt \
+Deutschkenntnisse ausdrücklich, das grenzt das Bewerberfeld stark ein" oder "Als \
+Senior-Position ohne einschlägige Jahre eher aussichtslos, aber sie zeigt, wonach \
+dort gesucht wird".
+  Setze bei jeder Stelle "horizon" auf "aktuell" — eine offene Ausschreibung ist \
+immer gegenwärtig, und für Bewerbungsfristen ist der Reiter der falsche Ort.
+  Erfinde NIEMALS eine Stelle, einen Arbeitgeber oder eine Anforderung. Wenn die \
+Kandidatenliste leer ist, gib leere Listen zurück — das ist der Normalfall, denn \
+deutsche Arbeitgeber schreiben in Peking nur vereinzelt aus.
 
 ZEITHORIZONT — jeder Beitrag bekommt zusätzlich ein Feld "horizon". Die Seite \
 zeigt drei Reiter, und dieses Feld entscheidet, unter welchem der Beitrag landet. \
@@ -512,14 +553,14 @@ Leser Tiefe bei dem, was zählt, und sieht trotzdem alles Übrige.
 
 - Stufe 1 "top" — was eine Zusammenfassung UND eine Einordnung verdient.
   Obergrenzen: HÖCHSTENS 4 für immobilien, 5 für events, 3 für sport, 3 für messen, \
-4 für stadt, 3 für peking.
+4 für stadt, 3 für peking, 3 für jobs.
 - Stufe 2 "also" — alles Weitere, das man wissen sollte, je als Überschrift plus EIN \
 kurzer Satz mit echtem Inhalt. Keine Kategoriebezeichnung: schreibe, was der Beitrag \
 meldet, damit man allein an dieser Zeile entscheiden kann, ob man ihn öffnet.
   Obergrenzen: HÖCHSTENS 5 für immobilien, 6 für events, 4 für sport, 4 für messen, \
-6 für stadt, 4 für peking.
+6 für stadt, 4 für peking, 4 für jobs.
 
-Die sechs Rubriken sind FEST und unabhängig. Gib immer alle sechs Schlüssel zurück. Die \
+Die sieben Rubriken sind FEST und unabhängig. Gib immer alle sieben Schlüssel zurück. Die \
 Kandidaten decken je nach Rubrik die letzten ein bis vierzehn Tage ab, eine Rubrik darf \
 also berechtigt leer bleiben — dann gib leere Listen zurück und mach mit der nächsten \
 weiter. Das gilt besonders für "sport": Damentennis und -volleyball in Deutschland \
@@ -539,7 +580,8 @@ Form:
   "sport":      {"top": [<item>, ...], "also": [<brief>, ...]},
   "messen":     {"top": [<item>, ...], "also": [<brief>, ...]},
   "stadt":      {"top": [<item>, ...], "also": [<brief>, ...]},
-  "peking":     {"top": [<item>, ...], "also": [<brief>, ...]}
+  "peking":     {"top": [<item>, ...], "also": [<brief>, ...]},
+  "jobs":       {"top": [<item>, ...], "also": [<brief>, ...]}
 }
 
 <item> = {
@@ -547,7 +589,7 @@ Form:
 höchstens ~80 Zeichen>",
   "url":     "<der Link des Kandidaten, exakt kopiert>",
   "tag":     "<eines von: neubau, baustart, verkauf, fertig, preise, konzert, kino, \
-comedy, buehne, tennis, volleyball, messe, fest, verkehr, jobs, visum, news>",
+comedy, buehne, tennis, volleyball, messe, fest, verkehr, jobs, visum, stelle, news>",
   "horizon": "<eines von: aktuell, wochen, monate — siehe ZEITHORIZONT oben>",
   "summary": "<1-2 Sätze: was passiert ist, mit konkreten Zahlen, Orten und Terminen, \
 soweit die Quelle sie nennt>",
@@ -587,7 +629,7 @@ Preise und Mieten, "konzert" für Konzerte, "kino" für Filme und Kinos, "comedy
 Comedy und Kabarett, "buehne" für Theater, Musical und Show, "tennis" für Tennis, \
 "volleyball" für Volleyball, "messe" für Messen, "fest" für Feste und Märkte, \
 "verkehr" für Verkehr und Baustellen, "jobs" für Arbeitsmarkt und Arbeitgeber in \
-China, "visum" für Visum, Aufenthalt und Arbeitserlaubnis, "news" für alles Übrige.
+China, "visum" für Visum, Aufenthalt und Arbeitserlaubnis, "stelle" für eine konkrete Stellenausschreibung, "news" für alles Übrige.
 - Setze "horizon" bei JEDEM Beitrag, auch bei den Kurzmeldungen. Die Obergrenzen \
 gelten je Rubrik, nicht je Reiter — verteile nicht künstlich auf die drei \
 Zeiträume und verschiebe keinen Beitrag in einen falschen Zeitraum, nur damit ein \
@@ -999,7 +1041,10 @@ def preflight() -> str | None:
             "  Lokal:      $env:OPENROUTER_API_KEY = 'sk-or-v1-...'\n"
             "  Key holen unter https://openrouter.ai/keys"
         )
-    missing = [key for key in SECTION_KEYS if not config.FEEDS.get(key)]
+    # "jobs" ist die Ausnahme: die Rubrik kommt aus der SmartRecruiters-API
+    # (jobs.py) und hat deshalb bewusst keinen Eintrag in FEEDS.
+    missing = [key for key in SECTION_KEYS
+               if key not in API_SECTIONS and not config.FEEDS.get(key)]
     if missing:
         return (
             f"Für diese Rubrik(en) fehlen Feeds in configuration.py: "
@@ -1044,8 +1089,15 @@ def main() -> int:
     candidates = {
         key: fetch_items(config.FEEDS[key], max_age_hours=windows[key],
                          max_per_feed=tuning(key)["per_feed"])
-        for key in SECTION_KEYS
+        for key in SECTION_KEYS if key not in API_SECTIONS
     }
+    # Die einzige Rubrik ohne RSS. Wie ein toter Feed darf auch eine
+    # unerreichbare API den Tageslauf nicht abbrechen — jobs.fetch() fängt
+    # selbst ab und gibt im Zweifel eine leere Liste zurück.
+    if "jobs" in SECTION_KEYS:
+        candidates["jobs"] = jobs.fetch(
+            max_age_hours=windows["jobs"], max_items=MAX_CANDIDATES_PER_SECTION
+        )
     print("Gesammelt: " + ", ".join(
         f"{len(candidates[key])} {SECTION_LABELS[key]}" for key in SECTION_KEYS))
 
