@@ -25,7 +25,7 @@ Rubriken, gefüllt mit den Beiträgen dieses Zeitraums:
 6. **Peking & China** — China als möglicher künftiger Arbeitsort: deutsche
    Arbeitgeber vor Ort, Arbeitserlaubnis und Visum, Arbeitsmarkt für Fachkräfte.
    Nachrichten, keine Ausschreibungen.
-7. **Neue Stellen in China** — echte offene Ausschreibungen bei Arbeitgebern
+7. **Neue Stellen in Peking** — echte offene Ausschreibungen bei Arbeitgebern
    jeder Herkunft, sortiert nach Bewerbungsaussicht statt nach Attraktivität,
    mit Sprach- und Visumsvermerk je Stelle.
 
@@ -42,7 +42,7 @@ mehr „Frankfurt Kompakt" heißt:
 | Konzerte, Kino & Comedy | ganz Deutschland | für einen Weltstar fährt man nach Köln oder Berlin |
 | Sport | nur Deutschland | Karten kauft man für das, was erreichbar ist |
 | Peking & China | China | ein möglicher künftiger Arbeitsort, kein Alltag |
-| Neue Stellen | ganz China, alle Arbeitgeber | dort will man langfristig arbeiten |
+| Neue Stellen | Peking, alle Arbeitgeber | dort will man langfristig arbeiten |
 
 Bei den deutschlandweiten Rubriken kommt eine Qualitätsschwelle dazu: Konzerte
 nur bei **großen internationalen Namen**, nicht bei regionalen Bands oder
@@ -109,7 +109,7 @@ trotzdem alles Übrige. Zielwert sind **drei bis vier Minuten Lesezeit**.
 | Messen & Feste | bis zu 3 | bis zu 4 |
 | Frankfurt & Infrastruktur | bis zu 4 | bis zu 6 |
 | Peking & China | bis zu 3 | bis zu 4 |
-| Neue Stellen in China | bis zu 6 | bis zu 8 |
+| Neue Stellen in Peking | bis zu 6 | bis zu 8 |
 
 Das sind Deckel, keine Zielvorgaben — der Prompt verbietet das Auffüllen, ein
 Beitrag muss sich seinen Platz also verdienen, und ein ruhiger Tag ergibt eine
@@ -200,19 +200,30 @@ international ausgeschrieben, der Rest richtete sich rein chinesisch an den
 lokalen Arbeitsmarkt, 16 davon als Hochschulrekrutierung für Absolventen.
 
 Internationale Technologieunternehmen über Greenhouse passen deutlich besser,
-weil dort Englisch die Arbeitssprache ist. Ein typischer Lauf heute:
+weil dort Englisch die Arbeitssprache ist.
 
-| Arbeitgeber | Stellen | davon international |
+### Peking ist ein schmales Feld — aber ein sauberes
+
+Gefiltert wird auf Peking (`CITIES` in `jobs.py`). Was dann übrig bleibt:
+
+| | Stellen | davon international |
 |---|---|---|
-| Riot Games | 6 | 6 |
-| Bosch | 6 | 0 |
-| Grab | 4 | 4 |
-| Airbnb | 2 | 2 |
-| Epic Games, Continental | je 1 | 1 |
-| **gesamt** | **20** | **13** |
+| **nur Peking** | **4** | **4** — Trefferquote 100 % |
+| ganz China | 20 | 13 |
 
-Darunter *Senior Site Reliability Engineer* (Grab, Peking) und *Cloud
-Infrastructure and Security Engineer* (Riot Games, Shanghai).
+Vier klingt wenig, aber jede einzelne ist ohne fließendes Mandarin erreichbar,
+darunter *Senior Site Reliability Engineer* (Grab). Über ganz China wären es
+zwar 20, aber sieben davon rein chinesische Ausschreibungen für den lokalen
+Arbeitsmarkt.
+
+Die Enge ist ausgemessen, nicht vermutet: **230 Arbeitgeberkennungen** wurden
+geprüft — 131 bei SmartRecruiters, 99 weitere Greenhouse-Boards quer durch
+Gaming, SaaS, Fintech, Datenbanken und deutsche Industrie. Kein einziges
+weiteres Board führt Peking-Stellen. Der Grund: Deutsche Industrie sitzt in
+China im Jangtse-Delta, und die internationalen Technologiefirmen haben ihre
+China-Standorte fast alle in Shanghai.
+
+Wer den Radius öffnen will, leert `CITIES` — das ist der wirksamste Hebel.
 
 ### Drei Entwurfsentscheidungen, die den Unterschied machten
 
@@ -253,7 +264,7 @@ werden übersetzt und das Original dahintergesetzt.
 | | |
 |---|---|
 | Mehr Arbeitgeber | `SMARTRECRUITERS` und `GREENHOUSE` in `jobs.py` |
-| Auf Städte eingrenzen | `CITIES` — leer heißt ganz China |
+| Radius | `CITIES` — steht auf Peking, leer heißt ganz China |
 | Anderer fachlicher Zuschnitt | `ROLE_RE` |
 | Absolventenstellen doch zeigen | `SKIP_CAMPUS = False` |
 
@@ -287,7 +298,7 @@ Rubriküberschrift, 4px-Kante der Karte, Linkfarbe:
 | Konzerte, Kino & Comedy | `#8a5273` | `#c79ab4` |
 | Sport | `#3f6b5e` | `#8fbdae` |
 | Peking & China | `#4a5f85` | `#9db3d4` |
-| Neue Stellen in China | `#6b5340` | `#c4a893` |
+| Neue Stellen in Peking | `#6b5340` | `#c4a893` |
 | Messen & Feste | `#8a6a3d` | `#c2a577` |
 | Frankfurt & Infrastruktur | `#4f4f4f` | `#c8c8c8` |
 
@@ -463,7 +474,7 @@ alle Rubriken hielte die halbe Seite dauerhaft leer.
 | Konzerte, Kino & Comedy | 120 h (5 Tage) | Ankündigungen kommen schubweise, oft am Wochenanfang |
 | Sport | 336 h (14 Tage) | das schmalste Feld überhaupt — eine Turnierankündigung darf nicht durchrutschen |
 | Peking & China | 336 h (14 Tage) | bewegt sich über Wochen; in 7 Tagen blieben nach Abzug der Konjunkturmeldungen kaum drei Kandidaten |
-| Neue Stellen in China | 8760 h (1 Jahr) | eine offene Ausschreibung veraltet nicht wie eine Nachricht |
+| Neue Stellen in Peking | 8760 h (1 Jahr) | eine offene Ausschreibung veraltet nicht wie eine Nachricht |
 | Messen & Feste | 168 h (7 Tage) | stark saisonal — monatelang nichts, dann viel |
 | Frankfurt & Infrastruktur | 24 h | vier Redaktionen liefern täglich mehr als genug |
 

@@ -95,6 +95,8 @@ GREENHOUSE = [
     "datadog",
     "gitlab",
     "roblox",
+    "scopely",
+    "clickhouse",
 ]
 
 # ---------------------------------------------------------------------------
@@ -111,13 +113,20 @@ CHINA_RE = re.compile(
     re.I,
 )
 
-# Optionale Eingrenzung auf einzelne Städte, kleingeschrieben. LEER heißt: ganz
-# China. So ist es eingestellt, und zwar aus Messung: Von den fachlich
-# passenden Ausschreibungen der letzten 30 Tage lag bei den deutschen
-# Arbeitgebern KEINE in Peking — sie liegen in Suzhou, Shanghai und Wuxi, weil
-# die deutsche Industrie in China im Jangtse-Delta sitzt. Eine Eingrenzung auf
-# die Hauptstadt räumt die Rubrik leer.
-CITIES = []
+# Eingrenzung auf einzelne Städte, kleingeschrieben, Teiltreffer. Eine leere
+# Liste hieße: ganz China.
+#
+# Peking ist ein schmales Feld, das ist gemessen: Über beide Quellen und 230
+# geprüfte Arbeitgeberkennungen bleiben derzeit VIER offene Stellen — drei bei
+# Grab, eine bei Airbnb. Dafür sind alle vier international ausgeschrieben und
+# damit ohne fließendes Mandarin erreichbar; die Trefferquote ist also 100 %,
+# während sie über ganz China bei 13 von 20 lag.
+#
+# Der Grund: Deutsche Industrie sitzt in China im Jangtse-Delta (Bosch verteilt
+# sich auf Shanghai, Suzhou und Wuxi), und die internationalen Technologiefirmen
+# mit Greenhouse-Board haben ihre China-Standorte fast alle in Shanghai. Wer den
+# Radius öffnen will, leert diese Liste — das ist der wirksamste Hebel hier.
+CITIES = ["beijing", "peking"]
 
 # Fachlicher Zuschnitt: DevOps zuerst, Backend daneben. Bewusst weit gefasst und
 # nur eine Vorauswahl — über die Eignung entscheidet das Modell im

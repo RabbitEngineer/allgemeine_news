@@ -497,7 +497,7 @@ liefern von alldem reichlich — es ist trotzdem nicht das Thema.
   Diese Rubrik enthält KEINE Stellenanzeigen — dafür gibt es "jobs". Erfinde \
 niemals eine und behandle keinen Beitrag so, als sei er eine.
 
-- "jobs" — echte, offene Stellenausschreibungen in China, bei Arbeitgebern jeder \
+- "jobs" — echte, offene Stellenausschreibungen in PEKING, bei Arbeitgebern jeder \
 Herkunft. Anders als überall sonst sind die Kandidaten hier KEINE Presseartikel, \
 sondern Ausschreibungen aus den Bewerbermanagementsystemen der Arbeitgeber selbst. \
 Titel, Ort und Erfahrungsstufe stehen so darin, wie der Arbeitgeber sie \

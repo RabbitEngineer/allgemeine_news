@@ -38,7 +38,7 @@ SECTIONS = [
     ("messen", "Messen & Feste in Frankfurt"),
     ("stadt", "Frankfurt & Infrastruktur"),
     ("peking", "Peking & China"),
-    ("jobs", "Neue Stellen in China"),
+    ("jobs", "Neue Stellen in Peking"),
 ]
 
 # Zeithorizonte als Reiter über den Rubriken. Jeder Beitrag bekommt vom Modell
