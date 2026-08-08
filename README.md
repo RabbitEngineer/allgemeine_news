@@ -123,22 +123,35 @@ Reiter voller wirkt.
 
 ## Farbschema
 
-Die Farben sind von [frankfurtflyer.de](https://frankfurtflyer.de) übernommen
-(dort das WordPress-Theme *MH Magazine Lite*): Signalrot `#e64946` als
-Markenfarbe, Anthrazit `#2a2a2a`, Seitenhintergrund `#f7f7f7`, Linien `#ebebeb`.
-Übernommen wurden **nur die Farbwerte** — Layout, Typografie und Aufbau der Seite
+Der Aufbau ist von [frankfurtflyer.de](https://frankfurtflyer.de) übernommen
+(dort das WordPress-Theme *MH Magazine Lite*): ein rotes Leitmotiv, Anthrazit
+`#2a2a2a` als Schriftfarbe, Seitenhintergrund `#f7f7f7`, Linien `#ebebeb`.
+Übernommen wurde **nur die Palette** — Layout, Typografie und Aufbau der Seite
 sind unverändert die dieses Projekts.
 
-Das Rot führt als Markenfarbe (Links, Fokusrahmen, Balken am Wichtigsten-Kasten)
-und trägt zugleich die erste Rubrik. Die drei weiteren Rubrikfarben sind daraus
-abgeleitet und bleiben im warmen Register der Vorlage:
+Die Buntwerte sind gegenüber der Vorlage deutlich entsättigt. Deren Signalrot
+`#e64946` war gleichzeitig Markenfarbe, erste Rubrikfarbe und Hintergrund des
+aktiven Reiters und wurde in dieser Häufung zu laut. Farbe trägt jetzt nur noch
+die Rubrikzuordnung, und zwar in schmalen Bauteilen — Trennlinie unter der
+Rubriküberschrift, 4px-Kante der Karte, Linkfarbe:
 
 | Rubrik | hell | dunkel |
 |---|---|---|
-| Neubau & Immobilien | `#e64946` | `#f4726f` |
-| Konzerte, Kino & Comedy | `#b23a86` | `#e08ac4` |
-| Messen & Feste | `#a86a00` | `#e0a54a` |
-| Frankfurt allgemein | `#2a2a2a` | `#c8c8c8` |
+| Neubau & Immobilien | `#9e4a48` | `#d1817f` |
+| Konzerte, Kino & Comedy | `#8a5273` | `#c79ab4` |
+| Messen & Feste | `#8a6a3d` | `#c2a577` |
+| Frankfurt allgemein | `#4f4f4f` | `#c8c8c8` |
+
+**Die Tag-Plaketten sind neutral grau.** Vorher hatte jedes der 13 Tags eine
+eigene Farbe — grün, bernstein, türkis, violett, blau —, was zusammen mit den
+vier Rubrikfarben einen kompletten Farbkreis auf einer Seite ergab. Die Rubrik
+steht schon an der Kartenkante und in der Überschrift; das Tag muss sie nicht
+ein drittes Mal codieren, sein Text sagt ohnehin, worum es geht. Wer eine
+einzelne Rubrik wieder abheben will, überschreibt ihr `--tag-<key>-bg`/`-fg`-Paar
+in `render.py` mit festen Werten statt mit `var(--tag-bg)`.
+
+Alle Rubrikfarben erreichen auf ihrem Grund mindestens 4.5:1 — sie tragen Text
+(Rubriküberschrift, „Weiterlesen bei"-Zeile), nicht nur Ränder.
 
 Alles davon steht als CSS-Custom-Property im `CSS`-Block in `render.py`, jeweils
 einmal für hell und einmal für dunkel.

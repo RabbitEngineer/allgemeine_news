@@ -145,67 +145,80 @@ def pretty_date(iso: str) -> str:
 # Styles
 # ---------------------------------------------------------------------------
 
-# Die Farben stammen von frankfurtflyer.de (WordPress-Theme MH Magazine Lite):
-# Signalrot #e64946 als Marke, Anthrazit #2a2a2a, Seitengrund #f7f7f7, Linien
-# #ebebeb. Das Rot führt als Markenfarbe und trägt zugleich die erste Rubrik;
-# die drei weiteren Rubrikfarben sind daraus abgeleitet und bleiben im warmen
-# Register der Vorlage. Das Layout ist unverändert — nur die Werte sind neu.
+# Der Aufbau der Palette stammt von frankfurtflyer.de (WordPress-Theme
+# MH Magazine Lite): ein rotes Leitmotiv, Anthrazit als Schriftfarbe,
+# Seitengrund #f7f7f7, Linien #ebebeb. Das Layout ist unverändert — nur die
+# Werte sind neu.
+#
+# Die Buntwerte sind gegenüber der Vorlage deutlich entsättigt: das Signalrot
+# #e64946 war als Markenfarbe, als Rubrikfarbe UND als Reiterhintergrund im
+# Einsatz und wurde dadurch zu laut. Farbe trägt hier nur noch die
+# Rubrikzuordnung, und zwar in Bauteilen, die schmal sind — Trennlinie unter
+# der Rubriküberschrift, 4px-Kante der Karte, Linkfarbe. Für großflächige
+# Bauteile bleibt es bei Grau.
+#
+# Alle Rubrikfarben erreichen auf ihrem jeweiligen Grund mindestens 4.5:1, sie
+# tragen nämlich Text (die Rubriküberschrift und die "Weiterlesen bei"-Zeile),
+# nicht nur Ränder.
 CSS = """
 *,*::before,*::after{box-sizing:border-box}
 :root{
   --bg:#f7f7f7; --surface:#fff; --raised:#ebebeb;
   --ink:#2a2a2a; --muted:#555; --faint:#7c7c7c;
   --line:#ebebeb; --line-strong:#d3d3d3;
-  --brand:#e64946;
-  --immobilien:#e64946; --events:#b23a86; --messen:#a86a00; --stadt:#2a2a2a;
+  --brand:#a8504d;
+  --immobilien:#9e4a48; --events:#8a5273; --messen:#8a6a3d; --stadt:#4f4f4f;
   /* Reiterleiste nach dem Vorbild der Hauptnavigation von frankfurtflyer.de:
      anthrazitfarbener Balken, roter Unterstrich, aktiver Punkt rot hinterlegt.
      Das Aktiv-Rot ist eine Spur tiefer als die Markenfarbe, damit weiße
      Versalien darauf lesbar bleiben; der Unterschied ist mit bloßem Auge
      nicht auszumachen. */
   --tabbar:#2a2a2a; --tabink:#d8d8d8;
-  --tab-active-bg:#d83f3c; --tab-active-ink:#fff;
+  --tab-active-bg:#8f4442; --tab-active-ink:#fff;
   --shadow:0 1px 2px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.06);
-  --tag-neubau-bg:#dff4e7;   --tag-neubau-fg:#0c5c33;
-  --tag-baustart-bg:#fdf0d9; --tag-baustart-fg:#7a4700;
-  --tag-verkauf-bg:#dff4e7;  --tag-verkauf-fg:#0c5c33;
-  --tag-fertig-bg:#d8f2f0;   --tag-fertig-fg:#08544f;
-  --tag-preise-bg:#fce4e3;   --tag-preise-fg:#9c2b28;
-  --tag-konzert-bg:#f7e2ef;  --tag-konzert-fg:#8d2c68;
-  --tag-kino-bg:#ece4fd;     --tag-kino-fg:#51349a;
-  --tag-comedy-bg:#fdf0d9;   --tag-comedy-fg:#7a4700;
-  --tag-buehne-bg:#f7e2ef;   --tag-buehne-fg:#8d2c68;
-  --tag-messe-bg:#dfebfb;    --tag-messe-fg:#0d3d71;
-  --tag-fest-bg:#fde8dc;     --tag-fest-fg:#8a3d10;
-  --tag-verkehr-bg:#fce2e2;  --tag-verkehr-fg:#8f1c1c;
-  --tag-news-bg:#ebebeb;     --tag-news-fg:#4c4c4c;
+  --tag-bg:#e8e8e8; --tag-fg:#4c4c4c;
 }
 @media (prefers-color-scheme:dark){
   :root{
     --bg:#161616; --surface:#1f1f1f; --raised:#292929;
     --ink:#ececec; --muted:#b3b3b3; --faint:#8c8c8c;
     --line:#303030; --line-strong:#454545;
-    --brand:#f4726f;
-    --immobilien:#f4726f; --events:#e08ac4; --messen:#e0a54a; --stadt:#c8c8c8;
+    --brand:#d1817f;
+    --immobilien:#d1817f; --events:#c79ab4; --messen:#c2a577; --stadt:#c8c8c8;
     /* Im Dunkelmodus trägt der aktive Reiter dunkle Schrift auf hellem Rot —
-       weiß auf #f4726f wäre zu kontrastarm. */
+       weiß auf #d1817f wäre zu kontrastarm. */
     --tabbar:#262626; --tabink:#c0c0c0;
-    --tab-active-bg:#f4726f; --tab-active-ink:#1a1a1a;
+    --tab-active-bg:#d1817f; --tab-active-ink:#1a1a1a;
     --shadow:0 1px 2px rgba(0,0,0,.5),0 8px 24px rgba(0,0,0,.35);
-    --tag-neubau-bg:#12331f;   --tag-neubau-fg:#79d9a2;
-    --tag-baustart-bg:#3d2f14; --tag-baustart-fg:#f2c572;
-    --tag-verkauf-bg:#12331f;  --tag-verkauf-fg:#79d9a2;
-    --tag-fertig-bg:#0f2f2c;   --tag-fertig-fg:#68d3c8;
-    --tag-preise-bg:#3d1c1b;   --tag-preise-fg:#f4918e;
-    --tag-konzert-bg:#3a1c2e;  --tag-konzert-fg:#eda1cf;
-    --tag-kino-bg:#2a2145;     --tag-kino-fg:#c0a6f7;
-    --tag-comedy-bg:#3d2f14;   --tag-comedy-fg:#f2c572;
-    --tag-buehne-bg:#3a1c2e;   --tag-buehne-fg:#eda1cf;
-    --tag-messe-bg:#132844;    --tag-messe-fg:#8cbdf2;
-    --tag-fest-bg:#3b2415;     --tag-fest-fg:#f0ac7c;
-    --tag-verkehr-bg:#3d1b1b;  --tag-verkehr-fg:#f09a9a;
-    --tag-news-bg:#2c2c2c;     --tag-news-fg:#b8b8b8;
+    --tag-bg:#2c2c2c; --tag-fg:#b8b8b8;
   }
+}
+
+/* Alle Tags tragen dieselbe neutrale Plakette. Vorher hatte jedes der 13 Tags
+   eine eigene Farbe — grün, bernstein, türkis, violett, blau —, was zusammen
+   mit den vier Rubrikfarben und dem Rot der Reiterleiste einen kompletten
+   Farbkreis auf einer Seite ergab. Die Rubrik steht schon am Kartenrand und
+   in der Rubriküberschrift; das Tag muss sie nicht ein drittes Mal codieren,
+   sein Text sagt ohnehin, worum es geht.
+
+   Die Paare bleiben einzeln bestehen, damit ein neues Tag weiterhin nur einen
+   Eintrag in TAG_LABELS und eine Zeile hier braucht (und damit sich eine
+   einzelne Rubrik wieder abheben ließe, falls das je gewollt ist). Weil beide
+   Themes --tag-bg/--tag-fg auf :root setzen, folgt der Alias von selbst. */
+:root{
+  --tag-neubau-bg:var(--tag-bg);   --tag-neubau-fg:var(--tag-fg);
+  --tag-baustart-bg:var(--tag-bg); --tag-baustart-fg:var(--tag-fg);
+  --tag-verkauf-bg:var(--tag-bg);  --tag-verkauf-fg:var(--tag-fg);
+  --tag-fertig-bg:var(--tag-bg);   --tag-fertig-fg:var(--tag-fg);
+  --tag-preise-bg:var(--tag-bg);   --tag-preise-fg:var(--tag-fg);
+  --tag-konzert-bg:var(--tag-bg);  --tag-konzert-fg:var(--tag-fg);
+  --tag-kino-bg:var(--tag-bg);     --tag-kino-fg:var(--tag-fg);
+  --tag-comedy-bg:var(--tag-bg);   --tag-comedy-fg:var(--tag-fg);
+  --tag-buehne-bg:var(--tag-bg);   --tag-buehne-fg:var(--tag-fg);
+  --tag-messe-bg:var(--tag-bg);    --tag-messe-fg:var(--tag-fg);
+  --tag-fest-bg:var(--tag-bg);     --tag-fest-fg:var(--tag-fg);
+  --tag-verkehr-bg:var(--tag-bg);  --tag-verkehr-fg:var(--tag-fg);
+  --tag-news-bg:var(--tag-bg);     --tag-news-fg:var(--tag-fg);
 }
 html{-webkit-text-size-adjust:100%}
 body{
@@ -242,7 +255,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand);outline-offs
 .tablist label{flex:1 1 auto;text-align:center;padding:12px 14px;cursor:pointer;
   font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
   line-height:1.3;color:var(--tabink);transition:background .12s}
-.tablist label:hover{background:rgba(230,73,70,.32);color:#fff}
+.tablist label:hover{background:rgba(168,80,77,.30);color:#fff}
 .tablist .n{display:inline-block;margin-left:.5em;opacity:.65;
   font-variant-numeric:tabular-nums}
 .tabpanel{display:none;padding-top:26px}
