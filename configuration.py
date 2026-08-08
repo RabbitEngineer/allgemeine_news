@@ -54,6 +54,11 @@ OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
 _GN = "https://news.google.com/rss/search?q={}&hl=de&gl=DE&ceid=DE:de"
 
+# Dieselbe Suche im englischen Index. Nur für die Peking-Rubrik gebraucht: zu
+# Arbeitserlaubnis und Anwerbung ausländischer Fachkräfte in China berichtet
+# die englischsprachige Presse deutlich ausführlicher.
+_GN_EN = "https://news.google.com/rss/search?q={}&hl=en-US&gl=US&ceid=US:en"
+
 # Neubau- und Immobilienprojekte — ausschließlich Frankfurt am Main. Bewusst
 # auf Vorhaben für Privatkunden ausgerichtet; der Prompt in main.py wirft
 # Büro-, Logistik- und Investorenmeldungen wieder raus. SkylineAtlas verfolgt
@@ -168,6 +173,38 @@ STADT_FEEDS = [
     ("Gastronomie", _GN.format("Frankfurt+am+Main+Restaurant+Eroeffnung")),
 ]
 
+# Peking und China als möglicher Arbeitsort. Diese Rubrik liefert bewusst
+# NACHRICHTEN, keine Stellenanzeigen — für Stellenanzeigen gibt es keine Feeds
+# (LinkedIn 404, Indeed 403, StackOverflow Jobs eingestellt, 51job und
+# eChinacities ohne Feed, AHK ohne nutzbaren Feed). Wer echte Stellen will,
+# braucht die Karriereseiten-Abfrage, nicht diese Liste.
+#
+# Was hier steht, beantwortet die Frage "lohnt sich der Schritt und wie steht
+# es um die Voraussetzungen": ob deutsche Arbeitgeber ihre China-Präsenz
+# ausbauen oder abbauen, wie der Arbeitsmarkt für Rückkehrer und Fachkräfte
+# aussieht, und was sich bei Visum und Arbeitserlaubnis ändert.
+#
+# Die englischsprachigen Suchen sind Absicht: zu Arbeitserlaubnis und
+# Anwerbung ausländischer Fachkräfte in China berichtet die englische Presse
+# ausführlicher als die deutsche. Der Prompt schreibt trotzdem auf Deutsch.
+PEKING_FEEDS = [
+    ("Deutsche Firmen in China",
+     _GN.format("deutsche+Unternehmen+China+Standort+OR+investiert")),
+    ("Deutsche Wirtschaft China",
+     _GN.format("AHK+China+Handelskammer+deutsche+Wirtschaft")),
+    ("Arbeitsmarkt China", _GN.format("China+Arbeitsmarkt+Fachkraefte+OR+Gehalt")),
+    ("Rueckkehrer", _GN.format("China+Rueckkehrer+Absolventen+Arbeitsmarkt")),
+    ("Tech-Branche China",
+     _GN.format("China+Tech-Unternehmen+stellt+ein+OR+Entlassungen")),
+    ("Visum & Aufenthalt",
+     _GN.format("China+Arbeitsvisum+OR+K-Visum+Fachkraefte")),
+    ("Leben in Peking", _GN.format("Peking+leben+arbeiten+Auslaender+Alltag")),
+    ("Hiring Beijing",
+     _GN_EN.format("Beijing+hiring+foreign+talent+work+permit")),
+    ("German firms in China",
+     _GN_EN.format("German+companies+China+expansion+jobs")),
+]
+
 # Zuordnung Rubrik -> Feeds. Die Schlüssel müssen exakt denen in SECTIONS
 # (render.py) entsprechen; main.py baut die Rubriken aus diesem Verzeichnis.
 FEEDS = {
@@ -176,6 +213,7 @@ FEEDS = {
     "sport": SPORT_FEEDS,
     "messen": MESSE_FEEDS,
     "stadt": STADT_FEEDS,
+    "peking": PEKING_FEEDS,
 }
 
 # ---------------------------------------------------------------------------

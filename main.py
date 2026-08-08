@@ -111,6 +111,14 @@ SECTION_TUNING = {
     "sport": {"hours": 336, "per_feed": 6},
     "messen": {"hours": 168, "per_feed": 6},
     "stadt": {"hours": 24, "per_feed": 6},
+    # Peking: keine tagesaktuelle Rubrik. Was hier zählt — verlagert ein
+    # Arbeitgeber, ändert sich eine Visumsregel, dreht der Arbeitsmarkt —
+    # entwickelt sich über Wochen, nicht über Stunden. Mit einem Wochenfenster
+    # blieben nach Abzug der Konjunkturmeldungen, die der Prompt ohnehin
+    # verwirft, kaum drei brauchbare Kandidaten übrig; zwei Wochen geben dem
+    # Modell etwas zu wählen. Das per_feed-Limit bleibt klein, weil sonst die
+    # China-Konjunkturberichterstattung die Rubrik im Alleingang füllt.
+    "peking": {"hours": 336, "per_feed": 4},
 }
 DEFAULT_TUNING = {"hours": 48, "per_feed": 6}
 
@@ -118,11 +126,11 @@ DEFAULT_TUNING = {"hours": 48, "per_feed": 6}
 # ab, was stimmt, solange keine eigene Domain im Spiel ist.
 SITE_URL = env_or("SITE_URL", "")
 
-# Obergrenze für eine Ausgabe. Eine randvolle Ausgabe (19 Hauptbeiträge, 25
-# Kurzmeldungen über fünf Rubriken) misst gerechnet rund 5.000 Token, deutscher
+# Obergrenze für eine Ausgabe. Eine randvolle Ausgabe (22 Hauptbeiträge, 29
+# Kurzmeldungen über sechs Rubriken) misst gerechnet rund 5.800 Token, deutscher
 # Text braucht dabei spürbar mehr Token je Zeichen als englischer. Der Wert
 # lässt also Luft und begrenzt nur einen Ausreißer.
-MAX_OUTPUT_TOKENS = 7000
+MAX_OUTPUT_TOKENS = 8000
 
 # Alles im Zeitfenster geht bis zu dieser Grenze ans LLM zur Auswahl. Ein
 # höherer Wert erhöht die Eingabe-Token und damit die Kosten etwa proportional.
@@ -310,8 +318,10 @@ def format_items(items) -> str:
 # eines, das andere prüfen.
 SYSTEM_PROMPT = """Du bist Redakteur eines kurzen täglichen Nachrichtenüberblicks \
 für jemanden, der in Frankfurt am Main wohnt. Der Leser ist Privatperson, kein \
-Immobilienprofi, kein Sportreporter und kein Journalist. Du bekommst rohe \
-Kandidatenbeiträge, nach fünf Rubriken gruppiert. Deine Aufgabe ist REDAKTIONELL: \
+Immobilienprofi, kein Sportreporter und kein Journalist. Er ist in China geboren, \
+spricht Deutsch und Chinesisch, hat IT-Kenntnisse und erwägt, später einmal in \
+Peking zu arbeiten — das ist für die letzte Rubrik wichtig und für die übrigen ohne \
+Belang. Du bekommst rohe Kandidatenbeiträge, nach sechs Rubriken gruppiert. Deine Aufgabe ist REDAKTIONELL: \
 die interessantesten auswählen, gewichten, entscheiden, was eine Zusammenfassung \
 verdient und was nur eine Erwähnung, und erklären, was das für diesen Leser \
 bedeutet. Du lieferst strukturiertes JSON — das Format steht unten; die Darstellung \
@@ -344,6 +354,12 @@ Karten kaufen kann. Ein Turnier in Melbourne, Paris, Rom oder Indian Wells gehö
 NICHT hinein, auch wenn es sportlich bedeutender ist — man kann dort nicht hin. \
 Einzige Ausnahme: die Auslosung oder Terminbekanntgabe eines Turniers, das später in \
 Deutschland stattfindet.
+
+- "peking" — CHINA, mit Schwerpunkt Peking. Diese eine Rubrik handelt nicht vom \
+Leben in Deutschland, sondern von China als möglichem künftigen Arbeitsort. Ein \
+Beitrag über den deutschen Arbeitsmarkt, über Entlassungen bei US-Techkonzernen \
+oder über die Visumspolitik Japans gehört NICHT hinein, auch wenn die Suchfeeds so \
+etwas liefern.
 
 Rubriken und was jeweils zählt:
 
@@ -431,6 +447,34 @@ Parks, Bäder, bemerkenswerte Neueröffnungen in der Gastronomie.
   Weglassen: Einzelmeldungen aus dem Polizeibericht, Unfälle und Kriminalfälle ohne \
 größere Bedeutung, Sportergebnisse, Wettervorhersagen, alles aus dem übrigen Hessen.
 
+- "peking" — China als möglicher künftiger Arbeitsort. Der Leser erwägt, in Peking \
+zu arbeiten: Er ist in China geboren, spricht Deutsch und Chinesisch und hat \
+IT-Kenntnisse. Diese Rubrik soll ihm die Entscheidung erleichtern. In dieser \
+Rangfolge:
+  1. Deutsche und europäische Unternehmen in China: neue Standorte, Ausbau, \
+Einstellungen, Entwicklungszentren — ebenso aber Rückzüge, Stellenabbau und \
+Werksschließungen. Beides zählt gleich viel, denn beides beantwortet dieselbe Frage: \
+Wächst oder schrumpft die Zahl der Arbeitgeber, bei denen Deutschkenntnisse ein \
+Vorteil sind?
+  2. Arbeitserlaubnis und Aufenthalt: Arbeitsvisum, das K-Visum für ausländische \
+Fachkräfte, Regeln für Rückkehrer mit ausländischem Abschluss, Meldepflichten, \
+Steuerfragen für Zugezogene. Eine Regeländerung hier ist das Wertvollste in dieser \
+Rubrik, weil sie unmittelbar über Machbarkeit entscheidet.
+  3. Arbeitsmarkt für Fachkräfte in China, besonders IT und Software: Nachfrage, \
+Gehälter, gefragte Qualifikationen, die Lage für Rückkehrer und für Bewerber mit \
+ausländischer Ausbildung.
+  4. Praktisches zum Leben in Peking: Lebenshaltungskosten, Wohnen, Alltag für \
+Zugezogene, Erfahrungsberichte.
+  Sag bei jedem Beitrag, was daraus für jemanden folgt, der den Schritt erwägt.
+  Weglassen: allgemeine Geopolitik, Zölle, Sanktionen und Handelsstreit, solange \
+nicht ausdrücklich steht, dass deutsche Arbeitgeber in China Personal auf- oder \
+abbauen; Börsen- und Konjunkturberichte; Militär und Taiwan; chinesische \
+Innenpolitik ohne Bezug zum Arbeiten dort; Meldungen über den deutschen \
+Arbeitsmarkt; Visums- und Arbeitsmarktnachrichten anderer Länder. Die Suchfeeds \
+liefern von alldem reichlich — es ist trotzdem nicht das Thema.
+  Diese Rubrik enthält KEINE Stellenanzeigen. Erfinde niemals eine und behandle \
+keinen Beitrag so, als sei er eine.
+
 ZEITHORIZONT — jeder Beitrag bekommt zusätzlich ein Feld "horizon". Die Seite \
 zeigt drei Reiter, und dieses Feld entscheidet, unter welchem der Beitrag landet. \
 Maßstab ist, WANN das Ereignis für den Leser stattfindet, gemessen am heutigen \
@@ -468,14 +512,14 @@ Leser Tiefe bei dem, was zählt, und sieht trotzdem alles Übrige.
 
 - Stufe 1 "top" — was eine Zusammenfassung UND eine Einordnung verdient.
   Obergrenzen: HÖCHSTENS 4 für immobilien, 5 für events, 3 für sport, 3 für messen, \
-4 für stadt.
+4 für stadt, 3 für peking.
 - Stufe 2 "also" — alles Weitere, das man wissen sollte, je als Überschrift plus EIN \
 kurzer Satz mit echtem Inhalt. Keine Kategoriebezeichnung: schreibe, was der Beitrag \
 meldet, damit man allein an dieser Zeile entscheiden kann, ob man ihn öffnet.
   Obergrenzen: HÖCHSTENS 5 für immobilien, 6 für events, 4 für sport, 4 für messen, \
-6 für stadt.
+6 für stadt, 4 für peking.
 
-Die fünf Rubriken sind FEST und unabhängig. Gib immer alle fünf Schlüssel zurück. Die \
+Die sechs Rubriken sind FEST und unabhängig. Gib immer alle sechs Schlüssel zurück. Die \
 Kandidaten decken je nach Rubrik die letzten ein bis vierzehn Tage ab, eine Rubrik darf \
 also berechtigt leer bleiben — dann gib leere Listen zurück und mach mit der nächsten \
 weiter. Das gilt besonders für "sport": Damentennis und -volleyball in Deutschland \
@@ -494,7 +538,8 @@ Form:
   "events":     {"top": [<item>, ...], "also": [<brief>, ...]},
   "sport":      {"top": [<item>, ...], "also": [<brief>, ...]},
   "messen":     {"top": [<item>, ...], "also": [<brief>, ...]},
-  "stadt":      {"top": [<item>, ...], "also": [<brief>, ...]}
+  "stadt":      {"top": [<item>, ...], "also": [<brief>, ...]},
+  "peking":     {"top": [<item>, ...], "also": [<brief>, ...]}
 }
 
 <item> = {
@@ -502,7 +547,7 @@ Form:
 höchstens ~80 Zeichen>",
   "url":     "<der Link des Kandidaten, exakt kopiert>",
   "tag":     "<eines von: neubau, baustart, verkauf, fertig, preise, konzert, kino, \
-comedy, buehne, tennis, volleyball, messe, fest, verkehr, news>",
+comedy, buehne, tennis, volleyball, messe, fest, verkehr, jobs, visum, news>",
   "horizon": "<eines von: aktuell, wochen, monate — siehe ZEITHORIZONT oben>",
   "summary": "<1-2 Sätze: was passiert ist, mit konkreten Zahlen, Orten und Terminen, \
 soweit die Quelle sie nennt>",
@@ -541,7 +586,8 @@ Verkaufs- oder Vermietungsstart, "fertig" für Fertigstellung und Bezug, "preise
 Preise und Mieten, "konzert" für Konzerte, "kino" für Filme und Kinos, "comedy" für \
 Comedy und Kabarett, "buehne" für Theater, Musical und Show, "tennis" für Tennis, \
 "volleyball" für Volleyball, "messe" für Messen, "fest" für Feste und Märkte, \
-"verkehr" für Verkehr und Baustellen, "news" für alles Übrige.
+"verkehr" für Verkehr und Baustellen, "jobs" für Arbeitsmarkt und Arbeitgeber in \
+China, "visum" für Visum, Aufenthalt und Arbeitserlaubnis, "news" für alles Übrige.
 - Setze "horizon" bei JEDEM Beitrag, auch bei den Kurzmeldungen. Die Obergrenzen \
 gelten je Rubrik, nicht je Reiter — verteile nicht künstlich auf die drei \
 Zeiträume und verschiebe keinen Beitrag in einen falschen Zeitraum, nur damit ein \

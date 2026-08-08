@@ -5,7 +5,7 @@ veröffentlicht als **kostenlose GitHub-Pages-Website**, die sich jeden Morgen
 selbst neu baut.
 
 Oben stehen drei Reiter nach Zeithorizont — **Aktuell**, **In den nächsten
-Wochen**, **In den nächsten Monaten**. Unter jedem Reiter liegen dieselben fünf
+Wochen**, **In den nächsten Monaten**. Unter jedem Reiter liegen dieselben sechs
 Rubriken, gefüllt mit den Beiträgen dieses Zeitraums:
 
 1. **Neubau & Immobilien in Frankfurt** — Bauvorhaben, die für Privatkunden
@@ -22,6 +22,9 @@ Rubriken, gefüllt mit den Beiträgen dieses Zeitraums:
 5. **Frankfurt & Infrastruktur** — was den Alltag hier betrifft: Verkehr,
    Baustellen, Nahverkehr, Stadtpolitik mit praktischen Folgen, Museen,
    Neueröffnungen.
+6. **Peking & China** — China als möglicher künftiger Arbeitsort: deutsche
+   Arbeitgeber vor Ort, Arbeitserlaubnis und Visum, Arbeitsmarkt für Fachkräfte.
+   **Keine Stellenanzeigen** — warum nicht, steht unten.
 
 ## Die Radien sind je Rubrik verschieden
 
@@ -35,6 +38,7 @@ mehr „Frankfurt Kompakt" heißt:
 | Frankfurt & Infrastruktur | nur Frankfurt | betrifft den täglichen Weg |
 | Konzerte, Kino & Comedy | ganz Deutschland | für einen Weltstar fährt man nach Köln oder Berlin |
 | Sport | nur Deutschland | Karten kauft man für das, was erreichbar ist |
+| Peking & China | China | ein möglicher künftiger Arbeitsort, kein Alltag |
 
 Bei den deutschlandweiten Rubriken kommt eine Qualitätsschwelle dazu: Konzerte
 nur bei **großen internationalen Namen**, nicht bei regionalen Bands oder
@@ -100,6 +104,7 @@ trotzdem alles Übrige. Zielwert sind **drei bis vier Minuten Lesezeit**.
 | Sport | bis zu 3 | bis zu 4 |
 | Messen & Feste | bis zu 3 | bis zu 4 |
 | Frankfurt & Infrastruktur | bis zu 4 | bis zu 6 |
+| Peking & China | bis zu 3 | bis zu 4 |
 
 Das sind Deckel, keine Zielvorgaben — der Prompt verbietet das Auffüllen, ein
 Beitrag muss sich seinen Platz also verdienen, und ein ruhiger Tag ergibt eine
@@ -108,7 +113,7 @@ ehrlich kurze Ausgabe.
 **„Außerdem notiert“ ist keine reine Überschriftenliste** — jeder Eintrag trägt
 einen Satz dazu, was der Beitrag tatsächlich meldet, und einen eigenen Link.
 
-**Die fünf Rubriken sind fest und unabhängig.** Alle fünf erscheinen in jedem
+**Die sechs Rubriken sind fest und unabhängig.** Alle sechs erscheinen in jedem
 Reiter, in derselben Reihenfolge. Eine Rubrik ohne Beiträge in diesem Zeitraum
 liest sich schlicht als *„Nichts in diesem Zeitraum.“* statt zu verschwinden —
 sonst bliebe offen, ob es nichts gibt oder ob etwas kaputt ist. Rubriken borgen
@@ -178,6 +183,7 @@ Rubriküberschrift, 4px-Kante der Karte, Linkfarbe:
 | Neubau & Immobilien | `#9e4a48` | `#d1817f` |
 | Konzerte, Kino & Comedy | `#8a5273` | `#c79ab4` |
 | Sport | `#3f6b5e` | `#8fbdae` |
+| Peking & China | `#4a5f85` | `#9db3d4` |
 | Messen & Feste | `#8a6a3d` | `#c2a577` |
 | Frankfurt & Infrastruktur | `#4f4f4f` | `#c8c8c8` |
 
@@ -331,7 +337,7 @@ gerechnet aus Zeichenzahlen mit den Listenpreisen von OpenRouter:
 | `openai/gpt-5` | ~14,00 | Spitzenpreis für eine Zusammenfassungsaufgabe |
 
 Die Spanne reicht von einem typischen Tag bis zu einer randvollen Ausgabe. Sie
-liegt über den Werten des Vorgängerprojekts, weil fünf Rubriken statt drei mehr
+liegt über den Werten des Vorgängerprojekts, weil sechs Rubriken statt drei mehr
 Kandidaten und mehr Ausgabetext bedeuten und deutscher Text je Zeichen mehr Token
 braucht als englischer.
 
@@ -352,13 +358,15 @@ alle Rubriken hielte die halbe Seite dauerhaft leer.
 | Neubau & Immobilien | 168 h (7 Tage) | Bauvorhaben werden selten gemeldet; ein Wochenfenster fängt sie ein |
 | Konzerte, Kino & Comedy | 120 h (5 Tage) | Ankündigungen kommen schubweise, oft am Wochenanfang |
 | Sport | 336 h (14 Tage) | das schmalste Feld überhaupt — eine Turnierankündigung darf nicht durchrutschen |
+| Peking & China | 336 h (14 Tage) | bewegt sich über Wochen; in 7 Tagen blieben nach Abzug der Konjunkturmeldungen kaum drei Kandidaten |
 | Messen & Feste | 168 h (7 Tage) | stark saisonal — monatelang nichts, dann viel |
 | Frankfurt & Infrastruktur | 24 h | vier Redaktionen liefern täglich mehr als genug |
 
 Die Entdoppelung sorgt dafür, dass ein weiteres Fenster nichts wiederholt — es
 fügt nur Abdeckung hinzu. Ändern lässt sich das ohne Codeänderung über
 Repository-Variablen: `MAX_AGE_HOURS_IMMOBILIEN`, `MAX_AGE_HOURS_EVENTS`,
-`MAX_AGE_HOURS_SPORT`, `MAX_AGE_HOURS_MESSEN`, `MAX_AGE_HOURS_STADT`.
+`MAX_AGE_HOURS_SPORT`, `MAX_AGE_HOURS_MESSEN`, `MAX_AGE_HOURS_STADT`,
+`MAX_AGE_HOURS_PEKING`.
 
 **`DEDUP_EDITIONS` in `main.py` muss mehr Tage abdecken als das breiteste
 Fenster.** Das ist Sport mit 14 Tagen, der Wert steht deshalb auf 16 (früher 9).
@@ -465,7 +473,7 @@ Nur einfache Werte, kein Code, dort kann also nichts kaputtgehen.
 | Ändern | Einstellung in `configuration.py` |
 |---|---|
 | Das Modell | `MODEL` |
-| Welche Feeds gelesen werden | `IMMOBILIEN_FEEDS`, `EVENT_FEEDS`, `SPORT_FEEDS`, `MESSE_FEEDS`, `STADT_FEEDS` und die Zuordnung `FEEDS` |
+| Welche Feeds gelesen werden | `IMMOBILIEN_FEEDS`, `EVENT_FEEDS`, `SPORT_FEEDS`, `MESSE_FEEDS`, `STADT_FEEDS`, `PEKING_FEEDS` und die Zuordnung `FEEDS` |
 | Wie viele Ausgaben bleiben | `KEEP_DIGESTS` (30) |
 
 Alles Weitere steht neben dem Code, der es benutzt:

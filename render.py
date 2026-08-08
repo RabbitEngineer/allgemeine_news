@@ -27,8 +27,9 @@ SITE_TITLE = "Allgemeine News"
 # Die Rubriken haben absichtlich unterschiedliche Radien, und die Beschriftung
 # sagt das: Wohnen, Feste und Infrastruktur sind an Frankfurt gebunden, weil
 # sie den Alltag vor Ort betreffen; Konzerte und Sport decken Deutschland ab,
-# weil man für einen Auftritt oder ein Turnier auch reist. Welcher Radius für
-# welche Rubrik gilt, steht als Regel im SYSTEM_PROMPT (main.py) — die
+# weil man für einen Auftritt oder ein Turnier auch reist; Peking steht für
+# sich, weil es um einen möglichen künftigen Arbeitsort geht. Welcher Radius
+# für welche Rubrik gilt, steht als Regel im SYSTEM_PROMPT (main.py) — die
 # Feedauswahl allein kann das nicht durchsetzen.
 SECTIONS = [
     ("immobilien", "Neubau & Immobilien in Frankfurt"),
@@ -36,11 +37,12 @@ SECTIONS = [
     ("sport", "Sport"),
     ("messen", "Messen & Feste in Frankfurt"),
     ("stadt", "Frankfurt & Infrastruktur"),
+    ("peking", "Peking & China"),
 ]
 
 # Zeithorizonte als Reiter über den Rubriken. Jeder Beitrag bekommt vom Modell
 # ein "horizon"-Feld mit einem dieser Schlüssel; in jedem Reiter stehen dann
-# wieder alle fünf Rubriken, gefüllt mit den Beiträgen dieses Zeitraums.
+# wieder alle sechs Rubriken, gefüllt mit den Beiträgen dieses Zeitraums.
 # Der erste Eintrag ist der Rückfallwert für alles, was sich nicht einordnen
 # lässt — er muss deshalb der Reiter für die Gegenwart sein.
 # Ein neuer Horizont braucht zusätzlich einen Absatz im SYSTEM_PROMPT (main.py);
@@ -67,6 +69,8 @@ TAG_LABELS = {
     "buehne": "Bühne",
     "tennis": "Tennis",
     "volleyball": "Volleyball",
+    "jobs": "Arbeitsmarkt",
+    "visum": "Visum",
     "messe": "Messe",
     "fest": "Fest",
     "verkehr": "Verkehr",
@@ -178,7 +182,7 @@ CSS = """
   --line:#ebebeb; --line-strong:#d3d3d3;
   --brand:#a8504d;
   --immobilien:#9e4a48; --events:#8a5273; --sport:#3f6b5e;
-  --messen:#8a6a3d; --stadt:#4f4f4f;
+  --messen:#8a6a3d; --stadt:#4f4f4f; --peking:#4a5f85;
   /* Reiterleiste nach dem Vorbild der Hauptnavigation von frankfurtflyer.de:
      anthrazitfarbener Balken, roter Unterstrich, aktiver Punkt rot hinterlegt.
      Das Aktiv-Rot ist eine Spur tiefer als die Markenfarbe, damit weiße
@@ -196,7 +200,7 @@ CSS = """
     --line:#303030; --line-strong:#454545;
     --brand:#d1817f;
     --immobilien:#d1817f; --events:#c79ab4; --sport:#8fbdae;
-    --messen:#c2a577; --stadt:#c8c8c8;
+    --messen:#c2a577; --stadt:#c8c8c8; --peking:#9db3d4;
     /* Im Dunkelmodus trägt der aktive Reiter dunkle Schrift auf hellem Rot —
        weiß auf #d1817f wäre zu kontrastarm. */
     --tabbar:#262626; --tabink:#c0c0c0;
@@ -208,7 +212,7 @@ CSS = """
 
 /* Alle Tags tragen dieselbe neutrale Plakette. Vorher hatte jedes der 13 Tags
    eine eigene Farbe — grün, bernstein, türkis, violett, blau —, was zusammen
-   mit den fünf Rubrikfarben und dem Rot der Reiterleiste einen kompletten
+   mit den sechs Rubrikfarben und dem Rot der Reiterleiste einen kompletten
    Farbkreis auf einer Seite ergab. Die Rubrik steht schon am Kartenrand und
    in der Rubriküberschrift; das Tag muss sie nicht ein drittes Mal codieren,
    sein Text sagt ohnehin, worum es geht.
@@ -229,6 +233,8 @@ CSS = """
   --tag-buehne-bg:var(--tag-bg);   --tag-buehne-fg:var(--tag-fg);
   --tag-tennis-bg:var(--tag-bg);   --tag-tennis-fg:var(--tag-fg);
   --tag-volleyball-bg:var(--tag-bg); --tag-volleyball-fg:var(--tag-fg);
+  --tag-jobs-bg:var(--tag-bg);     --tag-jobs-fg:var(--tag-fg);
+  --tag-visum-bg:var(--tag-bg);    --tag-visum-fg:var(--tag-fg);
   --tag-messe-bg:var(--tag-bg);    --tag-messe-fg:var(--tag-fg);
   --tag-fest-bg:var(--tag-bg);     --tag-fest-fg:var(--tag-fg);
   --tag-verkehr-bg:var(--tag-bg);  --tag-verkehr-fg:var(--tag-fg);
@@ -285,6 +291,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--brand);outline-offs
 .section.sport{--accent:var(--sport)}
 .section.messen{--accent:var(--messen)}
 .section.stadt{--accent:var(--stadt)}
+.section.peking{--accent:var(--peking)}
 
 .cards{display:flex;flex-direction:column;gap:14px}
 .card{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);
@@ -444,7 +451,7 @@ def _sections(digest: dict, horizon: str) -> str:
             body = (f'<div class="cards">{"".join(_card(i) for i in section["top"])}</div>'
                     + _also(section["also"]))
         else:
-            # Alle fünf Rubriken erscheinen in jedem Reiter, auch die leeren.
+            # Alle sechs Rubriken erscheinen in jedem Reiter, auch die leeren.
             # Eine Rubrik, die je nach Zeitraum verschwände, ließe den Leser
             # rätseln, ob es nichts gibt oder ob etwas kaputt ist.
             body = '<p class="empty">Nichts in diesem Zeitraum.</p>'
