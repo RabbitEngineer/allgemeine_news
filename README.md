@@ -25,8 +25,9 @@ Rubriken, gefüllt mit den Beiträgen dieses Zeitraums:
 6. **Peking & China** — China als möglicher künftiger Arbeitsort: deutsche
    Arbeitgeber vor Ort, Arbeitserlaubnis und Visum, Arbeitsmarkt für Fachkräfte.
    Nachrichten, keine Ausschreibungen.
-7. **Neue Stellen in Peking** — echte, neu ausgeschriebene Stellen bei deutschen
-   Arbeitgebern, ausgewählt nach Bewerbungsaussicht statt nach Attraktivität.
+7. **Neue Stellen in China** — echte, neu ausgeschriebene Stellen bei deutschen
+   Arbeitgebern, sortiert nach Bewerbungsaussicht statt nach Attraktivität, mit
+   Sprachvermerk je Stelle.
 
 ## Die Radien sind je Rubrik verschieden
 
@@ -41,7 +42,7 @@ mehr „Frankfurt Kompakt" heißt:
 | Konzerte, Kino & Comedy | ganz Deutschland | für einen Weltstar fährt man nach Köln oder Berlin |
 | Sport | nur Deutschland | Karten kauft man für das, was erreichbar ist |
 | Peking & China | China | ein möglicher künftiger Arbeitsort, kein Alltag |
-| Neue Stellen | Peking | dort will man arbeiten |
+| Neue Stellen | ganz China | dort will man langfristig arbeiten |
 
 Bei den deutschlandweiten Rubriken kommt eine Qualitätsschwelle dazu: Konzerte
 nur bei **großen internationalen Namen**, nicht bei regionalen Bands oder
@@ -108,7 +109,7 @@ trotzdem alles Übrige. Zielwert sind **drei bis vier Minuten Lesezeit**.
 | Messen & Feste | bis zu 3 | bis zu 4 |
 | Frankfurt & Infrastruktur | bis zu 4 | bis zu 6 |
 | Peking & China | bis zu 3 | bis zu 4 |
-| Neue Stellen in Peking | bis zu 3 | bis zu 4 |
+| Neue Stellen in China | bis zu 6 | bis zu 8 |
 
 Das sind Deckel, keine Zielvorgaben — der Prompt verbietet das Auffüllen, ein
 Beitrag muss sich seinen Platz also verdienen, und ein ruhiger Tag ergibt eine
@@ -168,7 +169,7 @@ Die Obergrenzen aus der Tabelle oben gelten **je Rubrik, nicht je Reiter**. Der
 Prompt verbietet ausdrücklich, Beiträge auf die Zeiträume zu verteilen, damit ein
 Reiter voller wirkt.
 
-## Woher die Stellen kommen — und warum so wenige
+## Woher die Stellen kommen — und was die Rubrik nicht leisten kann
 
 Diese eine Rubrik liest kein RSS. **Für Stellenanzeigen gibt es keine Feeds
 mehr**, das wurde vor dem Bau geprüft:
@@ -178,75 +179,89 @@ mehr**, das wurde vor dem Bau geprüft:
 | LinkedIn Jobs | 404 — RSS abgeschaltet |
 | Indeed China | 403 — sperrt automatisierte Abrufe |
 | StackOverflow Jobs | 404 — Dienst eingestellt |
-| eChinacities, theBeijinger, 51job | 404 / kein Feed |
-| AHK Greater China | 302, kein nutzbarer Feed |
-| WeWorkRemotely | funktioniert — aber weltweit remote, nicht Peking |
+| 51job, theBeijinger | kein Feed |
+| AHK Greater China | keine Jobbörse unter erreichbarer Adresse |
+| StepStone „Jobs in China" | 200, aber vollständig im Browser gerendert — maschinell nicht lesbar |
+| eChinacities | 200 und lesbar, aber fast ausschließlich Englischlehrer-Stellen |
+| WeWorkRemotely | funktioniert — aber weltweit remote, nicht China |
 
-Google-News-Suchen nach „Jobs Peking" antworten zwar mit 200 und 51 Einträgen,
-liefern aber Presseartikel: *„China sanktioniert deutsche…"*, *„Exportkontrollen
-gegen 14 deutsche Firmen"*. Jobbörsen sind keine Presse und syndizieren nicht
-dorthin.
+Google-News-Suchen nach „Jobs Peking" antworten mit 51 Einträgen, liefern aber
+Presseartikel: *„China sanktioniert deutsche…"*. Jobbörsen sind keine Presse.
 
-Was es stattdessen gibt, ist die **öffentliche API von SmartRecruiters** — dem
-Bewerbermanagementsystem, über das ein Teil der deutschen Industrie ausschreibt.
-Dokumentiert, ohne Schlüssel, liefert JSON. `jobs.py` fragt sie ab und reicht die
-Treffer als Kandidaten in dieselbe Pipeline wie die RSS-Beiträge.
+Was bleibt, ist die **öffentliche API von SmartRecruiters** — dokumentiert, ohne
+Schlüssel, liefert JSON. `jobs.py` fragt sie ab und reicht die Treffer als
+Kandidaten in dieselbe Pipeline wie die RSS-Beiträge.
 
-### Die Ausbeute ist klein, und das liegt an Peking
+### Die gemessene Ausbeute
 
-Gemessen beim Bau:
+| | |
+|---|---|
+| Ausschreibungen in China insgesamt | 1289 |
+| davon in den letzten 30 Tagen | 199 |
+| davon DevOps- oder Backend-nah | 30 |
+| davon international ausgeschrieben | **2** |
+| davon Hochschulrekrutierung (`校招`) | 16 |
+| **realistisch für einen Berufserfahrenen ohne Mandarin** | **2** |
 
-| | Stellen in China | davon in Peking |
-|---|---|---|
-| Bosch | 1258 | 24 |
-| Continental | 31 | 0 |
+Zwei Befunde stecken darin.
 
-**Deutsche Industriearbeitgeber sitzen in China im Jangtse-Delta, nicht in der
-Hauptstadt.** Bei Bosch verteilen sich die Stellen auf Shanghai (345), Suzhou
-(333) und Wuxi (227). Nach dem Filter auf IT-nahe Rollen bleiben in Peking
-**zwei** Ausschreibungen übrig — beide aus der Hydraulikentwicklung.
-
-Nimmt man Shanghai und Suzhou dazu, sind es sofort **30** (der Deckel), darunter
-`AI 软件工程平台工程师` und `ADAS行为决策规划算法工程师`. Das ist eine Zeile in
-`jobs.py`:
+**Erstens sitzt die deutsche Industrie in China im Jangtse-Delta, nicht in
+Peking.** Die Treffer liegen in Suzhou, Shanghai, Wuxi, Hangzhou und Jinan. Auf
+Peking eingegrenzt bleiben null. `CITIES` in `jobs.py` steht deshalb leer, was
+„ganz China" bedeutet:
 
 ```python
-CITIES = ["beijing"]                            # wie ausgeliefert
-CITIES = ["beijing", "shanghai", "suzhou"]      # wo tatsächlich gesucht wird
+CITIES = []                       # wie ausgeliefert: ganz China
+CITIES = ["beijing", "shanghai"]  # eingrenzen, wenn gewünscht
 ```
 
-Das ist der wirksamste Hebel in dieser Datei. Wenn die Rubrik dauerhaft leer
-bleibt, liegt es fast sicher hieran und nicht an einem Fehler.
+**Zweitens sind fast alle Ausschreibungen rein chinesisch** und richten sich
+damit an den lokalen Arbeitsmarkt, der fließendes Mandarin voraussetzt. Jede
+Stelle trägt deshalb einen Vermerk — *international ausgeschrieben*, *nur auf
+Chinesisch*, *Hochschulrekrutierung* —, und der Prompt sortiert danach: Was nur
+auf Chinesisch steht, kommt nach „Außerdem notiert" statt nach oben;
+Absolventenprogramme fallen ganz weg.
 
-### Welche Arbeitgeber erfasst sind
+### Was diese Rubrik nicht leisten kann
 
-Nur **Bosch** und **Continental** — von den geprüften deutschen Namen nutzen nur
-diese beiden SmartRecruiters. SAP, Siemens, BMW, Mercedes, BASF, Bayer, Henkel,
-Infineon und Lufthansa antworten mit `totalFound: 0`, weil sie auf
-SuccessFactors, Workday oder Phenom liegen; jedes davon bräuchte einen eigenen
-Adapter. Einen Namen zu `COMPANIES` hinzuzufügen ist ungefährlich: ein
-unbekannter liefert 0 statt eines Fehlers.
+**Sie ersetzt keine eigene Suche.** Bei zwei brauchbaren Treffern in 30 Tagen
+aus zwei Arbeitgebern ist sie ein Frühwarnsystem, kein Stellenmarkt. Sie meldet
+zuverlässig, *wenn* Bosch oder Continental international ausschreiben — mehr
+nicht. Was daneben nötig bleibt:
+
+- **LinkedIn mit Suchagent**, Filter „China" plus „DevOps", auf täglich gestellt.
+  Kein Feed, aber die Mail kommt von selbst.
+- **Karriereseiten direkt**: SAP, Siemens, BMW, Mercedes, BASF, Bayer, Henkel,
+  Infineon, ZF und Schaeffler liegen auf SuccessFactors, Workday oder Phenom.
+  52 Namen wurden bei SmartRecruiters geprüft, nur Bosch und Continental sind
+  dort. Jedes andere System bräuchte einen eigenen Adapter — machbar, aber je
+  Arbeitgeber eigene Arbeit.
+- **Die Deutsche Handelskammer in China** vermittelt Kontakte zu deutschen
+  Mittelständlern, die gar nicht öffentlich ausschreiben. Genau dort ist ein
+  deutscher Muttersprachler mit IT-Erfahrung am ehesten gefragt.
 
 ### Wie ausgewählt wird
 
 Nicht nach „interessanteste Stelle", sondern nach **Bewerbungsaussicht**. Der
-Prompt kennt das Profil — in China geboren, Deutsch und Chinesisch fließend,
-IT-Kenntnisse — und sortiert danach:
+Prompt kennt das Profil — Deutscher, Deutsch und Englisch, Chinesisch nur
+rudimentär, mehrjährige Erfahrung in DevOps und etwas Backend — und sortiert:
 
-1. Stellen, die **Deutschkenntnisse** ausdrücklich nennen. Das ist der Vorteil,
-   der vom lokalen Bewerberfeld trennt, und wiegt schwerer als eine spannendere
-   Aufgabe.
-2. IT-, Software-, Daten- und Systemrollen.
-3. Einstiegs- und mittlere Erfahrungsstufen vor Senior- und Führungspositionen.
+1. **Sprache zuerst.** International oder mit Deutsch/Englisch ausgeschrieben.
+   Eine Stelle, die fließendes Mandarin verlangt, ist keine Aussicht, so gut sie
+   fachlich auch passt.
+2. **DevOps** und Angrenzendes: Cloud, Kubernetes, CI/CD, Plattform,
+   Automatisierung, Infrastruktur, SRE, Linux.
+3. **Backend** danach — davon hat er weniger.
+4. Einstiegs- und mittlere Stufen vor Senior- und Führungspositionen.
 
-Die Einordnung unter jeder Stelle sagt ehrlich, ob die Aussicht gut oder mäßig
-ist, statt jede Ausschreibung schönzureden.
+Die Einordnung unter jeder Stelle sagt ehrlich, wenn die Aussicht mäßig ist,
+statt jede Ausschreibung schönzureden. Chinesische Titel werden übersetzt und
+das Original dahintergesetzt.
 
 Weil die Wiederholungssperre auch hier greift, zeigt die Rubrik **neu
-ausgeschriebene** Stellen — keinen dauerhaften Stellenmarkt. Das Fenster ist mit
-30 Tagen das breiteste der Anwendung und damit bewusst breiter als
-`DEDUP_EDITIONS` (16): Eine noch offene Stelle ein zweites Mal zu sehen schadet
-nicht, eine übersehene schon.
+ausgeschriebene** Stellen. Das Fenster ist mit 30 Tagen das breiteste der
+Anwendung und bewusst breiter als `DEDUP_EDITIONS` (16): Eine noch offene Stelle
+ein zweites Mal zu sehen schadet nicht, eine übersehene schon.
 
 ## Farbschema
 
@@ -268,7 +283,7 @@ Rubriküberschrift, 4px-Kante der Karte, Linkfarbe:
 | Konzerte, Kino & Comedy | `#8a5273` | `#c79ab4` |
 | Sport | `#3f6b5e` | `#8fbdae` |
 | Peking & China | `#4a5f85` | `#9db3d4` |
-| Neue Stellen in Peking | `#6b5340` | `#c4a893` |
+| Neue Stellen in China | `#6b5340` | `#c4a893` |
 | Messen & Feste | `#8a6a3d` | `#c2a577` |
 | Frankfurt & Infrastruktur | `#4f4f4f` | `#c8c8c8` |
 
@@ -444,7 +459,7 @@ alle Rubriken hielte die halbe Seite dauerhaft leer.
 | Konzerte, Kino & Comedy | 120 h (5 Tage) | Ankündigungen kommen schubweise, oft am Wochenanfang |
 | Sport | 336 h (14 Tage) | das schmalste Feld überhaupt — eine Turnierankündigung darf nicht durchrutschen |
 | Peking & China | 336 h (14 Tage) | bewegt sich über Wochen; in 7 Tagen blieben nach Abzug der Konjunkturmeldungen kaum drei Kandidaten |
-| Neue Stellen in Peking | 720 h (30 Tage) | in Peking wird nur vereinzelt ausgeschrieben; kürzer wäre die Rubrik immer leer |
+| Neue Stellen in China | 720 h (30 Tage) | international ausgeschrieben wird nur vereinzelt; kürzer wäre die Rubrik immer leer |
 | Messen & Feste | 168 h (7 Tage) | stark saisonal — monatelang nichts, dann viel |
 | Frankfurt & Infrastruktur | 24 h | vier Redaktionen liefern täglich mehr als genug |
 
@@ -560,7 +575,7 @@ Nur einfache Werte, kein Code, dort kann also nichts kaputtgehen.
 |---|---|
 | Das Modell | `MODEL` |
 | Welche Feeds gelesen werden | `IMMOBILIEN_FEEDS`, `EVENT_FEEDS`, `SPORT_FEEDS`, `MESSE_FEEDS`, `STADT_FEEDS`, `PEKING_FEEDS` und die Zuordnung `FEEDS` |
-| In welchen Städten nach Stellen gesucht wird | `CITIES` in `jobs.py` — der wirksamste Hebel dort |
+| In welchen Städten nach Stellen gesucht wird | `CITIES` in `jobs.py` — leer heißt ganz China |
 | Welche Arbeitgeber nach Stellen abgefragt werden | `COMPANIES` in `jobs.py` |
 | Welche Rollen als passend gelten | `ROLE_RE` in `jobs.py` |
 | Wie viele Ausgaben bleiben | `KEEP_DIGESTS` (30) |

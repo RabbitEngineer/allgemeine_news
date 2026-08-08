@@ -18,22 +18,34 @@ Das Modell wählt aus, fasst zusammen und ordnet ein, die Wiederholungssperre
 sorgt dafür, dass eine Ausschreibung genau einmal erscheint. Die Rubrik zeigt
 also **neu ausgeschriebene** Stellen, keinen dauerhaften Stellenmarkt.
 
-ERWARTUNGEN — vor dem ersten Lauf gemessen, damit niemand rätselt:
+ERWARTUNGEN — gemessen, damit niemand rätselt, und ernüchternd:
 
-    Bosch        1258 Stellen in China, davon    24 in Peking
-    Continental    31 Stellen in China, davon     0 in Peking
+    1289 Ausschreibungen in China insgesamt
+     199 davon in den letzten 30 Tagen
+      15 davon DevOps- oder Backend-nah
+       0 davon mit lateinischem Titel
+       0 davon in Peking
 
-Deutsche Industriearbeitgeber sitzen in China im Jangtse-Delta, nicht in der
-Hauptstadt: Bei Bosch verteilen sich die Stellen auf Shanghai (345), Suzhou
-(333) und Wuxi (227). Auf Peking allein eingegrenzt bleibt fast nichts übrig,
-und IT-nahe Stellen dort sind die Ausnahme. Wer mehr sehen will, erweitert
-CITIES unten — das ist eine Zeile und der wirksamste Hebel in dieser Datei.
+Zwei Befunde stecken darin. Erstens sitzt die deutsche Industrie in China im
+Jangtse-Delta und nicht in der Hauptstadt — die 15 Treffer lagen in Suzhou (6),
+Shanghai (3), Wuxi (3), Hangzhou und Jinan. Deshalb steht CITIES unten leer,
+also ohne Ortsfilter; eine Eingrenzung auf Peking räumt die Rubrik leer.
 
-Nur Bosch und Continental fanden sich unter den geprüften deutschen Namen bei
-SmartRecruiters; SAP, Siemens, BMW, Mercedes, BASF, Bayer, Henkel, Infineon
-und Lufthansa nutzen andere Systeme (SuccessFactors, Workday, Phenom), die
-jeweils einen eigenen Adapter bräuchten. COMPANIES aufzunehmen ist dagegen
-gratis: ein falscher Name liefert `totalFound: 0` statt eines Fehlers.
+Zweitens, und das wiegt schwerer: Alle 15 waren ausschließlich auf Chinesisch
+ausgeschrieben. Solche Stellen richten sich an den lokalen Arbeitsmarkt und
+setzen in aller Regel fließendes Mandarin voraus. Für einen Bewerber mit nur
+rudimentären Chinesischkenntnissen ist diese Quelle deshalb strukturell dünn —
+sie bleibt drin, weil eine international ausgeschriebene Stelle jederzeit
+auftauchen kann und dann sofort sichtbar ist, aber sie ersetzt keine eigene
+Suche. Was stattdessen trägt, steht in der README unter "Was diese Rubrik
+nicht leisten kann".
+
+Nur Bosch und Continental fanden sich unter 52 geprüften deutschen Namen bei
+SmartRecruiters; SAP, Siemens, BMW, Mercedes, BASF, Bayer, Henkel, Infineon,
+ZF, Schaeffler und Lufthansa nutzen andere Systeme (SuccessFactors, Workday,
+Phenom), die jeweils einen eigenen Adapter bräuchten. COMPANIES zu erweitern
+ist dagegen gratis: ein unbekannter Name liefert `totalFound: 0` statt eines
+Fehlers.
 """
 
 import json
@@ -54,10 +66,13 @@ COMPANIES = [
     "Continental",
 ]
 
-# Städte, die zählen — kleingeschrieben verglichen. Peking allein ergibt fast
-# nichts (siehe Kopf dieser Datei); "shanghai" und "suzhou" aufzunehmen ist der
-# Unterschied zwischen einer leeren und einer gefüllten Rubrik.
-CITIES = ["beijing"]
+# Städte, die zählen — kleingeschrieben verglichen, Teiltreffer erlaubt.
+# LEERE LISTE heißt: ganz China, kein Ortsfilter. So ist es eingestellt, weil
+# eine Eingrenzung auf Peking die Rubrik leerräumt: Von den 15 DevOps- und
+# Backend-Treffern der letzten 30 Tage lag KEINER in Peking, sondern in Suzhou
+# (6), Shanghai (3), Wuxi (3), Hangzhou und Jinan. Deutsche Industrie sitzt in
+# China im Jangtse-Delta, nicht in der Hauptstadt.
+CITIES = []
 
 # Ländercode der API. "cn" ist Festlandchina.
 COUNTRY = "cn"
@@ -65,17 +80,20 @@ COUNTRY = "cn"
 # Wie viele Ausschreibungen je Firma höchstens geholt werden. Die API liefert
 # 100 je Seite; Bosch allein hat über 1200 in China, ohne Deckel wären das 13
 # Abrufe für eine Rubrik, die am Ende drei Einträge zeigt.
-MAX_PER_COMPANY = 600
+MAX_PER_COMPANY = 1500
 PAGE = 100
 
-# Fachlicher Zuschnitt. Bewusst weit gefasst und nur eine Vorauswahl — über die
-# Eignung entscheidet das Modell im SYSTEM_PROMPT, das den Lebenslauf des
-# Lesers kennt. Chinesische Begriffe sind nötig, weil ein Teil der
-# Ausschreibungen ausschließlich auf Chinesisch betitelt ist.
+# Fachlicher Zuschnitt: DevOps zuerst, Backend daneben. Bewusst weit gefasst
+# und nur eine Vorauswahl — über die Eignung entscheidet das Modell im
+# SYSTEM_PROMPT, das das Profil des Lesers kennt. Die chinesischen Begriffe
+# sind nötig, weil der größte Teil der Ausschreibungen ausschließlich auf
+# Chinesisch betitelt ist (运维 Betrieb/DevOps, 后端 Backend, 云 Cloud).
 ROLE_RE = re.compile(
-    r"software|engineer|developer|entwickl|informatik|\bIT\b|data|cloud|devops|"
-    r"cyber|security|architect|programmier|analyst|digital|system|automation|"
-    r"软件|开发|数据|算法|系统|工程师|架构|信息",
+    r"devops|sre|site reliability|platform engineer|kubernetes|k8s|docker|"
+    r"ci/cd|cicd|jenkins|terraform|ansible|cloud|infrastructure|infrastruktur|"
+    r"backend|back-end|microservice|\bapi\b|linux|automation|automatisier|"
+    r"software|developer|entwickl|java|python|golang|informatik|\bIT\b|"
+    r"运维|云|后端|平台|架构|自动化|软件|开发",
     re.I,
 )
 
@@ -83,6 +101,21 @@ ROLE_RE = re.compile(
 # nennt, ist deshalb wertvoller als eine ohne. Nur ein Hinweis für das Modell,
 # kein Filter.
 GERMAN_RE = re.compile(r"german|deutsch|德语|德国", re.I)
+
+# Der Leser spricht Deutsch und Englisch, Chinesisch nur rudimentär. Das dreht
+# die übliche Bewertung um: Eine Ausschreibung mit lateinischem Titel ist in
+# aller Regel international ausgeschrieben und damit überhaupt erreichbar, eine
+# rein chinesische richtet sich an den lokalen Arbeitsmarkt und setzt fast
+# immer fließendes Mandarin voraus. Auch das ist nur ein Hinweis; entscheiden
+# soll das Modell, nicht ein Filter hier.
+CJK_RE = re.compile(r"[一-鿿]")
+
+# Hochschulrekrutierung. 校招 ist der feste Ausdruck für den Jahrgangsantritt
+# ("届校招" mit vorangestelltem Abschlussjahr), 实习 ist ein Praktikum. Beides
+# richtet sich an Studierende und ist für einen Bewerber mit mehrjähriger
+# Berufserfahrung gegenstandslos — es machte beim Test aber die Mehrheit der
+# Treffer aus, taucht also als Hinweis in der Zusammenfassung auf.
+CAMPUS_RE = re.compile(r"校招|实习|campus|graduate program|intern\b|trainee", re.I)
 
 TIMEOUT = 20
 WORKERS = 4
@@ -132,6 +165,9 @@ def _released(posting: dict):
 
 
 def _in_scope(posting: dict) -> bool:
+    """Ortsfilter. Leeres CITIES heißt: ganz China, alles zählt."""
+    if not CITIES:
+        return True
     city = str((posting.get("location") or {}).get("city") or "").strip().lower()
     return any(city == wanted or wanted in city for wanted in CITIES)
 
@@ -143,7 +179,7 @@ def fetch(max_age_hours: int, max_items: int = 30) -> list:
     published, summary), damit der Rest der Pipeline — Wiederholungssperre,
     URL-Prüfung, Herausgeberzuordnung — ohne Sonderfall damit umgehen kann.
     """
-    if not COMPANIES or not CITIES:
+    if not COMPANIES:
         return []
 
     cutoff = datetime.now(timezone.utc) - timedelta(hours=max_age_hours)
@@ -169,9 +205,21 @@ def fetch(max_age_hours: int, max_items: int = 30) -> list:
             location = posting.get("location") or {}
             department = (posting.get("department") or {}).get("label") or ""
             experience = (posting.get("experienceLevel") or {}).get("label") or ""
-            hint = " Die Ausschreibung nennt Deutschkenntnisse." if GERMAN_RE.search(
-                json.dumps(posting, ensure_ascii=False)
-            ) else ""
+            hints = []
+            if GERMAN_RE.search(json.dumps(posting, ensure_ascii=False)):
+                hints.append("Die Ausschreibung nennt Deutschkenntnisse.")
+            hints.append(
+                "Nur auf Chinesisch ausgeschrieben, richtet sich also"
+                " voraussichtlich an den lokalen Arbeitsmarkt."
+                if CJK_RE.search(title) else
+                "International ausgeschrieben (lateinischer Titel)."
+            )
+            if CAMPUS_RE.search(title):
+                hints.append(
+                    "Hochschulrekrutierung fuer Absolventen, nicht fuer "
+                    "Berufserfahrene."
+                )
+            hint = " " + " ".join(hints)
 
             items.append({
                 "source": posting.get("company", {}).get("name") or company,
