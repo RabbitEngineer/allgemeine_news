@@ -1,0 +1,100 @@
+{
+  "tldr": [
+    "Der frühere Frankfurter Verkehrsdezernent Klaus Oesterling ist im Alter von 74 Jahren gestorben.",
+    "In Höchst hat die „Genussschmiede“ mit einem neuen Betreiberpaar und saisonalem Fine Dining wieder eröffnet.",
+    "Ein Frankfurter Ortsbeirat kann bis 2030 keine neuen Projekte fördern, nachdem der Magistrat Rücklagen eingezogen hat."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Frankfurts früherer Verkehrsdezernent Klaus Oesterling ist tot",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/frankfurt-spd-politiker-und-stadtrat-a-d-klaus-oesterling-gestorben-accg-201108018.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Der frühere Frankfurter Stadtrat und SPD-Politiker Klaus Oesterling ist am Freitag im Alter von 74 Jahren gestorben. Über Jahrzehnte prägte er die Kommunalpolitik, besonders die Verkehrspolitik der Stadt.",
+        "why": "Die Nachricht ordnet ein, warum Oesterlings Entscheidungen und Positionen im Frankfurter Verkehr bis heute nachwirken.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Ortsbeirat 10 kann bis 2030 keine neuen Projekte fördern",
+        "url": "https://www.fnp.de/frankfurt/ortsbeirat-10-steht-ploetzlich-mit-33-800-euro-schulden-da-94434615.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Der Magistrat hat die Rücklagen der Frankfurter Ortsbeiräte eingezogen, darunter bereits Vereinen zugesagte Gelder. Der betroffene Ortsbeirat steht dadurch mit 33.800 Euro Schulden da und kann bis 2030 keine neuen Projekte fördern.",
+        "why": "Für Initiativen und Vereine im betroffenen Stadtbezirk fallen damit auf Jahre mögliche Zuschüsse für neue Vorhaben weg.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Höchster Genussschmiede eröffnet mit neuem Betreiberpaar",
+        "url": "https://www.fr.de/frankfurt/hoechst-ort904325/ehepaar-lesko-eroeffnet-genussschmiede-in-hoechst-neu-mit-fine-dining-94434632.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Maja und Tomislav Lesko haben die „Höchster Genussschmiede“ neu eröffnet. Das Restaurant setzt auf Fine Dining mit saisonalen Produkten.",
+        "why": "In Höchst gibt es damit wieder eine besondere gastronomische Adresse für einen Restaurantbesuch.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": []
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [
+      {
+        "title": "Senior Site Reliability Engineer bei Grab in Peking",
+        "url": "https://jobs.smartrecruiters.com/Grab/744000126903384",
+        "tag": "stelle",
+        "horizon": "aktuell",
+        "summary": "Grab sucht in Peking einen Senior Site Reliability Engineer. Die Stelle ist international ausgeschrieben; als Sprache wird Englisch erwähnt, die Ausschreibung ordnet sie der Erfahrungsstufe Associate zu.",
+        "why": "Die Rolle passt fachlich besonders gut zu DevOps- und SRE-Erfahrung, und Englisch statt Mandarin als genannte Sprache verbessert die Aussicht deutlich.",
+        "source": "Grab"
+      },
+      {
+        "title": "Senior Software Engineer Backend bei Grab in Peking",
+        "url": "https://jobs.smartrecruiters.com/Grab/744000142204054",
+        "tag": "stelle",
+        "horizon": "aktuell",
+        "summary": "Grab schreibt in Peking eine Stelle als Senior Software Engineer, Backend aus. Die international veröffentlichte Ausschreibung nennt Englisch und die Erfahrungsstufe Mid-Senior Level.",
+        "why": "Die internationale Ausschreibung und Englischkenntnisse sprechen für eine realistische Bewerbung, fachlich liegt die reine Backend-Rolle aber hinter einer DevOps- oder SRE-Stelle.",
+        "source": "Grab"
+      },
+      {
+        "title": "Senior Software Engineer Reverse Engineering bei Grab in Peking",
+        "url": "https://jobs.smartrecruiters.com/Grab/744000135163619",
+        "tag": "stelle",
+        "horizon": "aktuell",
+        "summary": "Grab sucht in Peking einen Senior Software Engineer für Reverse Engineering. Die Stelle ist international mit lateinischem Titel ausgeschrieben, erwähnt Englisch und ist als Associate-Position gekennzeichnet.",
+        "why": "Englisch und die internationale Ausschreibung sind Pluspunkte, Reverse Engineering gehört jedoch nicht zum genannten Schwerpunkt und die verlangte Seniorität kann die Passung begrenzen.",
+        "source": "Grab"
+      },
+      {
+        "title": "Software Engineer Guest & Host Notifications bei Airbnb",
+        "url": "https://careers.airbnb.com/positions/7725256?gh_jid=7725256",
+        "tag": "stelle",
+        "horizon": "aktuell",
+        "summary": "Airbnb schreibt in Peking eine Stelle als Software Engineer im Bereich Guest & Host Notifications aus. Die Ausschreibung ist international und auf Englisch beziehungsweise mit lateinischem Titel veröffentlicht.",
+        "why": "Die internationale Veröffentlichung macht die Stelle grundsätzlich zugänglich; Angaben zu DevOps-Bezug, Erfahrungsstufe sowie Visum oder Umzug fehlen in den Kandidatendaten.",
+        "source": "Airbnb"
+      }
+    ],
+    "also": []
+  }
+}
