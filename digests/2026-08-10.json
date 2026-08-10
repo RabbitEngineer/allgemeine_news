@@ -1,0 +1,114 @@
+{
+  "tldr": [
+    "Die Bahnstrecke zwischen Hanau und Friedberg ist nach der Güterzug-Entgleisung wieder frei.",
+    "In Frankfurt gilt wegen der Trockenheit ein Grillverbot; selbst abgestellte Autos können Brände auslösen.",
+    "Für ausländische Fachkräfte bleibt der Weg zu einem Job in China mit umfangreichen bürokratischen Hürden verbunden."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Frankfurter Buchmesse: Tschechien stellt Programm als Gastland vor",
+        "url": "",
+        "tag": "messe",
+        "horizon": "wochen",
+        "summary": "Tschechien hat sein Programm als Gastland der Frankfurter Buchmesse vorgestellt. Weitere Angaben zu einzelnen Veranstaltungen nennt der Kandidatenbeitrag nicht.",
+        "why": "Das Programm kann bei der Planung eines Buchmessebesuchs im Herbst helfen; konkrete Termine sollten noch geprüft werden."
+      },
+      {
+        "title": "Frankfurter Apfelweinfest hat begonnen",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQWDBSYWFjNXAxQ1NFY0pNcl9WUXF3YnZRb0pvanZfdXRQanlaeEpFZ2x6ZDBKQm1NMmJ0NW15RDlqbUcwZUhsc0RFX1VnQXBpYjA1bEt6SS1Hb1hGN3d2a1FvT0NUaXQ0X28wcmw0OE55SmkzVi1VaG9nT3ViV0tfa1E3d1dNUmdHbnpwTHFOdVoyTUhwOUlHTC1hcUt4TXhfbVFkMnZ1YmsycEtfTDhqS0htNzh0LU5IS29NZkxLOG80RG16aDV2TEcySzlDMGdJ?oc=5",
+        "tag": "fest",
+        "horizon": "aktuell",
+        "summary": "Das Frankfurter Apfelweinfest ist am Wochenende gestartet; in diesem Jahr gibt es eine Neuerung, deren Einzelheiten der Kandidatentext nicht nennt.",
+        "why": "Das Fest läuft bereits und eignet sich als kurzfristiges Ausflugsziel in Frankfurt; Details zur Neuerung sollten vor dem Besuch nachgelesen werden.",
+        "source": "t-online – Frankfurt"
+      }
+    ],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Bahnstrecke Hanau–Friedberg nach Güterzugunfall wieder frei",
+        "url": "https://www.hessenschau.de/wirtschaft/nach-gueterzug-entgleisung-bahnstrecke-hanau-friedberg-wieder-frei-v2,bahnstrecke-hanau-friedberg-100.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Nach der Entgleisung eines Güterzugs in Nidderau ist die Bahnstrecke zwischen Hanau und Friedberg wieder freigegeben. Die Reparaturarbeiten hatten mehrere Wochen gedauert.",
+        "why": "Pendler auf dieser Zulaufstrecke können wieder mit regulären Verbindungen rechnen, sollten am Montag aber noch mit Nachwirkungen rechnen.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "Frankfurt meldet täglich rund zwölf defekte Bahnsteigaufzüge",
+        "url": "https://www.fr.de/frankfurt/ostend-ort904335/barrierefreiheit-in-frankfurt-jeden-tag-ein-dutzend-aufzuege-ausser-betrieb-94435567.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "An Frankfurts U- und S-Bahn-Stationen sind nach dem Bericht täglich rund zwölf Aufzüge außer Betrieb. Eine Stadtverordnete im Rollstuhl fordert deshalb Veränderungen.",
+        "why": "Wer auf einen Aufzug angewiesen ist, sollte vor der Fahrt die Verfügbarkeit prüfen und gegebenenfalls eine andere Station oder Route einplanen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Frankfurt plant weniger Ganztagsplätze und eine neue Förderschule",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/frankfurts-schulentwicklung-neue-foerderschule-geplant-accg-201101807.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Frankfurt will seine Schulentwicklung an den Bedarf anpassen und dabei die Zahl der Ganztagsplätze reduzieren. Außerdem ist eine neue Förderschule für geistig beeinträchtigte Kinder geplant.",
+        "why": "Für Familien mit schulpflichtigen Kindern kann sich dadurch das Angebot an Nachmittagsbetreuung und Förderplätzen verändern.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Wegen Trockenheit gilt in Frankfurt ein Grillverbot",
+        "url": "https://www.fnp.de/frankfurt/grillverbot-in-frankfurt-feuerwehr-warnt-vor-braenden-durch-autos-94435491.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Wegen der anhaltenden Trockenheit gilt in Frankfurt ein Grillverbot. Die Feuerwehr warnt zudem, dass ein auf trockenem Gras abgestelltes Auto einen Brand auslösen kann.",
+        "why": "Grillen im Freien ist derzeit untersagt; auch beim Parken an trockenen Flächen ist besondere Vorsicht nötig.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": [
+      {
+        "title": "Condor fliegt täglich von Frankfurt nach Tel Aviv",
+        "url": "https://www.fnp.de/frankfurt/an-condor-fliegt-von-frankfurt-taeglich-kuestenstadt-am-mittelmeer-94434939.html",
+        "horizon": "aktuell",
+        "summary": "Condor hat vom Frankfurter Flughafen eine tägliche Verbindung nach Tel Aviv aufgenommen, die vor allem Umsteigepassagiere bedienen soll.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Frankfurt stimmt kommunalem Wärmeplan grundsätzlich zu",
+        "url": "https://www.fr.de/frankfurt/magistrat-sagt-ja-zum-kommunalen-waermeplan-94435450.html",
+        "horizon": "wochen",
+        "summary": "Der Magistrat hat dem kommunalen Wärmeplan zugestimmt; der formelle Beschluss des Stadtparlaments soll im Oktober folgen.",
+        "source": "Frankfurter Rundschau"
+      }
+    ]
+  },
+  "peking": {
+    "top": [
+      {
+        "title": "Ausländische Fachkräfte kämpfen weiter mit Chinas Bürokratie",
+        "url": "",
+        "tag": "visum",
+        "horizon": "aktuell",
+        "summary": "Ein Bericht der South China Morning Post beschreibt, dass ausländische Beschäftigte für einen Job in China weiterhin zahlreiche bürokratische Schritte und Nachweise bewältigen müssen.",
+        "why": "Ein Wechsel nach Peking bleibt organisatorisch aufwendig; Bewerbungen sollten mit ausreichend Vorlauf für Arbeitserlaubnis, Visum und weitere Genehmigungen geplant werden."
+      }
+    ],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
