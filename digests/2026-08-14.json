@@ -1,0 +1,125 @@
+{
+  "tldr": [
+    "Im Schönhofviertel entstehen 134 Wohnungen über einer Grundschule; der überwiegende Teil ist gefördert.",
+    "Auf der A5 stehen bei Frankfurt ab Oktober 2026 Sperrungen wegen einer Brückensanierung an.",
+    "Frankfurts Busverkehr bleibt wegen verspäteter Lieferung von 52 Fahrzeugen eingeschränkt; auf den Linien 63 und 66 fallen weiter Fahrten aus."
+  ],
+  "immobilien": {
+    "top": [
+      {
+        "title": "Schönhofviertel: 134 geförderte Wohnungen über einer Grundschule",
+        "url": "https://www.fr.de/frankfurt/bockenheim-ort54494/hybridschule-in-frankfurt-wohnungen-auf-grundschule-draufgebaut-94442942.html",
+        "tag": "neubau",
+        "horizon": "monate",
+        "summary": "Im Schönhofviertel entsteht eine der ersten Hybridschulen Deutschlands: Über den Klassenzimmern werden 134 Wohnungen gebaut. Der überwiegende Teil des Wohnraums ist gefördert.",
+        "why": "Das schafft mittelfristig ein vergleichsweise preisgünstiges Wohnungsangebot in Bockenheim, konkrete Bezugs- oder Bewerbungsdaten nennt die Meldung aber nicht.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Billie Eilish bringt ihre Arena-Tour nach Deutschland",
+        "url": "",
+        "tag": "konzert",
+        "horizon": "aktuell",
+        "summary": "Billie Eilishs Arena-Tour zum Album „Hit Me Hard And Soft“ erreicht Deutschland. Die Meldung nennt im Auszug weder deutsche Städte noch Termine oder einen Vorverkaufsstart.",
+        "why": "Der Name macht die Tour grundsätzlich relevant, für eine konkrete Planung fehlen derzeit jedoch Stadt, Halle, Datum und Informationen zum Kartenverkauf."
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Museumsuferfest kehrt mit Wein und Live-Musik zurück",
+        "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNLTlMdlZoYk5iUGlSb1dKWUVwTHBDTUVzZVN3cnBGU3otQ2k0NlYzV3NHZ0lUNHJOSUZRbzRwVUlLc1R4eGN4cVBNdVU4cnlKRFJ0VmZFUWRRc1lXVFljLThuNzVLM3FUckhmVkJRYXZPRWVnbU9aZnhRUW1UMExpWEo0bEItbHJPOWFqaXpPZUxOaXNteFcxaHlWYm94Q3ViNkZzQ0lxZ1Y1bW5yTXVaNkJ3RWlCVktiWXpfa181dmNISFFUTEZ5X0N3OXFfcEk3QWc2RVd0U0VVRmJvdjBkektDQmtPWlNGemc?oc=5",
+        "tag": "fest",
+        "horizon": "aktuell",
+        "summary": "Das Museumsuferfest kehrt mit Wein und Live-Musik an das Frankfurter Mainufer zurück.",
+        "why": "Das Fest ist ein wichtiger Termin für die Frankfurter Freizeitplanung; Zeitraum und genaues Programm müssen der verlinkten Meldung entnommen werden.",
+        "source": "Journal Frankfurt"
+      },
+      {
+        "title": "Frankfurt feiert das Goetheturmfest",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNdFpHWmU1amptTmFMUUpmbkwyZ09rNmZvaHBuTmRPQWJtLW5FSjhYdk1BdFpKM04td1dFVUg0M21KaXBwOHo5OTk2VGVQX2FzaXBrZmx5QVFBR29mVlVTaVNFeVQxQ3Fac0MzSUFqVTUxc3B0Sk5DS1BKX3ZnRllMVFp4a0x1SEx3REVINmVBLWdEYTYxTkQybGw4T2dnN2ZiQWpwb1FqODVYWVBBYnMtYnJUdi1EbjFhcXZmVHdBa3NxZ09mVkQ4?oc=5",
+        "tag": "fest",
+        "horizon": "aktuell",
+        "summary": "In Frankfurt wird das Goetheturmfest gefeiert.",
+        "why": "Das Fest ist für die Freizeitplanung im Frankfurter Süden interessant, der Kandidat nennt jedoch weder Termin noch Programm.",
+        "source": "Journal Frankfurt"
+      }
+    ],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "A5-Brücke bei Frankfurt wird ab Oktober in Richtung Süden gesperrt",
+        "url": "https://www.fr.de/frankfurt/a5-bruecke-bei-frankfurt-wird-saniert-einschraenkungen-fuer-autofahrer-94441589.html",
+        "tag": "verkehr",
+        "horizon": "wochen",
+        "summary": "Eine Brücke an der A5 zwischen Frankfurt und Bad Homburg wird ab Oktober 2026 saniert. Dafür sind Sperrungen in Richtung Süden vorgesehen.",
+        "why": "Autofahrten aus dem Frankfurter Raum nach Süden werden voraussichtlich länger dauern; Pendler und Reisende sollten ab Herbst Ausweichrouten oder zusätzliche Zeit einplanen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Frankfurts neue Straßenbahngeneration startet am Montag",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/frankfurt-neue-strassenbahngeneration-geht-in-betrieb-accg-201122394.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Die neue Straßenbahngeneration geht am Montag in Frankfurt in Betrieb. Die Fahrzeuge waren bereits vor vier Jahren vorgestellt, anschließend aber an den Hersteller zurückgegeben worden.",
+        "why": "Für Fahrgäste beginnt damit der reguläre Einsatz neuer Fahrzeuge; zunächst ist mit einem schrittweisen Start und nicht mit einer sofortigen Umstellung des gesamten Netzes zu rechnen.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "52 neue Busse fehlen: Ausfälle auf Frankfurts Linien 63 und 66",
+        "url": "https://www.fnp.de/frankfurt/mercedes-liefert-52-busse-nicht-frankfurter-warten-bis-zu-einer-stunde-94442512.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Die städtische Busgesellschaft ICB wartet weiterhin auf 52 Dieselbusse, die bis zum 31. Juli geliefert werden sollten. Auf den Linien 63 und 66 fallen seit Monaten zahlreiche Fahrten aus, teils warten Fahrgäste bis zu einer Stunde.",
+        "why": "Wer auf diesen Linien unterwegs ist, sollte kurzfristig mehr Zeit einplanen und Verbindungen vor der Abfahrt prüfen.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Einzelhandel streikt am Freitag in Frankfurt",
+        "url": "https://www.fr.de/frankfurt/verdi-streik-in-frankfurt-einzelhandel-legt-arbeit-nieder-94442934.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Beschäftigte im hessischen Einzelhandel legen am Freitag, 14. August, auch in Frankfurt erneut die Arbeit nieder. Die Gewerkschaft Verdi fordert höhere Löhne.",
+        "why": "In einzelnen Filialen kann es zu Schließungen oder Einschränkungen kommen; für wichtige Einkäufe sind alternative Zeiten oder Geschäfte sinnvoll.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": [
+      {
+        "title": "Frankfurt ruft wegen hohen Wasserverbrauchs zu Sparsamkeit auf",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/vorerst-entwarnung-trotz-duerre-geht-frankfurt-das-wasser-nicht-aus-201118999.html",
+        "horizon": "aktuell",
+        "summary": "Der Trinkwasserverbrauch im Rhein-Main-Gebiet erreichte im Juni Rekordwerte und steigt nach den hessischen Sommerferien erneut, weshalb der Versorger zu verantwortungsvollem Verbrauch aufruft.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Lärmbeschwerden über Gastronomie im Frankfurter Nordend",
+        "url": "https://www.fr.de/frankfurt/aerger-wegen-laerm-durch-gastronomie-im-frankfurter-nordend-94442738.html",
+        "horizon": "aktuell",
+        "summary": "Anwohner im Nordend beschweren sich über Ruhestörungen durch Gäste der dortigen Gastronomie.",
+        "source": "Frankfurter Rundschau"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
