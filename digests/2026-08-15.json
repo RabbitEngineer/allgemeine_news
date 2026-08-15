@@ -1,0 +1,101 @@
+{
+  "tldr": [
+    "In Schwanheim ist die hausärztliche Versorgung stark eingebrochen: Drei von sechs Praxen haben geschlossen.",
+    "Das neue, doppelt so große VHS-Zentrum in Bockenheim eröffnet am 1. September.",
+    "Der Bahnhof Frankfurt-Höchst soll saniert und mit neuen Geschäften aufgewertet werden."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Schwanheim verliert die Hälfte seiner Hausarztpraxen",
+        "url": "https://www.fnp.de/frankfurt/drei-von-sechs-hausarztpraxen-in-schwanheim-geschlossen-94442503.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "In Schwanheim haben drei von sechs Hausarztpraxen geschlossen. Der Versorgungsgrad liegt dadurch nur noch bei 51,28 Prozent und damit deutlich unter der kritischen Marke von 75 Prozent.",
+        "why": "Für Bewohner Schwanheims kann die Suche nach einer Hausarztpraxis schwieriger werden; besonders bei einem Praxiswechsel sind längere Wege und Aufnahmestopps zu erwarten.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Neues VHS-Zentrum in Bockenheim eröffnet am 1. September",
+        "url": "https://www.fr.de/frankfurt/bockenheim-ort54494/vhs-zentrum-bockenheim-eroeffnet-am-september-doppelt-so-gross-94444407.html",
+        "tag": "news",
+        "horizon": "wochen",
+        "summary": "Die Frankfurter Volkshochschule zieht von der Leipziger Straße in die Gräfstraße 97. Das neue Zentrum bietet auf 835 Quadratmetern erstmals auch Sportkurse und ist doppelt so groß wie der bisherige Standort.",
+        "why": "Wer in Bockenheim oder den angrenzenden Stadtteilen Kurse sucht, erhält ab dem 1. September ein größeres Angebot an einem neuen Standort.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Bahnhof Frankfurt-Höchst soll saniert und aufgewertet werden",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/bahnhof-frankfurt-hoechst-deutsche-bahn-will-endlich-sanieren-accg-201115685.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Die Deutsche Bahn will den Bahnhof Frankfurt-Höchst umfassend auffrischen. Gerüste sollen bald verschwinden, die Bahnhofshalle soll renoviert werden und neue Geschäfte sollen einziehen.",
+        "why": "Für Pendler im Frankfurter Westen dürfte der Bahnhof langfristig angenehmer werden; während der Arbeiten können sich Wege und Zugänge ändern.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Deutsches Architekturmuseum zeigt neue Dauerausstellung",
+        "url": "https://www.fr.de/frankfurt/niederrad-ort904331/deutsches-architekturmuseum-zeigt-neue-dauerausstellung-mit-zehn-dioramen-94444494.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Das Deutsche Architekturmuseum hat nach seiner Rückkehr eine neue Dauerausstellung eröffnet. Zehn Dioramen erzählen die Geschichte des Bauens von der Jungsteinzeit bis zu den Wolkenkratzern der 1980er Jahre.",
+        "why": "Die Ausstellung ist ein dauerhaftes neues Kulturangebot in Frankfurt und eignet sich auch ohne besondere Vorkenntnisse für einen Museumsbesuch.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": [
+      {
+        "title": "Frankfurter Koalition legt Vertrag mit Digital- und Klimaprojekten vor",
+        "url": "https://www.fnp.de/frankfurt/frankfurter-koalition-verspricht-tausende-projekte-doch-wer-macht-das-94444350.html",
+        "horizon": "aktuell",
+        "summary": "CDU, Grüne, SPD und Volt haben einen Koalitionsvertrag mit zahlreichen Klima-, Digital- und Sozialprojekten vorgelegt, obwohl die Verwaltung bereits bei Bauanträgen an ihre Grenzen stößt.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Schönhofviertel zeigt Folgen unzureichender Infrastrukturplanung",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/schoenhofviertel-frankfurt-neubaugebiet-mit-planungsfehlern-accg-201122078.html",
+        "horizon": "aktuell",
+        "summary": "Im Schönhofviertel wurden bei der Planung zwei Fehler gemacht; einer wurde behoben, für den anderen zeichnet sich keine schnelle Lösung ab.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Zehntscheunenfest in Praunheim findet vom 21. bis 23. August statt",
+        "url": "https://www.fr.de/frankfurt/praunheim-ort904336/zehntscheunenfest-findet-erstmals-ausserhalb-der-sommerferien-statt-94444630.html",
+        "horizon": "wochen",
+        "summary": "Das traditionelle Nachbarschaftsfest in Praunheim wird vom 21. bis 23. August zum 40. Mal veranstaltet; rund 150 Aktive beteiligen sich.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Mittelalterliches Gemälde im Frankfurter Dom wird restauriert",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/restaurierung-im-frankfurter-dommuseum-ein-mittelalter-bild-wie-vor-100-jahren-201126370.html",
+        "horizon": "aktuell",
+        "summary": "Im Frankfurter Dommuseum wird eine mittelalterliche Christusdarstellung aus der Wahlkapelle restauriert.",
+        "source": "FAZ Frankfurt"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
