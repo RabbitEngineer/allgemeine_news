@@ -1,0 +1,98 @@
+{
+  "tldr": [
+    "Am Walldorfer Kreuz beginnt eine Großbaustelle; Autofahrten über die wichtige Verbindung südlich von Frankfurt können länger dauern.",
+    "Der Bolongaropalast in Höchst soll nach zehn Jahren Sanierung und Kosten von 73 Millionen Euro Mitte 2027 wieder öffnen.",
+    "Billie Eilish kommt mit ihrer Arena-Tour nach Deutschland; konkrete Termine und der Vorverkauf sind in der Meldung noch nicht genannt."
+  ],
+  "immobilien": {
+    "top": [
+      {
+        "title": "Schönhofviertel steht beispielhaft für Probleme im Frankfurter Neubau",
+        "url": "",
+        "tag": "neubau",
+        "horizon": "aktuell",
+        "summary": "Der Beitrag untersucht am Beispiel des Schönhofviertels, warum in Frankfurter Neubaugebieten aus Sicht der Autoren vieles nicht wie geplant funktioniert. Konkrete Wohnungszahlen, Preise oder ein neuer Vermietungs- beziehungsweise Bezugstermin werden im vorliegenden Auszug nicht genannt.",
+        "why": "Für eine kurzfristige Wohnraumsuche ergibt sich daraus kein konkretes Angebot, der Beitrag liefert aber Hinweise auf typische Probleme großer neuer Quartiere."
+      },
+      {
+        "title": "Frankfurter Grundschule erhält Wohnungen auf dem Schuldach",
+        "url": "",
+        "tag": "neubau",
+        "horizon": "aktuell",
+        "summary": "In Frankfurt wird ein hybrides Gebäude vorgestellt, bei dem Wohnungen auf einer Grundschule errichtet wurden. Der Auszug nennt keine Zahl der Wohnungen, Preise oder einen Bezugstermin.",
+        "why": "Das Modell kann künftig zusätzliche Wohnungen schaffen, ist für die unmittelbare Wohnungssuche aber nur relevant, wenn später konkrete Vermietungsdaten veröffentlicht werden."
+      }
+    ],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Billie Eilish kündigt Deutschlandtermine ihrer Arena-Tour an",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNUEozMUZTaWVCVXUwV1VaRW5nYVd3T1pmdE02WlpGLUlkTExVbFNURERDLUFzZWx5akJzSVVjUXlBT3RfalRRLVpZOW9lSUpFWUtBN05MYkdkU1otMWZMMU1JQmM4OWRKZ09HU0k1RGdoR1hMUHdtRjF6dkpxTHM1VTdUTzdMbHpBYTAzN05SbGc4U0xidkxfT2hHYWFrcHVDYnVXaFJFY0lwdUxjV0pxa2V6LURvaWJXekxCX1doOEVRZw?oc=5",
+        "tag": "konzert",
+        "horizon": "aktuell",
+        "summary": "Billie Eilishs Arena-Tour „Hit Me Hard And Soft“ soll Deutschland erreichen. Im vorliegenden Kandidatentext fehlen konkrete Städte, Hallen, Auftrittsdaten und Angaben zum Vorverkaufsstart.",
+        "why": "Wegen der Größe des Acts lohnt es sich, auf die vollständige Termin- und Vorverkaufsankündigung zu achten; derzeit lässt sich noch keine Reise oder Karte planen.",
+        "source": "ad-hoc-news.de"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Großbaustelle am Walldorfer Kreuz startet mit Folgen für Autofahrer",
+        "url": "",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Am Walldorfer Kreuz hat eine größere Baustelle begonnen; der Beitrag nennt Hinweise, die Autofahrer ab Sonntag beachten müssen. Das Kreuz ist eine wichtige Verbindung im Verkehr südlich von Frankfurt.",
+        "why": "Für Fahrten über die A5 und A67 sowie zum Flughafen sollte mehr Zeit eingeplant und vor der Abfahrt die aktuelle Verkehrsführung geprüft werden."
+      },
+      {
+        "title": "Bolongaropalast in Höchst soll Mitte 2027 wieder öffnen",
+        "url": "https://www.fnp.de/frankfurt/bolongaropalast-oeffnet-mitte-2027-nach-zehn-jahren-und-73-millionen-euro-94444647.html",
+        "tag": "news",
+        "horizon": "monate",
+        "summary": "Die Stadt Frankfurt plant die Wiedereröffnung des sanierten Bolongaropalasts in Höchst für den Sommer 2027. Die Sanierung dauert seit 2017, die Kosten liegen inzwischen bei 73 Millionen Euro und haben sich damit nahezu verdoppelt.",
+        "why": "Für den Frankfurter Westen entsteht ab Mitte 2027 wieder ein bedeutender Ort für Kultur und Veranstaltungen, kurzfristig ist der Palast aber weiterhin nicht nutzbar.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Architekturmuseum zeigt nach Sanierung neue Dauerausstellung",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/deutsches-architekturmuseum-frankfurt-neue-dauerausstellung-accg-201126933.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Das Deutsche Architekturmuseum in Frankfurt hat nach längerer Sanierungspause eine neue Dauerausstellung eröffnet. Sie umfasst elf Modelle; von den früheren Exponaten ist nur ein Teil wieder zu sehen.",
+        "why": "Das Museum bietet damit wieder ein dauerhaftes neues Kulturziel in Frankfurt, auch wenn die Ausstellung nicht die vollständige frühere Sammlung zeigt.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Rohrsee im Schwanheimer Wald ist vollständig ausgetrocknet",
+        "url": "https://www.fnp.de/frankfurt/rohrsee-im-schwanheimer-wald-komplett-ausgetrocknet-94444318.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Der Rohrsee, ein alter Mainarm im Schwanheimer Wald, führt derzeit kein Wasser mehr. Im zurückgebliebenen Schlamm sind laut Bericht nur noch Spuren von Wildschweinen zu sehen.",
+        "why": "Die Entwicklung zeigt die Belastung der Frankfurter Grün- und Feuchtgebiete durch die trockene Witterung und ist bei Spaziergängen im Schwanheimer Wald sichtbar.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": []
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
