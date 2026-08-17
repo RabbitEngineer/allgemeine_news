@@ -1,0 +1,98 @@
+{
+  "tldr": [
+    "Das Heizkraftwerk West legt seine Steinkohleblöcke still; die Stadt steigt damit aus der Kohleverstromung aus.",
+    "Wegen vieler toter Wasservögel warnt das Grünflächenamt vor dem Baden in zwei Frankfurter Stadtparkweihern.",
+    "Bei Frankfurter Neubauprojekten gibt es weiterhin Kritik an Planung und Umsetzung, unter anderem im Schönhofviertel."
+  ],
+  "immobilien": {
+    "top": [
+      {
+        "title": "Kritik an der Umsetzung des Schönhofviertels",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPZXBxNGtzUm5DRHVOd2t1SzR0X0NQU0dxX3pqSmJFZHJIZHRROTZKZllmY0xzSEMwOUZaMk9UaEhqZ0NPakRaWFNsTTczRGNQTzhQMHdUa0oxRm9pdEpNQkRNeHJxWWtFNGhXT3BGbHBWRDVLLUNSZS1CUUx5VlozUW9NOURzbVBlR2VOTXdfZGpVc183RldIYXFKRVpaVzVtTXhrM2J0R2ctbFc3TnlNMFZobXpsUmkzdnJzbGVpUEtNcTJhRGg2Q0k5b3hyQUd6SHBUaw?oc=5",
+        "tag": "neubau",
+        "horizon": "aktuell",
+        "summary": "Ein FAZ-Beitrag untersucht, warum im Frankfurter Schönhofviertel und in anderen Neubaugebieten aus Sicht von Kritikern bei Planung und Umsetzung vieles nicht funktioniert.",
+        "why": "Für Kauf- oder Mietinteressierte ist die Meldung vor allem ein Hinweis, bei Neubauquartieren neben Grundriss und Preis auch Infrastruktur, Bauqualität und Fertigstellung des Umfelds zu prüfen.",
+        "source": "FAZ"
+      },
+      {
+        "title": "Frankfurter Hybridschule verbindet Schulbau mit Wohnungen",
+        "url": "",
+        "tag": "neubau",
+        "horizon": "monate",
+        "summary": "In Frankfurt wird ein hybrides Gebäude vorgestellt, bei dem Wohnungen auf einer Grundschule errichtet werden.",
+        "why": "Das Modell schafft zusätzlichen Wohnraum auf knappen innerstädtischen Flächen, sagt aber ohne Angaben zu Zahl, Preisen oder Zeitplan noch nichts über ein konkretes Miet- oder Kaufangebot aus."
+      }
+    ],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Tschechien bereitet Auftritt als Gast der Frankfurter Buchmesse vor",
+        "url": "",
+        "tag": "messe",
+        "horizon": "wochen",
+        "summary": "Tschechien wird als Gastland der Frankfurter Buchmesse Ausstellungen und weitere kulturelle Beiträge nach Frankfurt bringen.",
+        "why": "Wer die Buchmesse besucht, kann dort neben dem regulären Messeprogramm einen größeren tschechischen Schwerpunkt einplanen."
+      }
+    ],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Frankfurt legt Steinkohleblöcke im Heizkraftwerk West still",
+        "url": "https://www.fnp.de/frankfurt/mainova-erhaelt-genehmigung-kohlebloecke-werden-nach-zwoelf-monaten-stillgelegt-94445131.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Mainova legt die Steinkohleblöcke 2 und 3 im Frankfurter Heizkraftwerk West nach zwölf Monaten Betrieb still; damit steigt Frankfurt aus der Kohle aus.",
+        "why": "Für Haushalte ist kurzfristig vor allem wichtig, dass die Wärme- und Stromversorgung trotz des Ausstiegs weiter gesichert werden soll.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Frankfurt warnt vor dem Baden in zwei Stadtparkweihern",
+        "url": "https://www.fnp.de/frankfurt/viele-tote-wasservoegel-in-frankfurt-gruenflaechenamt-warnt-vor-baden-94445128.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "An zwei Frankfurter Stadtparkweihern wurden in den vergangenen Wochen ungewöhnlich viele tote Wasservögel gefunden. Tests auf Vogelgrippe, Vergiftung und Blaualgen waren unauffällig; das Grünflächenamt warnt dennoch vor dem Baden.",
+        "why": "Die Weiher sollten bis auf Weiteres gemieden werden, auch wenn die bisherigen Tests keine konkrete Ursache ergeben haben.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Falschparker blockieren Wege rund um das Brentanobad",
+        "url": "https://www.fnp.de/frankfurt/zugeparkt-brentanobad-fussgaenger-muessen-auf-die-strasse-gehwege-94444322.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Rund um das Brentanobad werden Geh- und Radwege zugeparkt, sodass Menschen mit Kinderwagen oder Rollstuhl teilweise auf die Fahrbahn ausweichen müssen.",
+        "why": "Wer das Brentanobad zu Fuß oder mit dem Fahrrad erreicht, sollte mit blockierten Wegen rechnen und besonders aufmerksam sein.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": [
+      {
+        "title": "Frankfurter Initiative startet neues Bürgerbegehren für eine grünere Innenstadt",
+        "url": "https://www.fr.de/frankfurt/fuer-eine-kuehlere-und-gruenere-innenstadt-neues-buergerbegehren-auf-dem-weg-94445863.html",
+        "horizon": "aktuell",
+        "summary": "Die Initiative Radentscheid sammelt Unterstützung für ein Bürgerbegehren, das mehr Grün und weniger Autoverkehr in der Frankfurter Innenstadt erreichen soll.",
+        "source": "Frankfurter Rundschau"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
