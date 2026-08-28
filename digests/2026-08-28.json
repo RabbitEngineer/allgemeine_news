@@ -1,0 +1,133 @@
+{
+  "tldr": [
+    "Das Museumsuferfest läuft von Freitag bis Sonntag mit 28 geöffneten Museen, zwölf Bühnen und Feuerwerk.",
+    "Frankfurt hat fünf Monate nach der Kommunalwahl einen neuen Magistrat mit vier CDU-Dezernenten.",
+    "Mehrere Autobahnsperrungen und Baustellen bremsen den Verkehr rund um Frankfurt an diesem Wochenende."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Take That kündigt Deutschlandtermine für die Live-Tour 2027 an",
+        "url": "",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "Take That plant eine Deutschlandtournee für 2027; der Kandidat kündigt Tickets, Termine und Vorverkaufsinformationen an, nennt im Auszug aber noch keine Städte oder Daten.",
+        "why": "Für die Planung ist die Meldung frühzeitig relevant, konkrete Städte und der Vorverkaufsstart müssen jedoch noch geprüft werden."
+      },
+      {
+        "title": "Korn kündigt sechs Arena-Konzerte in Deutschland für 2026 an",
+        "url": "",
+        "tag": "konzert",
+        "horizon": "wochen",
+        "summary": "Korn bringt die Europa-Tour 2026 mit sechs Arena-Shows nach Deutschland; der Kandidatenauszug nennt weder die Städte noch die Konzerttermine.",
+        "why": "Die Größe der Tour macht die Ankündigung für Fans in Frankfurt grundsätzlich relevant, für eine Kartenentscheidung fehlen aber noch Ort, Datum und Vorverkaufsstart."
+      }
+    ],
+    "also": [
+      {
+        "title": "Deutscher Film „Staatsschutz“ startet neu im Kino",
+        "url": "",
+        "horizon": "aktuell",
+        "summary": "Der deutsche Film „Staatsschutz“ ist neu im Kino."
+      }
+    ]
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Museumsuferfest läuft bis Sonntag mit 28 Museen und Feuerwerk",
+        "url": "",
+        "tag": "fest",
+        "horizon": "aktuell",
+        "summary": "Das Museumsuferfest findet vom 28. bis 30. August in Frankfurt statt. Erwartet werden rund eine Million Besucher; 28 Museen, zwölf Bühnen und ein Feuerwerk gehören zum Programm.",
+        "why": "Das Fest prägt an diesem Wochenende beide Mainufer; wer hingehen möchte, sollte mit sehr vollen Wegen und Bahnen rechnen."
+      }
+    ],
+    "also": [
+      {
+        "title": "Frankfurter Ehrenamtsmesse bringt 109 Organisationen im Römer zusammen",
+        "url": "",
+        "horizon": "aktuell",
+        "summary": "Bei der 19. Frankfurter Ehrenamtsmesse stellen sich 109 Organisationen im Römer vor."
+      }
+    ]
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Frankfurt hat nach der Wahl einen neuen Magistrat",
+        "url": "https://www.hessenschau.de/politik/neuer-magistrat-in-frankfurt-steht---vier-cdu-dezernenten-gewaehlt-v2,frankfurt-magistrat-100.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Gut fünf Monate nach der Kommunalwahl ist Frankfurts neue Stadtregierung arbeitsfähig. Die Stadtverordneten wählten vier neue Dezernenten, alle von der CDU.",
+        "why": "Die neue Mehrheit kann nun politische Vorhaben beschließen; besonders Verkehr, Stadtentwicklung und öffentliche Dienstleistungen dürften den Alltag betreffen.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "Mehrere Autobahnbaustellen bremsen den Verkehr rund um Frankfurt",
+        "url": "",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Gleich mehrere Bauarbeiten und Sperrungen auf Autobahnen rund um Frankfurt sorgen am Wochenende für Behinderungen.",
+        "why": "Für Fahrten aus Frankfurt sollte mehr Zeit eingeplant und die konkrete Route vor der Abfahrt geprüft werden."
+      },
+      {
+        "title": "Vorhalle der Frankfurter Leonhardskirche wird neuer Kulturort",
+        "url": "https://www.fr.de/frankfurt/die-vorhalle-der-frankfurter-leonardskirche-ist-fertig-und-soll-nun-auch-fuer-veranstaltungen-genutzt-werden-94465077.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Die Vorhalle der Frankfurter Leonhardskirche ist fertiggestellt und soll künftig auch für Veranstaltungen genutzt werden.",
+        "why": "Im Bahnhofsviertel beziehungsweise an der Altstadt entsteht damit ein zusätzlicher Veranstaltungsort; konkrete Termine stehen noch aus.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Sachsenhäuser Straßenfest Brückenwall findet 2026 letztmals in dieser Form statt",
+        "url": "https://www.fr.de/frankfurt/sachsenhausen-ort29377/brueckenwall-in-sachsenhausen-veranstalter-gibt-nach-18-jahren-auf-94465084.html",
+        "tag": "fest",
+        "horizon": "wochen",
+        "summary": "Das Sachsenhäuser Straßenfest im Brückenviertel findet am 5. September zum letzten Mal in seiner bisherigen Form statt, nachdem die Veranstalter nach 18 Jahren aufgeben.",
+        "why": "Wer das Fest noch in der bekannten Form erleben möchte, hat dafür nur noch diesen Termin.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": [
+      {
+        "title": "Einzelhandel an Frankfurts Berger Straße verliert weitere Boutiquen",
+        "url": "https://www.fnp.de/frankfurt/einzelhandel-in-frankfurt-unter-druck-wie-viele-pizzerien-doenerlaeden-und-thai-imbisse-kann-eine-strasse-vertragen-94463700.html",
+        "horizon": "aktuell",
+        "summary": "Auf der unteren Berger Straße sind sechs von zwölf Boutiquen verschwunden; an ihre Stelle treten vor allem Dönerläden, Pizzerien und andere Gastronomiebetriebe.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Verspätete Fernzüge häufen sich im Frankfurter Bahnverkehr",
+        "url": "https://www.fnp.de/frankfurt/einige-bahn-fernzuege-fast-immer-zu-spaet-frankfurt-verbindung-im-zentrum-94462400.html",
+        "horizon": "aktuell",
+        "summary": "In Frankfurt verspäten sich mehrere Fernzugverbindungen besonders häufig, darunter eine zentrale ICE-Verbindung durch die Stadt.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Lufthansa-Flug von Frankfurt nach Delhi muss über Baku umkehren",
+        "url": "https://www.fnp.de/frankfurt/spur-endet-ueber-dem-kaspischen-meer-daten-von-frankfurt-flieger-zwingen-crew-zum-umplanen-94464026.html",
+        "horizon": "aktuell",
+        "summary": "Ein Lufthansa-Flug von Frankfurt nach Delhi musste wegen fehlerhafter Positionsdaten über Turkmenistan umkehren und legte in Baku einen langen Zwischenstopp ein.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
