@@ -1,0 +1,88 @@
+{
+  "tldr": [
+    "Das Museumsuferfest läuft seit Freitag mit zwölf Bühnen, Feuerwerk und erwarteten eine Million Besuchern; am Mainufer ist mit großem Andrang zu rechnen.",
+    "Frankfurt ordnet die Zuständigkeiten im Magistrat neu und will Entscheidungen bei Großprojekten stärker zwischen den Dezernaten abstimmen.",
+    "Für die Landstromversorgung am Mainufer ist weiterhin kein Bauantrag gestellt; ein Baubeginn im dritten Quartal 2027 bleibt deshalb unsicher."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Museumsuferfest 2026: Zwölf Bühnen und Feuerwerk am Mainufer",
+        "url": "",
+        "tag": "fest",
+        "horizon": "aktuell",
+        "summary": "Das Museumsuferfest 2026 hat begonnen und bietet drei Tage Programm mit zwölf Bühnen und einem Feuerwerk; erwartet werden rund eine Million Besucher.",
+        "why": "Am Mainufer und auf den Zufahrtswegen ist bis zum Ende des Festes mit dichtem Andrang und Einschränkungen zu rechnen."
+      }
+    ],
+    "also": [
+      {
+        "title": "Frankfurter Ehrenamtsmesse bringt 109 Organisationen im Römer zusammen",
+        "url": "",
+        "horizon": "aktuell",
+        "summary": "Bei der 19. Frankfurter Ehrenamtsmesse stellen sich 109 Organisationen im Römer vor."
+      }
+    ]
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Frankfurt ordnet den Magistrat neu und stärkt Zusammenarbeit",
+        "url": "https://www.fnp.de/frankfurt/mike-josef-ordnet-frankfurter-magistrat-neu-und-zwingt-dezernate-zur-zusammenarbeit-94465210.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Oberbürgermeister Mike Josef verteilt die Zuständigkeiten im Frankfurter Magistrat neu; bei Großprojekten sollen mehrere Dezernate künftig im Einvernehmen entscheiden und nicht nur angehört werden.",
+        "why": "Die Neuordnung kann Planung und Umsetzung städtischer Großprojekte beeinflussen, bringt im Alltag aber zunächst keine unmittelbare Änderung.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Landstrom am Mainufer: Bauantrag fehlt, Baubeginn 2027 unsicher",
+        "url": "https://www.fnp.de/frankfurt/schiffe-und-hotels-warten-seit-jahrzehnten-auf-sauberen-strom-bauantrag-noch-nicht-gestellt-94465214.html",
+        "tag": "news",
+        "horizon": "monate",
+        "summary": "Seit Jahrzehnten warten rund 400 Kreuzfahrt- und Hotelschiffe auf Landstrom am Frankfurter Mainufer. Für den geplanten Baubeginn im dritten Quartal 2027 ist bislang noch nicht einmal der Bauantrag gestellt.",
+        "why": "Die Versorgung soll später Schiffsemissionen am Mainufer verringern, kurzfristig ändert sich für Anwohner und Besucher jedoch nichts.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Wintergärten an der Mainzer Landstraße sollen teilweise verschwinden",
+        "url": "https://www.fnp.de/frankfurt/mainzer-landstrasse-gastronomen-sollen-wintergaerten-abreissen-12-plaetze-uebrig-94465218.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Gastronomen an der Mainzer Landstraße sollen Wintergärten und Überdachungen zurückbauen; ein betroffener Betrieb befürchtet, danach nur noch zwölf Außenplätze behalten zu können.",
+        "why": "Wer dort wohnt oder ausgeht, muss mit Veränderungen bei Außengastronomie und möglicherweise längeren Konflikten zwischen Stadt und Wirten rechnen.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Städel zeigt neue Installation von Elmgreen & Dragset",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNZEdBN3JqX2pMOHZmTGpvUzByQ3I2ZUJUOWVoODdHUEJlTXZfYnJDZVJEc2tpY3RzM0RNbjZ1T1pYUU5QeGV6YktnNGdSV2pGYmlNeVZwMGwwSDI4cTdLUXJYX1pOV1BSRjBLUHMta1pZc3ZPMWNBdzcxTWxuV2JEQi1xc0hCUTRDR2ZrRlhoVFR1NDhNbVFMVGpfWktwdnZacDdfcWxydHpfYndPdnhyOU1vQ0pfQVgydmViaWhJWE0?oc=5",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Das Städel Museum präsentiert eine Installation des Künstlerduos Elmgreen & Dragset mit dem Titel „Stillleben mit Gemüse“.",
+        "why": "Die Ausstellung ist eine zusätzliche aktuelle Kulturoption in Frankfurt; genaue Laufzeit und Besuchsbedingungen sollten vor dem Museumsbesuch geprüft werden.",
+        "source": "Ad-hoc-news.de"
+      }
+    ],
+    "also": []
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
