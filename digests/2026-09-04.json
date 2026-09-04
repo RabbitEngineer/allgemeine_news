@@ -1,0 +1,125 @@
+{
+  "tldr": [
+    "Wegen einer S-Bahn-Sperrung und geplanter Sicherheitstests mit Bodycams kommt es im Frankfurter ÖPNV zu Änderungen.",
+    "Der Ostteil des Schönhofparks ist eröffnet; insgesamt entstehen im neuen Viertel 28.000 Quadratmeter Grünfläche.",
+    "Simple Minds geben im April 2027 vier Deutschland-Konzerte, darunter einen Termin in Köln."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Simple Minds spielen im April 2027 vier Deutschland-Konzerte",
+        "url": "",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "Simple Minds feiern ihr 50-jähriges Bestehen mit vier Deutschland-Konzerten im April 2027, darunter einem Termin in Köln.",
+        "why": "Für die Kölner Arena ist eine längere Anreise einzuplanen; Karten und genaue Termine sollten früh geprüft werden, da der Vorverkauf aus der Meldung nicht hervorgeht."
+      }
+    ],
+    "also": [
+      {
+        "title": "Korn kündigt Deutschlandtermine für die Euro-Tour 2026 an",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQU9KaWY0QnpJby0yQ2xfYzJ2X1lyd0ozOXdFSEtaZzg1UldVVWRwWTRlbmUtejRZOFNOWm14R3F3dnBvMzRQTFFEOUgwMC1pMmpZR2N4VTYwQ3ZCM3JYdl9Wb1VKel9UcHFmTjhQSW9oV25yMm9xQU1lME1rVzlXbkRWYkVZd1NKcmNHVFdUbWNjbVhlTGZESHJTRGtoOTVyY0E?oc=5",
+        "horizon": "aktuell",
+        "summary": "Korn führt seine Euro-Tour 2026 durch deutsche Arenen; konkrete Städte, Termine und Vorverkaufsdaten nennt der Auszug nicht.",
+        "source": "AD HOC NEWS"
+      }
+    ]
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": [
+      {
+        "title": "Europäische Woche des Sports meldet mehr als 500 Angebote in Frankfurt",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPSHBJOFZQS2xSUVoxWDBUUGNBRWMyalN0cHdtWmlDNnlja0ZmNkp0ZkNUbVBMOEgwb1RfZGx3UEpaRUxvV3NPRjJ0WFZYdmlmbW5fYnBXR2FtOHprRUdoWnVDci0zMDZwN2RJZC1RYzlPREMyNFJnWlJYRVdxSjIwLU5tTVptd2hNWnJZaTkzdzBBRUtFNkQ3X0ZBbUIzZ0JLREdYVDRna1U4Unl3V0dnM3VBTnpBTjg1NXV5aWQ3N1FnX1N0TDB6bjJJejEzZlB6?oc=5",
+        "horizon": "aktuell",
+        "summary": "Für die Europäische Woche des Sports in Frankfurt sind bereits mehr als 500 Angebote gemeldet; ein Zeitraum wird im Auszug nicht genannt.",
+        "source": "Frankfurter Rundschau"
+      }
+    ]
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Frankfurter S-Bahn-Sperrung: Grund und Folgen für Fahrgäste",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTzdiNy1DaGRFV1pGcFg4MjNkdjJHYXp6U1Zpdm5FcXgyMERlSmFCN0tEa0lUX3ZadVZRVW9VRTJBX20zMzFiNERfVG4wVWlpVWlFSzdsRGw0dWktTm9YbGJacERsdWhQVDVCaHZGdlZSbjRCUzRuMjVBU2pMNGNxOE94SGRfa0M1N0FTWGJjRGxVSzhRbGlQb3UyRzRMT0swRjZ3X0RiUm84Vlk?oc=5",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "In Frankfurt ist eine S-Bahn-Strecke gesperrt; der Beitrag erklärt den Grund der Sperrung und die Auswirkungen auf den Bahnverkehr.",
+        "why": "Wer derzeit mit der S-Bahn unterwegs ist, sollte vor der Fahrt die betroffene Strecke und mögliche Umleitungen prüfen.",
+        "source": "Hit Radio FFH"
+      },
+      {
+        "title": "Frankfurt testet Bodycams im öffentlichen Nahverkehr",
+        "url": "",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Frankfurt startet gemeinsam mit Hannover Sicherheitstests mit Bodycams im öffentlichen Nahverkehr; nähere Angaben zu Umfang und Dauer fehlen im Auszug.",
+        "why": "Fahrgäste müssen mit sichtbaren Kameraeinsätzen durch Sicherheitskräfte rechnen; der Test soll den Schutz des Personals und der Fahrgäste verbessern."
+      },
+      {
+        "title": "Schönhofpark eröffnet: 28.000 Quadratmeter Grün fürs neue Viertel",
+        "url": "https://www.fr.de/frankfurt/schoenhofpark-eroeffnet-12-500-quadratmeter-fuer-800-schulkinder-94474027.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Im neuen Schönhofviertel ist der Ostteil des Schönhofparks mit 12.500 Quadratmetern eröffnet worden. Auf der Westseite entsteht nochmals eine gleich große Fläche, insgesamt werden es 28.000 Quadratmeter.",
+        "why": "Der Park verbessert das Freizeitangebot im neuen Quartier bereits jetzt; die vollständige Grünanlage ist noch nicht fertig.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Frankfurt übt ab Montag für mögliche Krisenfälle",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/frankfurt-grossuebung-fuer-krisenfaelle-ab-montag-201189575.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Frankfurt beginnt am Montag eine Großübung für mögliche Krisen- und Katastrophenfälle mit Sirenen, Blaulicht und Einsatzteams. Auch die Bevölkerung soll zur persönlichen Vorsorge angeregt werden.",
+        "why": "Im Stadtgebiet können vorübergehend sichtbare Einsatzübungen und Warnsignale auftreten; sie gehören zur geplanten Bevölkerungsschutzübung.",
+        "source": "FAZ Frankfurt"
+      }
+    ],
+    "also": [
+      {
+        "title": "Beliebter Badesee bei Frankfurt wegen Wasserpest gesperrt",
+        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNRE1ORkdlQml3V3VZdU1LUU5TMHpLaVc1MDVPX1Zxd093Q04yRndfalFYZkZGYmRFU3NPMkN3eFdsYmlCTlM1TDY1SUt3ME15Z1dUbXNJRlN3SkJqN3ZXV3Z5VDAwUmlhQTdadEM2MXY5Tmc3RTNIdGJHNEtGd3haNGJULXotbERCRWZ3OGRtU2FyV3RUdmFzRjQ4VllfQkJqT0gzVDJvZTNGb2pnakVRNW1wbC16Xy1KSVctcW5TcGk5c0xSdkdEblFfZUpHMlQ1TTl5MzBUWkNZa0k?oc=5",
+        "horizon": "aktuell",
+        "summary": "Eine Behörde hat einen beliebten Badesee bei Frankfurt wegen stark wuchernder Wasserpest gesperrt.",
+        "source": "t-online – Frankfurt"
+      },
+      {
+        "title": "Teves-West im Gallus braucht ab 2030 eine neue Perspektive",
+        "url": "https://www.fr.de/frankfurt/gallus-ort904318/mietvertrag-fuer-teves-west-endet-2030-wenn-wir-hier-nicht-bleiben-koennen-stirbt-das-alles-94474938.html",
+        "horizon": "monate",
+        "summary": "Der Mietvertrag für den Kultur- und Bildungsstandort Teves-West im Gallus endet 2030; ob die Stadt ihn verlängert, ist offen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Frankfurt hält an umstrittenem Radweg an der Habsburgerallee fest",
+        "url": "https://www.fnp.de/frankfurt/habsburgerallee-radweg-zwischen-autos-und-laternen-stadt-plant-nichts-94472276.html",
+        "horizon": "aktuell",
+        "summary": "Der Radweg an der Habsburgerallee entspricht laut dem Beitrag nicht mehr heutigen Standards, dennoch plant die Stadt derzeit keinen Umbau.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Berta-Jourdan-Schule muss nach gescheitertem Umzug neu planen",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/berta-jourdan-schule-umzug-gescheitert-nach-3-jahren-201188023.html",
+        "horizon": "aktuell",
+        "summary": "Der geplante Umzug der Frankfurter Berta-Jourdan-Schule ist nach drei Jahren Diskussion gescheitert; die Standortfrage ist damit wieder offen.",
+        "source": "FAZ Frankfurt"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
