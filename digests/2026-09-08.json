@@ -1,0 +1,115 @@
+{
+  "tldr": [
+    "Eine wichtige U-Bahn-Verbindung durch die Frankfurter Innenstadt ist wegen Rauchentwicklung in einem Tunnelabschnitt gesperrt.",
+    "Die Herbst-Dippemess hat begonnen; zugleich schließt das Museum für Weltkulturen sein Haupthaus bis Frühjahr 2027.",
+    "James Blunt kommt im kommenden Jahr nach Düsseldorf; der Vorverkauf wird rechtzeitig relevant."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "James Blunt spielt im kommenden Jahr in Düsseldorf",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQSTU0MC1yVW1rZmJyd0tPSmZTR3Q3cFBaUmZfTnVBZEZ1WEJpNkRLWjJURW1NNlpJTms5d2hzeFhSdTlXNzFoSkRLVTV5M0VJOFVTQXB6eDhxYXdwbE5Ib3JfWjNsZHBWdjE1cnZRMHd2QkpRQnlvNk03OVRhUERBOVRCb0JYZWRyS0xMQksxVmJDbGlFV1BWSVBrYzdTblZvaE9sY1ZiN0dGR1VtS0F1UDAzWFg2M01pZVdSMnJ2NGZ2WFVwVGdOdFZB?oc=5",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "James Blunt kündigt für das kommende Jahr ein Konzert in Düsseldorf an. Der Beitrag informiert über Termin, Tickets und Vorverkauf, nennt im Auszug aber noch kein konkretes Datum.",
+        "why": "Düsseldorf ist von Frankfurt aus erreichbar; für einen bekannten Arena-Act sollte der Vorverkaufsbeginn beobachtet werden, sobald der genaue Termin feststeht.",
+        "source": "RP Online"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Die Herbst-Dippemess in Frankfurt hat begonnen",
+        "url": "https://www.fr.de/frankfurt/dippemess-frankfurt-startet-alles-zur-herbst-ausgabe-2026-94479794.html",
+        "tag": "fest",
+        "horizon": "aktuell",
+        "summary": "Die Herbstauflage der Dippemess in Frankfurt ist gestartet; der Beitrag bündelt Termine, Öffnungszeiten und Hinweise zur Anfahrt.",
+        "why": "Für einen Besuch sollten Öffnungszeiten und die Anreise zum Festplatz geprüft werden, besonders zu Stoßzeiten.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Automechanika 2026 setzt auf mehr Aussteller und KI",
+        "url": "",
+        "tag": "messe",
+        "horizon": "aktuell",
+        "summary": "Die Automechanika 2026 wird mit mehr Ausstellern, neuen Formaten und einem Schwerpunkt auf künstlicher Intelligenz angekündigt.",
+        "why": "Die große Fachmesse kann das Verkehrs- und Hotelaufkommen rund um das Frankfurter Messegelände spürbar erhöhen."
+      }
+    ],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Rauch in Tunnel: U-Bahn-Verbindung durch Frankfurt gesperrt",
+        "url": "https://www.fr.de/frankfurt/bahn-stoerung-auf-wichtiger-strecke-durch-frankfurt-viel-feuerwehr-praesenz-in-der-innenstadt-94480466.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Eine wichtige U-Bahn-Verbindung durch die Frankfurter Innenstadt ist gesperrt, nachdem in einem Tunnelabschnitt Rauch entdeckt wurde; die Feuerwehr ist vor Ort.",
+        "why": "Wer heute durch die Innenstadt fahren muss, sollte mit Ausfällen und Umwegen rechnen und vor der Abfahrt die aktuellen Verkehrsmeldungen prüfen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Frankfurt muss zwölf marode Brücken ersetzen",
+        "url": "https://www.fnp.de/frankfurt/frankfurt-hat-zwoelf-marode-bruecken-und-noch-keinen-plan-womit-es-losgeht-94479909.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Frankfurt muss zwölf Brücken ersetzen, die von Spannungsrisskorrosion bedroht sind; welche Brücke zuerst abgerissen wird, ist noch offen.",
+        "why": "Kurzfristig ändert sich für den Alltag noch nichts, langfristig können Sperrungen und neue Verkehrsführungen mehrere Stadtteile betreffen.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Museum für Weltkulturen schließt Haupthaus bis Frühjahr 2027",
+        "url": "https://www.fnp.de/frankfurt/museum-fuer-weltkulturen-frankfurt-schliesst-haupthaus-bis-fruehjahr-2027-94479906.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Das Haupthaus des Museums für Weltkulturen am Schaumainkai 29 bleibt wegen der Erneuerung der Lichtanlage bis Frühjahr 2027 geschlossen; das Programm läuft im Nebenhaus weiter.",
+        "why": "Besuche im Haupthaus sind bis zur Wiedereröffnung nicht möglich, das Nebenhaus bleibt jedoch für Ausstellungen und Veranstaltungen geöffnet.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Warntag am 10. September testet Hessens Warnsystem",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/resilienzwoche-und-warntag-in-hessen-am-10-september-accg-201202624.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Während der hessischen Resilienzwoche wirbt das Land für Eigenvorsorge; am 10. September wird das Warnsystem beim Warntag getestet.",
+        "why": "Am Donnerstag können Warnmeldungen auf Mobiltelefonen und anderen Kanälen erscheinen, ohne dass ein echter Notfall vorliegt.",
+        "source": "FAZ Frankfurt"
+      }
+    ],
+    "also": [
+      {
+        "title": "Discover Airlines baut Italien-Angebot ab Frankfurt 2027 aus",
+        "url": "https://www.fnp.de/frankfurt/lufthansa-tochter-mit-neuem-italien-ziel-ab-flughafen-frankfurt-94478373.html",
+        "horizon": "monate",
+        "summary": "Die Lufthansa-Tochter Discover Airlines kündigt für 2027 ein erweitertes Italien-Programm mit einem neuen Direktziel ab Frankfurt an.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Frankfurter Palmengarten wirbt um Baumpatenschaften",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/baumpatenschaft-den-palmengarten-fit-fuer-die-zukunft-machen-accg-201168776.html",
+        "horizon": "aktuell",
+        "summary": "Der Palmengarten sucht Unterstützung durch Baumpatenschaften, um seine Baumvielfalt an die Folgen des Klimawandels anzupassen.",
+        "source": "FAZ Frankfurt"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
