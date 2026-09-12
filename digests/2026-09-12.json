@@ -1,0 +1,131 @@
+{
+  "tldr": [
+    "Die U-Bahn-Linien U4 und U5 fallen an diesem Samstag wegen Testfahrten komplett aus.",
+    "Auf dem früheren Siemens-Gelände in Niederrad entstehen 614 Wohnungen; ein weiteres großes Wohnungsangebot ist damit langfristig geplant.",
+    "Die Herbst-Dippemess am Ratsweg ist gestartet und läuft drei Wochen mit 120 Fahrgeschäften."
+  ],
+  "immobilien": {
+    "top": [
+      {
+        "title": "Nassauische Heimstätte baut 614 Wohnungen in Niederrad",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/nassauische-heimstaette-baut-614-neue-wohnungen-in-frankfurt-niederrad-accg-201214753.html",
+        "tag": "neubau",
+        "horizon": "monate",
+        "summary": "Auf dem früheren Siemens-Gelände in der Bürostadt Niederrad baut die Nassauische Heimstätte 614 Wohnungen. Weitere Angaben zu Wohnungsgrößen, Mieten oder einem Bezugstermin nennt der Kandidat nicht.",
+        "why": "Das erweitert das Frankfurter Wohnungsangebot langfristig, hilft aber nicht bei einer kurzfristigen Wohnungssuche.",
+        "source": "FAZ Frankfurt"
+      }
+    ],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Harry Styles kündigt neue Konzerte in Berlin an",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNUTdnOGpOMHdISjQzMW5DR0E1U0ViY0U2TXkyb2p0c2RoTURDSjMwT2RpX1NRbDN4SHVERjNZaGFseUx1QXloTkN1MXdiTVp4V1QyR3NidkhuWGdkdmVXM1E1M0lrdlk2NXNuSllwQkxjU1htcEpSU2NEYzR0MTFuZFlNbnY1Q09qVktCTkVZLV9TQUhfVFNjai0zZURGMldURnlCUnFKVVRrYzgtdjhsZHZXU2NnZ3ROUl9BV0dXRjdTR1RWNTIybTdR?oc=5",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "Harry Styles hat neue Konzerttermine in Berlin angekündigt. Der Kandidat nennt weder die Auftrittsdaten noch die Halle oder den Beginn des Vorverkaufs.",
+        "why": "Wegen der internationalen Nachfrage sollte der Vorverkaufsstart geprüft und bei Veröffentlichung der Termine früh gehandelt werden.",
+        "source": "focus.de"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Herbst-Dippemess am Ratsweg mit 120 Fahrgeschäften gestartet",
+        "url": "https://www.fnp.de/frankfurt/belastung-frankfurter-dippemess-eroeffnet-120-fahrgeschaefte-teils-mit-94486968.html",
+        "tag": "fest",
+        "horizon": "aktuell",
+        "summary": "Die Frankfurter Herbst-Dippemess am Ratsweg ist am Freitag gestartet und bietet drei Wochen lang 120 Fahrgeschäfte; erwartet werden rund 300.000 Gäste. Ein Fahrgeschäft erreicht laut Bericht Belastungen bis zum 4,5-Fachen der Erdbeschleunigung.",
+        "why": "Das Volksfest läuft bereits und ist für einen spontanen Besuch in Frankfurt in den kommenden drei Wochen relevant.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": [
+      {
+        "title": "Automechanika 2026 bringt die internationale Autobranche nach Frankfurt",
+        "url": "",
+        "horizon": "aktuell",
+        "summary": "Die Automechanika 2026 findet derzeit in Frankfurt statt und präsentiert Eindrücke von der internationalen Leitmesse für die Automobilbranche."
+      },
+      {
+        "title": "Formnext bringt die industrielle Fertigung nach Frankfurt",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNU1FIWFFtY2E0NHFvUTFWVmRyV0g0RklDQWMtdDdmSVdZX0xVNUNFWk9IbmFxTWpMR0UyaGJZLVZlYzMzZ082NWxMWk54WEtDcXUzZE1KeTlPVjJBNHZVTFlObU82NTkyWnd0YWFlMW1Rd0JVcnpBVVNJc3dJMHNDSVJKSlY4ZWFHZ09aOEJBdmc?oc=5",
+        "horizon": "monate",
+        "summary": "Die internationale Industriemesse Formnext wird in Frankfurt ausgerichtet und bringt dort die additive Fertigung und industrielle Produktion zusammen.",
+        "source": "inVISION | Bildverarbeitung"
+      }
+    ]
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "U4 und U5 fallen an diesem Samstag komplett aus",
+        "url": "https://www.hessenschau.de/wirtschaft/frankfurt-keine-u4-und-u5-am-samstag-v1,keine-u4-und-u5-am-wochenende-100.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Die U-Bahn-Linien U4 und U5 fahren am Samstag, 12. September, wegen Testfahrten auf den Strecken nicht. Für Fahrgäste gelten Ersatzverbindungen.",
+        "why": "Wer heute zwischen Innenstadt, Bornheim, Seckbach oder dem Frankfurter Berg unterwegs ist, sollte mehr Zeit einplanen und die Ersatzverbindungen prüfen.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "Mainbrücke Sindlingen wird bis 2030 zur Dauerbaustelle",
+        "url": "https://www.fr.de/frankfurt/massive-einschraenkungen-mainbruecke-wird-zur-dauerbaustelle-94486779.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Hessen Mobil saniert ab Montag die Mainbrücke Sindlingen an der B40. Die 11,5 Millionen Euro teuren Arbeiten sollen bis Mitte 2030 dauern.",
+        "why": "Pendler im Westen Frankfurts und im Flughafenumfeld müssen sich ab Montag auf jahrelange Einschränkungen und Umwege einstellen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Go Asia eröffnet neue Filiale in der Kaiserstraße",
+        "url": "https://www.fr.de/frankfurt/nach-aus-auf-der-zeil-go-asia-zieht-in-ehemalige-depot-filiale-94488074.html",
+        "tag": "news",
+        "horizon": "wochen",
+        "summary": "Die asiatische Supermarktkette Go Asia zieht nach der Schließung ihres Geschäfts auf der Zeil in die ehemalige Depot-Filiale in der Kaiserstraße 6. Damit wächst das Frankfurter Filialnetz auf drei Standorte.",
+        "why": "Für Einkäufe in der Innenstadt bleibt das Angebot erhalten, allerdings an einem neuen Standort in der Kaiserstraße.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Wohnungsportal Mietsofort verlangt laut Verbraucherzentrale 79 Euro",
+        "url": "https://www.fnp.de/frankfurt/ueberrascht-von-79-euro-rechnung-verbraucherzentrale-warnt-vor-wohnungsportal-94486618.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Das Wohnungsportal Mietsofort berechnet laut Verbraucherzentrale Hessen bereits für die Registrierung 79 Euro; gegen das Angebot liegen Beschwerden vor, und die Verbraucherschützer sehen mögliche Verstöße gegen Vorgaben.",
+        "why": "Bei der Wohnungssuche sollte vor einer Registrierung genau geprüft werden, welche Kosten entstehen und ob ein kostenpflichtiger Vertrag zustande kommt.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": [
+      {
+        "title": "Frankfurter Wasserhäuschen feiern am Samstag einen eigenen Tag",
+        "url": "https://www.fr.de/frankfurt/roedelheim-ort904342/yoga-grillwurst-und-comedy-frankfurter-wasserhaeuschen-feiern-am-samstag-94488694.html",
+        "horizon": "aktuell",
+        "summary": "Fünf Frankfurter Wasserhäuschen bieten am Samstag ein Programm mit Musik, Kinder-Yoga, Grillwurst und Live-Comedy; in Heinrichs Trinkhalle treten vier Comedians auf.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "MAK-Ausstellung hinterfragt die Wirkung von Grafikdesign",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORkwyMjdTb2R1Nk9IdTdDWGVTSDJTeldmcHg3b1dyQ2J0MmJaU3U3dkw3YlNxaUgyT2xpRmlES3p1WXJFTEtxZmVhSUFpT1lVbWZUQTBtNjF3bmtDRU9CQ29heWdJV2o2UFRUVktPcXhYSHhodzBEdUEzS0pVVXNtWXkySFZ6SzJsNl9wNXdqdVh6bEtXVWRSUEVWSlpWNjY4N0RKX1N2djdlUDYtWXFNNlBZbmo?oc=5",
+        "horizon": "aktuell",
+        "summary": "Eine neue Ausstellung im Museum Angewandte Kunst Frankfurt setzt sich kritisch mit Grafikdesign und dessen Wirkung auseinander.",
+        "source": "FAZ"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
