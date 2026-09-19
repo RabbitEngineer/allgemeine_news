@@ -1,0 +1,107 @@
+{
+  "tldr": [
+    "Die Frankfurter Buchmesse findet vom 7. bis 11. Oktober 2026 statt und bringt wegen Mängeln in Halle 6 größere Umbauten mit sich.",
+    "Oasis kündigt zwei Stadionkonzerte in München an; Termine und Vorverkaufsdetails nennt der vorliegende Beitrag nicht.",
+    "Frankfurt könnte Teststandort für Zugangskontrollen an Bahnsteigen werden, zunächst ist das aber nur ein Vorschlag."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Oasis kündigt zwei Stadionkonzerte in München an",
+        "url": "",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "Oasis kehrt für zwei große Konzerte nach Deutschland zurück; die Auftritte sollen in München in einem Stadion stattfinden. Der vorliegende Beitrag nennt weder Termine noch Vorverkaufsstart.",
+        "why": "Für einen international außergewöhnlich zugkräftigen Act lohnt es sich, die Termin- und Ticketankündigung zu beobachten; bis dahin ist noch keine Buchung möglich."
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Frankfurter Buchmesse öffnet vom 7. bis 11. Oktober",
+        "url": "https://www.fnp.de/frankfurt/alle-neuerungen-zur-frankfurter-buchmesse-2026-im-ueberblick-94498962.html",
+        "tag": "messe",
+        "horizon": "wochen",
+        "summary": "Die 78. Frankfurter Buchmesse findet vom 7. bis 11. Oktober 2026 statt. Wegen Mängeln in Halle 6 sind größere Umbauten auf dem Messegelände vorgesehen.",
+        "why": "Der Messebetrieb und die Wege auf dem Gelände können sich ändern; für einen Besuch sollten die aktuellen Hallenpläne und Zugangsinformationen geprüft werden.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Frankfurt könnte Teststandort für Bahnsteigkontrollen werden",
+        "url": "https://www.hessenschau.de/wirtschaft/minister-will-zugangskontrollen-an-frankfurter-bahnhoefen-testen-v2,bahnhof-zugangskontrollen-100.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Hessens Verkehrsminister Mansoori hat Frankfurt als Modellstandort für Zugangskontrollen an Bahnhöfen vorgeschlagen. Fahrgäste müssten dann vor dem Bahnsteig ein Ticket kontrollieren lassen; beschlossen ist ein Test noch nicht.",
+        "why": "Kurzfristig ändert sich für Bahnreisende nichts, langfristig könnten sich dadurch Zugänge und Umsteigewege an Frankfurter Bahnhöfen verändern.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "Nach Explosionen sitzt ein 17-Jähriger in Untersuchungshaft",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/explosionen-in-frankfurt-haftbefehl-gegen-17-jaehrigen-201241892.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Nach Detonationen in Frankfurt und Offenbach wurde gegen einen 17 Jahre alten niederländischen Jugendlichen Haftbefehl erlassen. Die Ermittler prüfen eine Verbindung zur organisierten Kriminalität.",
+        "why": "Die Ermittlungen laufen weiter; für den Alltag sind vor allem mögliche Sperrungen oder weitere Polizeimaßnahmen an den betroffenen Orten relevant.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Flughafenmalaria: Frankfurter Gesundheitsamt informiert über Schutz",
+        "url": "https://www.fr.de/frankfurt/mit-flugblaettern-gegen-malaria-erkrankungen-in-frankfurt-94499735.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Nach einem dritten Todesfall informiert das Frankfurter Gesundheitsamt über Symptome und Schutzmaßnahmen gegen Flughafenmalaria. Der Beitrag berichtet außerdem, dass Lufthansa ihre Maschinen derzeit nicht mit Insektiziden besprüht.",
+        "why": "Wer in Schwanheim oder am Flughafen unterwegs ist, sollte die Hinweise des Gesundheitsamts beachten und bei passenden Symptomen medizinischen Rat einholen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Umbau der Bolongarostraße verzögert sich weiter",
+        "url": "",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Das beauftragte Ingenieurbüro hat nach fast 20 Jahren Planung den Vertrag mit der Stadt gekündigt. Frankfurt muss die Planung für die Bolongarostraße neu ausschreiben; ein Baubeginn ist nicht absehbar.",
+        "why": "Für Anwohner bedeutet das, dass weder ein baldiger Umbau noch ein verlässlicher Zeitplan für mögliche Einschränkungen feststeht."
+      }
+    ],
+    "also": [
+      {
+        "title": "Frankfurt feiert 40 Jahre Erhalt der Straßenbahn in der Innenstadt",
+        "url": "https://www.fnp.de/frankfurt/frankfurter-strassenbahn-wie-60-000-unterschriften-die-tram-retteten-94498050.html",
+        "horizon": "aktuell",
+        "summary": "Zum 40. Jahrestag des Bürgerprotests gegen die Abschaffung der Straßenbahn in der Innenstadt wird am Samstag ab 16 Uhr auf dem Paulsplatz gefeiert.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ]
+  },
+  "peking": {
+    "top": [
+      {
+        "title": "Deutsche Unternehmen verlagern Investitionen von den USA nach China",
+        "url": "",
+        "tag": "jobs",
+        "horizon": "aktuell",
+        "summary": "Deutsche Unternehmen sollen Investitionen aus den USA nach China verlagern. Der Beitrag beschreibt damit eine stärkere wirtschaftliche Präsenz deutscher Firmen in China, nennt aber keine konkreten Standorte, Stellen oder Einstellungspläne.",
+        "why": "Das ist ein vorsichtig positives Signal für die Zahl potenzieller deutscher Arbeitgeber in China, beweist aber noch keinen zusätzlichen Bedarf an IT-Fachkräften in Peking."
+      }
+    ],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
