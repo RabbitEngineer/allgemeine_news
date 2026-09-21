@@ -1,0 +1,121 @@
+{
+  "tldr": [
+    "Die Deutsche Bahn beginnt am Knoten Frankfurt-Stadion die nächste Bauphase; die Arbeiten sollen noch sechs Jahre dauern.",
+    "Frankfurt plant den Ausbau der Fernwärme bis 2045 und gerät damit in Konflikt mit dem Klimaneutralitätsziel 2035.",
+    "Die Frankfurter Buchmesse 2026 kündigt neue Veranstaltungsformate und prominente Gäste an."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Frankfurter Buchmesse 2026 kündigt neue Angebote und Gäste an",
+        "url": "",
+        "tag": "messe",
+        "horizon": "wochen",
+        "summary": "Die Frankfurter Buchmesse 2026 stellt Neuerungen für Besucher vor; konkrete Einzelheiten nennt der Auszug nicht.",
+        "why": "Für den Besuch im Oktober lohnt es sich, das neue Programm und mögliche Änderungen bei Zugang oder Veranstaltungen vorab zu prüfen."
+      },
+      {
+        "title": "Open Books bringt Heidenreich und Funke nach Frankfurt",
+        "url": "",
+        "tag": "fest",
+        "horizon": "wochen",
+        "summary": "Das Lesefest Open Books 2026 kündigt unter anderem Auftritte von Elke Heidenreich und Cornelia Funke an.",
+        "why": "Das Literaturprogramm bietet eine Frankfurter Alternative zur eigentlichen Buchmesse und sollte wegen einzelner prominenter Veranstaltungen früh geprüft werden."
+      },
+      {
+        "title": "Frankfurter Buchmesse plant eigenes Kids Festival",
+        "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOWGh3b2Mtc0dTbHlXVlY3M2FVby1tcXF2bTdLNUFQdXVTU3pNTnRHck8yN1poamtubllHTGlQWl9uWGQydDhURktFczZRQ3BMZ0xCbHdJbWhLUXR5R0lVNXh4UkNlUmdqRzVkamlPaVlKay1oT29tcEVzUElEUDBpTTN4Vkt6aHc3a0ZaN2lhRjdlU0g3MDRyaGxOZ0JCMVNGZE5Tc2Rib0ZoTENJY3ZXVV9DY1UxTlRaaHM3cWlTb1dGZ3RFMTR5LW16LUJ5T2JwazlJRzRHWDVGNnc?oc=5",
+        "tag": "messe",
+        "horizon": "wochen",
+        "summary": "Die Frankfurter Buchmesse erweitert ihr Angebot 2026 um ein Kids Festival.",
+        "why": "Das neue Format ist vor allem für Familien interessant und kann die Planung eines Buchmessebesuchs beeinflussen.",
+        "source": "journal-frankfurt.de"
+      }
+    ],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Bauarbeiten am Knoten Frankfurt-Stadion gehen in nächste Phase",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/deutsche-bahn-bei-bauarbeiten-in-frankfurt-stadion-im-zeitplan-accg-201206272.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Beim Ausbau des Bahnknotens Frankfurt-Stadion beginnt die nächste Bauphase. Die Arbeiten liegen laut Deutsche Bahn im Zeitplan und sollen noch sechs Jahre dauern, während der Zugverkehr weiterläuft.",
+        "why": "Wer regelmäßig über den Frankfurter Süden oder den Flughafen fährt, muss auch langfristig mit Bauphasen und möglichen Änderungen im Bahnverkehr rechnen.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Frankfurts Fernwärmeausbau reicht bis 2045 statt bis 2035",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/gibt-frankfurt-das-klimaziel-2035-auf-accg-201243406.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Frankfurt plant den Ausbau der Fernwärme in der Stadt bis 2045, obwohl die Stadt eigentlich bereits 2035 klimaneutral sein will.",
+        "why": "Die Entscheidung kann langfristig beeinflussen, welche Heizsysteme in Wohngebäuden verfügbar sind und welche Kosten auf Eigentümer und Mieter zukommen.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Unregelmäßigkeiten bei Frankfurter Kommunalwahl sorgen für Fragen",
+        "url": "https://www.hessenschau.de/politik/kommunalwahlen/frankfurt-wieso-bekamen-gerade-diese-vier-politiker-auffaellig-viele-stimmen-v1,kom26-frankfurt-briefwahl-100.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Bei der Frankfurter Kommunalwahl stimmten Tausende Wähler einer kleinen Liste für Kandidaten anderer Parteien; auffällig häufig profitierten dieselben vier Politiker. Experten fordern Aufklärung.",
+        "why": "Die Vorgänge betreffen die Zusammensetzung der Frankfurter Politik; entscheidend ist nun, ob eine offizielle Prüfung oder weitere Konsequenzen folgen.",
+        "source": "hessenschau.de"
+      }
+    ],
+    "also": [
+      {
+        "title": "Frankfurt erwägt Zugangskontrollen am Hauptbahnhof",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/zugangskontrollen-an-bahnhoefen-loesen-viele-fragen-aus-201244801.html",
+        "horizon": "aktuell",
+        "summary": "Hessens Verkehrsminister Kaweh Mansoori will Zugangskontrollen an Bahnhöfen testen und hat dafür den Frankfurter Hauptbahnhof vorgeschlagen; ein Konzept fehlt noch.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Bockenheimer Superblock soll mit Einbahnstraßen kleiner ausfallen",
+        "url": "https://www.fr.de/frankfurt/bockenheim-ort54494/superblock-in-bockenheim-schrumpft-stadt-plant-einbahnstrassen-statt-sperren-94501282.html",
+        "horizon": "aktuell",
+        "summary": "Für den geplanten Superblock in Bockenheim setzt die Stadt offenbar stärker auf Einbahnstraßen statt auf umfassende Sperren; der Hessenplatz soll Fußgängerzone werden.",
+        "source": "Frankfurter Rundschau"
+      }
+    ]
+  },
+  "peking": {
+    "top": [
+      {
+        "title": "Deutsche Unternehmen wollen ihre Investitionen in China erhöhen",
+        "url": "",
+        "tag": "jobs",
+        "horizon": "aktuell",
+        "summary": "Deutsche Unternehmen stocken laut dem Beitrag ihre Investitionen in China auf.",
+        "why": "Mehr Investitionen können mittelfristig zusätzliche Rollen in Entwicklung, Infrastruktur und internationalem Projektgeschäft schaffen; konkrete Arbeitgeber oder Einstellungszahlen nennt der Beitrag jedoch nicht."
+      }
+    ],
+    "also": [
+      {
+        "title": "Deutsche Firmen verlagern Investitionen von den USA nach China",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOUThzcVlwTzVGN2F0MXB4VDZuVG1VRERXY0pqSGJjYWo0N3RPbTJHcWFTVjBVLU1wOG1fdmZiUkh3QzdLd29hdlgzQUNaSWlKam8xSEk1cUNTdVowRXZ6SV96YW00cmNQajNRSnd4dS1RS3lqWG1PaDZZeDRBb3FiXzZkdzk4cE5Ha0ZLZXU3QWF4MkNVeWJZ?oc=5",
+        "horizon": "aktuell",
+        "summary": "Deutsche Unternehmen verschieben dem Beitrag zufolge Investitionen aus den USA nach China.",
+        "source": "IDNFinancials"
+      }
+    ]
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
