@@ -1,0 +1,132 @@
+{
+  "tldr": [
+    "Die U7 fällt am Wochenende zwischen Enkheim und Eissporthalle aus; zur Dippemess fahren Ersatzbusse und die U4.",
+    "Jan Böhmermann hat seine komplette Arena-Tour abgesagt, darunter den Termin in der Frankfurter Festhalle.",
+    "Deutsche Unternehmen wollen ihre Investitionen in China ausbauen, konkrete neue Standorte oder Einstellungszahlen nennt der Beitrag jedoch nicht."
+  ],
+  "immobilien": {
+    "top": [
+      {
+        "title": "Studie sieht Frankfurter Immobilienblasenrisiko deutlich niedriger",
+        "url": "https://www.fr.de/frankfurt/platzt-die-frankfurter-immobilienblase-schweizer-bank-stuft-risiko-ein-zr-94505607.html",
+        "tag": "preise",
+        "horizon": "aktuell",
+        "summary": "Frankfurt und München galten lange als besonders gefährdet für eine Immobilienblase. Eine neue Studie bewertet das Risiko inzwischen deutlich entspannter, obwohl die Wohnungspreise weiterhin hoch sind.",
+        "why": "Für Kaufinteressierte spricht das gegen eine unmittelbar drohende starke Korrektur, ersetzt aber keinen Blick auf die weiterhin hohen Preise.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Jan Böhmermann sagt Arena-Tour mit Frankfurter Termin ab",
+        "url": "https://www.fnp.de/frankfurt/jan-boehmermann-sagt-arena-tour-ab-auch-frankfurt-betroffen-94504682.html",
+        "tag": "konzert",
+        "horizon": "aktuell",
+        "summary": "Jan Böhmermann hat seine komplette Arena-Tour abgesagt; betroffen ist auch das geplante Konzert in der Frankfurter Festhalle.",
+        "why": "Wer bereits Karten für Frankfurt hatte, sollte die Rückabwicklung beim jeweiligen Anbieter prüfen; ein Ersatztermin ist nicht genannt.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Dirty Honey kündigt Deutschland-Tour und neues Album an",
+        "url": "",
+        "tag": "konzert",
+        "horizon": "aktuell",
+        "summary": "Die US-Rockband Dirty Honey hat ein neues Album und eine Deutschland-Tour angekündigt; konkrete Termine oder Vorverkaufsdaten nennt der Kandidatenauszug nicht.",
+        "why": "Für Fans lohnt es sich, die weiteren Tourdaten und den Vorverkaufsstart zu beobachten, bevor einzelne Hallen ausverkauft sind."
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "U7 fährt am Wochenende zwischen Enkheim und Eissporthalle nicht",
+        "url": "https://www.fnp.de/frankfurt/u7-sperrung-trifft-frankfurter-dippemess-besucher-am-wochenende-94505605.html",
+        "tag": "verkehr",
+        "horizon": "wochen",
+        "summary": "Am Wochenende des 26. und 27. September fällt die U7 zwischen Enkheim und Eissporthalle aus. Ersatzbusse und die U4 stellen die Verbindung zur Frankfurter Dippemess her.",
+        "why": "Für Fahrten zur Dippemess oder durch den Osten Frankfurts sollte am Wochenende mehr Zeit eingeplant und auf U4 oder Ersatzbusse ausgewichen werden.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Schönhofviertel bleibt ohne direkten ÖPNV zum Westbahnhof",
+        "url": "https://www.fnp.de/frankfurt/350-meter-zum-westbahnhof-aber-km-umweg-schoenhofviertel-ohne-oepnv-anschluss-94505614.html",
+        "tag": "verkehr",
+        "horizon": "monate",
+        "summary": "Vom Schönhofviertel sind es zwar nur 350 Meter bis zum Westbahnhof, derzeit führt der Weg jedoch über einen 1,3-Kilometer-Umweg. Eine S-Bahn-Station ist frühestens für 2035 geplant; die Stadt prüft eine andere Lösung.",
+        "why": "Wer dort wohnt oder eine Wohnung sucht, muss auf Jahre mit einem umständlichen Weg zum Bahnanschluss rechnen.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Illegale Müllablagerungen steigen in Frankfurt auf fast 5.000 Fälle",
+        "url": "https://www.fnp.de/frankfurt/frankfurter-muellsuender-werden-immer-cleverer-bussgelder-sinken-auf-rekordtief-94505616.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Die Zahl illegaler Müllablagerungen in Frankfurt ist seit 2022 auf fast 5.000 Fälle pro Jahr gestiegen. Gleichzeitig sank die Zahl der Bußgeldermittlungen von 721 auf 448.",
+        "why": "Die Entwicklung deutet auf ein sichtbares Sauberkeitsproblem und eine geringere Verfolgung der Verursacher im Stadtgebiet hin.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Kostenloses Lernzentrum Tumo eröffnet in der Nordweststadt",
+        "url": "https://www.fr.de/frankfurt/roboter-bauen-in-der-freizeit-statt-kicken-94505500.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "In der Frankfurter Nordweststadt hat das digitale und kostenlose Lernzentrum Tumo den Betrieb aufgenommen; dort können junge Menschen unter anderem Roboter bauen und digitale Fähigkeiten lernen.",
+        "why": "Für Familien mit Jugendlichen ist damit ein kostenloses Angebot für Technik- und Medienbildung in einem weiteren Stadtteil hinzugekommen.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": [
+      {
+        "title": "Messflugzeug kreist trotz Nachtflugverbot über Frankfurt",
+        "url": "https://www.fr.de/frankfurt/trotz-nachtflugverbot-flugzeuge-kreisen-nachts-ueber-frankfurt-94504563.html",
+        "horizon": "aktuell",
+        "summary": "Wegen einer technischen Kontrolle ist in dieser Woche nachts ein Messflugzeug am Frankfurter Flughafen im Einsatz.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Hessens erste Begräbniskirche eröffnet Ende September im Nordend",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/st-michael-frankfurt-erste-begraebniskirche-in-hessen-201251939.html",
+        "horizon": "wochen",
+        "summary": "In der ehemaligen katholischen Kirche St. Michael im Frankfurter Nordend soll Ende September Hessens erste Begräbniskirche eröffnet werden.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Frankfurter Gastronomen kämpfen um ihre Außenbereiche",
+        "url": "https://www.hessenschau.de/wirtschaft/in-frankfurt-kaempfen-gastronomen-um-ihre-aussenbereiche-v1,aussengastronomie-frankfurt-104.html",
+        "horizon": "aktuell",
+        "summary": "Im Gallus will die Bauaufsicht bisher geduldete Außenbereiche von Gaststätten teilweise entfernen; die betroffenen Wirte fordern Kompromisse.",
+        "source": "hessenschau.de"
+      }
+    ]
+  },
+  "peking": {
+    "top": [
+      {
+        "title": "Deutsche Unternehmen wollen Investitionen in China ausbauen",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9oR1ViS0JjSjh2LUVBbkVHTWRDSHVieU1FcEd3V25uOWlFcmJDcEZPWTlZRFpLZ3VSOHhlUUVCNndsTG1CNnhNNURLaEdXMDdxRmJOLUMzNTUxbnlEQUlfamJOaWtCb2NERUdxUGt2OE0?oc=5",
+        "tag": "jobs",
+        "horizon": "aktuell",
+        "summary": "Deutsche Unternehmen stocken ihre Investitionen in China laut dem Beitrag auf. Konkrete Firmen, Standorte, Branchen oder zusätzliche Beschäftigtenzahlen nennt der Auszug nicht.",
+        "why": "Das spricht grundsätzlich für bessere Perspektiven bei deutschen Arbeitgebern in China, reicht aber noch nicht aus, um daraus konkrete Pekinger IT-Stellen oder einen bestimmten Arbeitgeber abzuleiten.",
+        "source": "German China.org"
+      }
+    ],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
