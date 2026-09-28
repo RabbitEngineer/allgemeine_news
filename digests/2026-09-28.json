@@ -1,0 +1,101 @@
+{
+  "tldr": [
+    "Die Frankfurter Buchmesse beginnt kommende Woche; Informationen zu Besuchertagen, Eintrittspreisen und Mitmachangeboten liegen vor.",
+    "Ab Frankfurt sollen 2027 drei neue Verbindungen zu europäischen Metropolen entstehen, eine davon bereits ab April.",
+    "In Peking ist bei Grab eine international ausgeschriebene Associate-Stelle als Senior Backend & Reliability Engineer offen; Englisch wird ausdrücklich genannt."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Andrea Bocelli kündigt Arena-Konzert am 20. Mai in Köln an",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNVDVad1IxWXhoaFZSVFI3ZlJYZUdXN1BsMjhJVldZcUJ4X2dsQU0taWwycDNBRVBfS3B6OFZrbzAtVUQ5N3MzZXJfbkVuMUdkdjEyWHhaY0EzQ3hvMHgwN2RrMENoVjA2WkQzZENYV2p3ekJRYmVsY08wWWROYjE1QkNqNmxPT0M5TXFVNjN3VWFEc29hcUtpSUxIU1NzUjEyOXlRcw?oc=5",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "Andrea Bocelli soll am 20. Mai ein Arena-Konzert in Köln geben. Die Quelle nennt weder die Halle noch einen Vorverkaufsstart.",
+        "why": "Der internationale Name macht den Termin grundsätzlich reisetauglich; Halle und Kartenstart sollten vor einer Planung noch geprüft werden.",
+        "source": "Rheinische Anzeigenblätter"
+      },
+      {
+        "title": "Oasis: Vorverkaufsplan für Deutschland-Termine 2027 veröffentlicht",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNVzNqZ00wY2tWZWZjTW9aSVkzSWMtdWpQSTk5REpLSFNvcjYxVlJySVpSMlZQSXlBSHFnTVFTSVNlTjc4OWhoN01iWjJ5OXd5dHpIMnIyeFRYRHNHd2NsWFpRSnV1UlVwZmJMeVBSZ2xKLWZvSnpyTXVKT1FDWS1fUHlhanl6ZFVQelI4Y1RyTEFZUk84c2VDUS03YmFWcmttUVNLOTVlNGR0alB6M2c?oc=5",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "Für Oasis-Tickets 2027 in München und weiteren deutschen Städten wird ein Vorverkaufsfahrplan angekündigt.",
+        "why": "Bei einer großen Oasis-Tour kann der Vorverkauf entscheidend sein; die konkreten Verkaufszeiten und Spielorte müssen dem Fahrplan entnommen werden.",
+        "source": "Musikexpress"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Frankfurter Buchmesse beginnt kommende Woche mit neuen Angeboten",
+        "url": "https://www.hessenschau.de/kultur/buchmesse/frankfurter-buchmesse-2026-diese-neuerungen-sollten-sie-kennen-v12,buchmesse-service-122.html",
+        "tag": "messe",
+        "horizon": "wochen",
+        "summary": "Die Frankfurter Buchmesse beginnt kommende Woche; angekündigt werden Informationen zu Neuerungen, Besuchertagen, Eintrittspreisen und Mitmachangeboten.",
+        "why": "Wer die Messe besuchen möchte, kann anhand der Besuchertage und Eintrittspreise jetzt den Besuch planen.",
+        "source": "hessenschau.de"
+      }
+    ],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Ab Frankfurt entstehen 2027 drei neue Europa-Verbindungen",
+        "url": "https://www.fr.de/frankfurt/neue-flugziele-ab-2027-was-passagiere-vom-flughafen-frankfurt-aus-jetzt-schon-planen-koennen-94512160.html",
+        "tag": "news",
+        "horizon": "monate",
+        "summary": "Zwischen dem Frankfurter Flughafen und drei europäischen Metropolen sollen 2027 neue Verbindungen starten; eine davon bereits im April.",
+        "why": "Für Reisen ab Frankfurt eröffnen sich damit zusätzliche Direktverbindungen, konkrete Ziele und Flugtage sollten noch geprüft werden.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "St. Michael im Nordend wird Hessens erste Begräbniskirche",
+        "url": "https://www.fnp.de/frankfurt/frankfurter-kirche-st-michael-hessens-erste-begraebniskirche-94512195.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Die denkmalgeschützte Kirche St. Michael im Nordend wurde zu einem Trauerort für Urnenbestattungen umgebaut; schon vor der Eröffnung sind mehr als ein Dutzend Urnenplätze belegt.",
+        "why": "Die Umnutzung schafft in Frankfurt ein neues Angebot für Urnenbestattungen und ist bereits vor der Eröffnung stark nachgefragt.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": [
+      {
+        "title": "Anmeldung zum Frankfurter Halbmarathon durch überlastete Server erschwert",
+        "url": "https://www.fr.de/frankfurt/funktioniert-null-grosse-probleme-bei-anmeldung-zum-frankfurter-halbmarathon-94513889.html",
+        "horizon": "aktuell",
+        "summary": "Bei der Anmeldung zum Frankfurter Halbmarathon führten überlastete Server und stundenlange Wartezeiten zu erheblichen Problemen.",
+        "source": "Frankfurter Rundschau"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [
+      {
+        "title": "Senior Backend & Reliability Engineer bei Grab in Peking",
+        "url": "https://jobs.smartrecruiters.com/Grab/744000152067419",
+        "tag": "stelle",
+        "horizon": "aktuell",
+        "summary": "Grab sucht in Peking einen Senior Backend & Reliability Engineer auf Associate-Erfahrungsstufe. Die international ausgeschriebene Stelle nennt Englisch als Anforderung.",
+        "why": "Die Kombination aus Backend und Reliability passt zu DevOps- und Backend-Erfahrung; die internationale Ausschreibung und Englisch als genannte Sprache sprechen gegen eine ausschließlich für den lokalen Markt gedachte Stelle.",
+        "source": "Grab"
+      }
+    ],
+    "also": []
+  }
+}
