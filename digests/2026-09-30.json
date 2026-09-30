@@ -1,0 +1,106 @@
+{
+  "tldr": [
+    "In der Nacht zu Donnerstag wird am Frankfurter Kreuz die Abfahrt von der A3 auf die A5 Richtung Kassel gesperrt.",
+    "Frankfurt erweitert die Böllerverbotszonen für Silvester 2026; betroffen ist unter anderem die Zeil.",
+    "Das Federweißer-Fest am Liebfrauenberg läuft noch bis zum 4. Oktober."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Federweißer-Fest am Liebfrauenberg läuft noch bis 4. Oktober",
+        "url": "",
+        "tag": "fest",
+        "horizon": "aktuell",
+        "summary": "Das Federweißer-Fest am Liebfrauenberg in Frankfurt läuft noch bis zum 4. Oktober; rund 20 Anbieter erwarten pro Wochenende bis zu 500 Besucher.",
+        "why": "Das Fest ist noch wenige Tage erreichbar und bietet sich als kurzfristiges Ausflugsziel in der Innenstadt an."
+      },
+      {
+        "title": "Frankfurter Buchmesse 2026 bietet mehr Veranstaltungen und kürzere Wege",
+        "url": "",
+        "tag": "messe",
+        "horizon": "wochen",
+        "summary": "Die Frankfurter Buchmesse 2026 soll mehr Veranstaltungen und kürzere Wege auf dem Messegelände bieten.",
+        "why": "Für Besucher dürfte die Messe dadurch leichter planbar werden; zugleich ist rund um das Gelände mit höherem Andrang zu rechnen."
+      }
+    ],
+    "also": [
+      {
+        "title": "Tschechien ist Gastland der Frankfurter Buchmesse 2026",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPTUcxNXFLemo2VUlTY2xGSm5fZFBSUk1mcXR4VGNhbC1xMDJmZnJlR2JzVXlaMWs2eEdPNzljckFKMHVYNEVxVWt2ZVpkQmlkYWM2bFJjTTlESzJsNENRbWxVcDlBdjdQeHFhRXJxLXZkVFRfVUpTX2hIWFVLVXV2bkN1Y1BHbFFPTGJpSFptS0swRlJjaEQzN3J1b1puTmJ2Rm1jQWs0NnNtU1U?oc=5",
+        "horizon": "wochen",
+        "summary": "Tschechien steht bei der Frankfurter Buchmesse 2026 als Gastland im Mittelpunkt.",
+        "source": "NDR.de"
+      },
+      {
+        "title": "Automechanika Frankfurt 2028 wird vorbereitet",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQalh0dU9KWlJHc0tMOXpjVFo3OVBVdTZtT0RpeGwxUkhibnVUV01XajFNSG5qSlF1ZDNYT1pIZ0ZiVllxZTBVNnhWSEQ5WHUwSURzZ1FzekhTaHhGdk90c2lWQWNQZTNKMUxTclVaNzNwWnNHNlRMYkpRNzNUTng5VGJiYk1JcTRRRXFjU2NB?oc=5",
+        "horizon": "monate",
+        "summary": "Die Automechanika Frankfurt ist für das Jahr 2028 angekündigt.",
+        "source": "Logistra.de"
+      }
+    ]
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Sperrung am Frankfurter Kreuz in der Nacht zu Donnerstag",
+        "url": "https://www.fr.de/frankfurt/sperrung-am-frankfurter-kreuz-steht-an-autofahrer-muessen-umplanen-94517404.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "In der Nacht zu Donnerstag wird am Frankfurter Kreuz die Abfahrt von der A3 auf die A5 Richtung Kassel gesperrt; eine Umleitung ist ausgeschildert.",
+        "why": "Wer nachts mit dem Auto über das Frankfurter Kreuz muss, sollte die Umleitung einplanen oder mehr Zeit einrechnen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Frankfurt erweitert Böllerverbotszonen für Silvester 2026",
+        "url": "",
+        "tag": "news",
+        "horizon": "wochen",
+        "summary": "Für Silvester 2026 weitet Frankfurt die Böllerverbotszonen deutlich aus; künftig ist auch die Zeil betroffen.",
+        "why": "Wer an Silvester Feuerwerk plant oder in der Innenstadt feiert, muss die erweiterten Verbotsbereiche berücksichtigen."
+      }
+    ],
+    "also": [
+      {
+        "title": "Ehemaliges Mövenpick-Hotel verkauft sein komplettes Inventar",
+        "url": "https://www.fr.de/frankfurt/frankfurter-hotel-musste-schliessen-jetzt-kann-man-das-gebaeude-leerkaufen-94516600.html",
+        "horizon": "wochen",
+        "summary": "Das Inventar des ehemaligen Mövenpick Hotels Frankfurt – darunter Möbel, Lampen, Geschirr und Küchengeräte – soll ab Oktober direkt im Hotel verkauft werden.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Frankfurt bleibt eine der teuersten Städte für Studierende",
+        "url": "",
+        "horizon": "aktuell",
+        "summary": "Frankfurt gehört laut dem Beitrag weiterhin zu den teuersten deutschen Städten für Studierende."
+      },
+      {
+        "title": "Neues Naturschutzzentrum soll Frankfurt international profilieren",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/frankfurt-conservation-center-wird-frankfurt-zu-europas-naturschutz-hotspot-accg-201195273.html",
+        "horizon": "monate",
+        "summary": "Mit dem Frankfurt Conservation Center auf dem Zoogelände will die Stadt eine europaweit sichtbare Einrichtung für Biodiversität und Naturschutz aufbauen.",
+        "source": "FAZ Frankfurt"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
