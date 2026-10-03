@@ -1,0 +1,84 @@
+{
+  "tldr": [
+    "Frankfurt hat den kommunalen Wärmeplan auf den Weg gebracht; bis 2030 sollen 63 weitere städtische Liegenschaften an das Fernwärmenetz angeschlossen werden.",
+    "Das ehemalige Postbank-Gebäude an der Eckenheimer Landstraße wird als möglicher Standort für eine Berufsschule geprüft."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Frankfurt bringt kommunalen Wärmeplan auf den Weg",
+        "url": "https://www.fr.de/frankfurt/frankfurter-klimaplan-steht-lieber-in-berlin-stunk-machen-94522687.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Frankfurt hat den kommunalen Wärmeplan auf den Weg gebracht. Stadt und Mainova wollen bis 2030 insgesamt 63 weitere städtische Liegenschaften an das Fernwärmenetz anschließen.",
+        "why": "Der Plan schafft einen Rahmen für die künftige Wärmeversorgung, ersetzt aber noch keine konkrete Entscheidung über Heizung oder Anschluss im einzelnen Gebäude.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Ehemaliges Postbank-Gebäude als Berufsschulstandort geprüft",
+        "url": "https://www.fnp.de/frankfurt/gallus-plan-gescheitert-frankfurter-berufsschule-soll-in-postbank-einziehen-94522380.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Die Stadt Frankfurt prüft das ehemalige Postbank-Gebäude an der Eckenheimer Landstraße als neuen Standort für eine Berufsschule; auch die Viktor-Frankl-Schule könnte dort untergebracht werden.",
+        "why": "Das Vorhaben ist noch nicht entschieden, könnte den Schulstandort und die Nutzung des Gebäudes im Frankfurter Norden aber spürbar verändern.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Neue Ausstellung im Palmengarten zeigt Garten-Utopien",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/garten-utopien-was-uns-in-zukunft-blueht-ausstellung-im-palmengarten-frankfurt-201276647.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Die Ausstellung „Garten Utopien – Was uns in Zukunft blüht“ zeigt im Frankfurter Palmengarten mit echten Blüten und künstlichen Gewächsen mögliche Zukunftsbilder für die Stadt.",
+        "why": "Für die Freizeitplanung gibt es damit eine neue Ausstellung im Palmengarten, auch wenn der Kandidat keinen Ausstellungszeitraum nennt.",
+        "source": "FAZ Frankfurt"
+      }
+    ],
+    "also": [
+      {
+        "title": "Emirates-A380 muss außerplanmäßig in Frankfurt landen",
+        "url": "https://www.fr.de/frankfurt/notfall-ueber-europa-emirates-airbus-a380-landet-in-frankfurt-94522948.html",
+        "horizon": "aktuell",
+        "summary": "Ein Airbus A380 von Emirates auf dem Weg von Dubai nach London musste wegen eines Notfalls außerplanmäßig am Frankfurter Flughafen zwischenlanden.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Neue Notunterkunft für obdachlose Frauen in Frankfurt eröffnet",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/frankfurt-neue-notunterkunft-fuer-obdachlose-frauen-eroeffnet-201279183.html",
+        "horizon": "aktuell",
+        "summary": "In Frankfurt wurde eine neue Notunterkunft für obdachlose Frauen eröffnet; Anwohner kritisieren die aus ihrer Sicht unzureichende Kommunikation vor dem Start.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Frankfurter Jazzmusikerin von Einheitsfeier ausgeladen",
+        "url": "https://www.fnp.de/frankfurt/song-frankfurt-laedt-jazzmusikerin-aus-sie-spricht-von-zensur-wegen-palaestina-94522707.html",
+        "horizon": "aktuell",
+        "summary": "Die für die Einheitsfeier auf dem Römerberg gebuchte britische Musikerin Momoko Gill wurde ausgeladen; über die Gründe wird gestritten.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
