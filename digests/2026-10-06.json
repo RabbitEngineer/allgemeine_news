@@ -1,0 +1,82 @@
+{
+  "tldr": [
+    "Die Frankfurter Buchmesse läuft vom 7. bis 11. Oktober; das Publikumsprogramm findet erstmals komplett ebenerdig rund um die Agora statt.",
+    "Mainova zahlt hunderten Frankfurter Haushalten Heizkosten zurück, weil eine gesetzliche Vorgabe jahrelang nicht eingehalten wurde.",
+    "Terminal 2 am Frankfurter Flughafen ist wegen einer mehrjährigen Sanierung geschlossen."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Buchmesse vom 7. bis 11. Oktober: Publikumsprogramm erstmals ebenerdig",
+        "url": "https://www.fr.de/frankfurt/frankfurter-buchmesse-2026-veranstaltungen-auf-erstmals-einer-ebene-94525812.html",
+        "tag": "messe",
+        "horizon": "aktuell",
+        "summary": "Die Frankfurter Buchmesse findet vom 7. bis 11. Oktober statt. Das Publikumsprogramm liegt erstmals komplett ebenerdig rund um die Agora; Ehrengast Tschechien bringt mehr als 75 Autorinnen und Autoren mit.",
+        "why": "Wer die Messe besuchen möchte, kann das Programm diese Woche auf der Agora planen; die gebündelte ebenerdige Anordnung dürfte die Orientierung erleichtern.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Mainova erstattet hunderten Frankfurter Haushalten Heizkosten",
+        "url": "https://www.hessenschau.de/wirtschaft/frankfurt-hunderte-mieter-erhalten-fuer-mehrere-jahre-heizkosten-zurueck-v1,mainova-rueckzahlung-100.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Mainova zahlt hunderten Haushalten in Frankfurt einen Teil der Heizkosten für mehrere Jahre zurück, weil eine gesetzliche Vorgabe nicht eingehalten wurde; zur Höhe der Erstattungen nennt der Auszug keine Angaben.",
+        "why": "Betroffene sollten ihre Abrechnungen und Mitteilungen von Mainova prüfen, um festzustellen, ob eine Rückzahlung zusteht.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "Terminal 2 am Frankfurter Flughafen ist für mehrere Jahre geschlossen",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUDRBNnJZUm0xeG5uMHdXdkFqcXN0UmNGMktYc0JLT0pBWVZyQm1oUVNqNU5kR0hza3ZjZEkySXN0eDVQV2htM2EyT2FGbXUxdV9ZM1Nvd2NUVVcxakxvQkdfbnVfMFYxMldBcnJhV05ia0hBaXU1Z1lwVnlxa2pnMWhUS2lOc0tyNTN1RUgtTkJJbF92YWhhWnVzUkxjZGd2NVZrcGc2Y2k5VUh5R0N0eVJR?oc=5",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Terminal 2 am Frankfurter Flughafen ist wegen einer Sanierung geschlossen, die mehrere Jahre dauern soll.",
+        "why": "Vor einer Flugreise sollte geprüft werden, von welchem Terminal die jeweilige Airline abfliegt und wie die Anreise zum Abflugbereich organisiert ist.",
+        "source": "Osthessen|News"
+      }
+    ],
+    "also": [
+      {
+        "title": "Am Merianplatz werden Ideen für bessere Aufenthaltsqualität gesucht",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/stadtklima-projekt-sucht-ideen-fuer-frankfurter-merianplatz-201289275.html",
+        "horizon": "wochen",
+        "summary": "Nach der Vergiftung von Bäumen soll ein Mitmachprogramm über den Winter Ideen für eine bessere Aufenthaltsqualität am Merianplatz sammeln.",
+        "source": "FAZ Frankfurt"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [
+      {
+        "title": "Ads Automation Product Management & Ops Lead – Grab, Peking",
+        "url": "https://jobs.smartrecruiters.com/Grab/744000150284849",
+        "tag": "stelle",
+        "horizon": "aktuell",
+        "summary": "Grab sucht in Peking einen Ads Automation Product Management & Ops Lead auf Mid-Senior-Level. Die internationale Ausschreibung erwähnt Englisch; Angaben zu Visum oder Umzug fehlen im Kandidatentext.",
+        "why": "Die internationale Ausschreibung und Englisch als genannte Sprache sind ein Plus; die Lead-Rolle im Anzeigen-Produktmanagement und -Betrieb ist aber nicht klar eine DevOps- oder Backend-Stelle, daher sollte die genaue Aufgabenbeschreibung vor einer Bewerbung geprüft werden.",
+        "source": "Grab"
+      }
+    ],
+    "also": []
+  }
+}
