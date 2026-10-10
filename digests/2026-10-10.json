@@ -1,0 +1,89 @@
+{
+  "tldr": [
+    "Die Frankfurter Buchmesse läuft bereits und ist damit am Wochenende noch zu besuchen.",
+    "Das Metropolis-Kino bleibt nach einem Brand mit Millionenschaden geschlossen; ein Wiedereröffnungstermin ist nicht genannt.",
+    "Nickelback spielen am 9. Juni 2027 in der Lanxess-Arena in Köln; Angaben zum Vorverkauf fehlen."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Nickelback spielen 2027 in der Lanxess-Arena Köln",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOT2ZNWUNFLUZrTWo3NFd0TDRIa1JsbU5zdDdTY1NEUFplYk5HMFlVQVNzcmp6TDV5UjMxZ3B5RFNudFFvRm91SFYzUHdpUlBJaVhCejl5T05ncTlsTklyOWNmZm1zbEFJUW1wT2FfN1ZNXzdaT0gyakl2VEtZU2hNLTByZDBGcUk5cmR6UEJxQXB0eklCQ0NxVWJ2VmVWd2NCZWc?oc=5",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "Nickelback treten am 9. Juni 2027 in der Lanxess-Arena in Köln auf. Die Meldung nennt keinen Vorverkaufsstart.",
+        "why": "Für das Konzert ist eine Fahrt nach Köln nötig; ein Ticketkauf lässt sich erst planen, wenn der Vorverkauf angekündigt ist.",
+        "source": "Kölnische Rundschau"
+      },
+      {
+        "title": "Metropolis-Kino bleibt nach Brand mit Millionenschaden geschlossen",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQN2ZVZlBkQzZnMDlFeVQ5WkY1V19UdU9lOVZYOHhib1dUSElYNWdRbkNqV0ctZzJ5bjdnaEhmN2NKekI1VnpEbmMwOGlaQm8xZ1g2Wld6QV9FNlM4dEdDSS0xNzV0S01sbEdTbUJJNGFJellwRmxKb0pnaXZ5SnNZVlRjY3IwR1NnSXU0b2RsalpXUQ?oc=5",
+        "tag": "kino",
+        "horizon": "aktuell",
+        "summary": "Nach einem Brand mit Millionenschaden bleibt das Frankfurter Metropolis-Kino geschlossen; ein Termin für die Wiedereröffnung wird nicht genannt.",
+        "why": "Für Kinobesuche in Frankfurt kommt das Metropolis vorerst nicht infrage; für Vorstellungen sollte ein anderes Kino gewählt werden.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Frankfurter Buchmesse hat begonnen und läuft am Wochenende",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdFI2ZzgwY0E4eFVpVk5HZkRHU0wwTEZMb3hZMno0dEVqbjdxdVJ2eVBORFdvbmZVaXI0b1ZCaXZRUnpMWGFqSVlqZDBXRHN3SVVOdThIM0tELTZ3RUJ3b0MxOTJ2eEh5T2F0RTJVRWc5cFE2WGdFMWp3TmJMY2IzTk02b25pLVpyYUs1NGRR?oc=5",
+        "tag": "messe",
+        "horizon": "aktuell",
+        "summary": "Die Frankfurter Buchmesse hat am 8. Oktober begonnen und ist am heutigen Samstag noch in vollem Gang.",
+        "why": "Wer die Messe besuchen möchte, kann das an diesem Wochenende noch tun; konkrete Angaben zu Tickets und Öffnungszeiten enthält die Meldung nicht.",
+        "source": "Deutschlandfunk Kultur"
+      }
+    ],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Marktschänke in Höchst hat mit neuen Wirten wieder geöffnet",
+        "url": "https://www.fr.de/frankfurt/hoechst-ort904325/marktschaenke-oeffnet-wieder-eintracht-fans-uebernehmen-kult-kneipe-94533300.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Die Marktschänke am Höchster Markt öffnete am Freitag um 17 Uhr wieder; die neuen Wirte betreiben auch das Schlosscafé.",
+        "why": "Für einen Besuch in Höchst steht die wiedereröffnete Kneipe nun wieder zur Verfügung.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": [
+      {
+        "title": "Winternotübernachtung in der Weißfrauenkirche bietet 50 Plätze",
+        "url": "https://www.fnp.de/frankfurt/winternotuebernachtung-startet-voll-mal-kalt-kirche-obdachlose-bahnhofsviertel-94533865.html",
+        "horizon": "aktuell",
+        "summary": "Die Diakonie hat in der Weißfrauenkirche eine Notübernachtung mit 50 Plätzen für obdachlose Männer eröffnet; eine andere Unterkunft in Frankfurt ist weggefallen.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Petition fordert Spielplatz am Alten Flugplatz Bonames",
+        "url": "https://www.fnp.de/frankfurt/alter-flugplatz-bonames-soll-spielplatz-bekommen-200-unterstuetzer-94534061.html",
+        "horizon": "aktuell",
+        "summary": "Eine Petition für einen Spielplatz am Alten Flugplatz Bonames hat mehr als 200 Unterstützer und muss nun offiziell von der Stadt behandelt werden.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
