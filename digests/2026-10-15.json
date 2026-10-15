@@ -1,0 +1,126 @@
+{
+  "tldr": [
+    "Die ABG will in den kommenden Jahren rund 5.700 Wohnungen planen und bauen; kurzfristig verfügbare Wohnungen folgen daraus noch nicht.",
+    "Am Frankfurter Flughafen kann die Kerosinversorgung wegen einer eingeschränkten Pipelinekapazität knapp werden, Lufthansa hat vorsorglich reagiert.",
+    "Eine offene Stelle in Peking bei Grab verbindet Backend und Reliability und nennt Englisch als Anforderung."
+  ],
+  "immobilien": {
+    "top": [
+      {
+        "title": "ABG plant rund 5.700 neue Wohnungen in Frankfurt",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/abg-frankfurt-plant-5700-neue-wohnungen-201316680.html",
+        "tag": "neubau",
+        "horizon": "monate",
+        "summary": "Die städtische ABG Frankfurt Holding will in den kommenden Jahren rund 5.700 Wohnungen planen und bauen und dafür 2,4 Milliarden Euro investieren. Das Vorhaben steht unter dem Vorbehalt passender Rahmenbedingungen.",
+        "why": "Das könnte das Wohnungsangebot langfristig vergrößern, ist aber noch kein konkretes Miet- oder Kaufangebot für eine kurzfristige Suche.",
+        "source": "FAZ Frankfurt"
+      }
+    ],
+    "also": [
+      {
+        "title": "41 Wohnungen an der Gießener Straße sorgen für Streit über den Bebauungsplan",
+        "url": "https://www.fnp.de/frankfurt/41-wohnungen-14-parkplaetze-anwohner-der-giessener-strasse-fordern-antworten-94541398.html",
+        "horizon": "monate",
+        "summary": "Die GSW stellte ihr geplantes Frankfurter Bauprojekt mit 41 Wohnungen und 14 Parkplätzen im Ortsbeirat vor; Anwohner bezweifeln, dass es zum geltenden Bebauungsplan passt.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ]
+  },
+  "events": {
+    "top": [
+      {
+        "title": "ATEEZ kündigt Deutschlandtermine in Köln und Berlin für 2027 an",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1BX2hhZmFZdkFSaktaTVFZZENOazJhOTVJNGJjVGl0bndaOXk2XzUxcWVRU2Z0ZDJZamx2VmpLVV8waWNfVlVDSUF1b00xWGJIV2lzR1VycGZzLTZza1lJRF85WThJdHBWSTR1aXAzWQ?oc=5",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "Die K-Pop-Gruppe ATEEZ plant ihre ZERO TO ALL-Tour 2027 mit Auftritten in Köln und Berlin. Der Kandidat nennt weder genaue Konzertdaten noch Hallen oder Vorverkaufsbeginn.",
+        "why": "Für eine Reiseplanung fehlen noch die konkreten Termine und Ticketinformationen; die Tourankündigung lohnt sich im Blick zu behalten.",
+        "source": "Radio:Active Magazine"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": [
+      {
+        "title": "Messe Frankfurt kündigt internationale Sicherheitsmesse an",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/internationale-sicherheitsmesse-ist-ein-hoffnungsschimmer-fuer-frankfurt-201316322.html",
+        "horizon": "monate",
+        "summary": "Die Messe Frankfurt plant eine internationale Sicherheitsmesse; der Beitrag bezeichnet sie als mögliche Belebung für das bislang selten gut gefüllte Messegelände.",
+        "source": "FAZ Frankfurt"
+      }
+    ]
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Pipeline-Engpass kann Kerosinversorgung am Flughafen Frankfurt beeinträchtigen",
+        "url": "https://www.hessenschau.de/wirtschaft/kerosin-mangel-am-frankfurter-flughafen-lufthansa-ergreift-massnahmen-v1,frankfurter-flughafen-kerosin-mangel-100.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Wegen reduzierter Kapazität einer Pipeline kann es am Frankfurter Flughafen zu Einschränkungen bei der Kerosinversorgung kommen. Lufthansa hat vorsorglich Maßnahmen ergriffen; Fraport sieht nach eigener Einschätzung keinen Grund zur Sorge.",
+        "why": "Bei anstehenden Flügen ist derzeit kein pauschaler Ausfall angekündigt, dennoch sollten Reisende Mitteilungen ihrer Airline im Auge behalten.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "Korean Filmfestival verlegt Eröffnung und sechs Filme nach Offenbach",
+        "url": "https://www.fr.de/frankfurt/korean-filmfestival-frankfurt-weicht-nach-kino-brand-nach-offenbach-aus-94541223.html",
+        "tag": "kino",
+        "horizon": "aktuell",
+        "summary": "Nach dem Brand im Frankfurter Metropolis finden die Eröffnung und sechs weitere Filme des Korean Filmfestival Frankfurt im Cinemaxx Offenbach statt. Das Festivalzentrum bleibt im Eldorado.",
+        "why": "Für die betroffenen Vorführungen ist statt eines Frankfurter Kinos die Anreise nach Offenbach einzuplanen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Liebieghaus zeigt ab 18. November eine Ausstellung zu Parthenon-Skulpturen",
+        "url": "https://www.fr.de/frankfurt/liebieghaus-rekonstruiert-parthenon-skulpturen-und-sucht-ihre-urlaubsfotos-94541107.html",
+        "tag": "news",
+        "horizon": "wochen",
+        "summary": "Das Liebieghaus eröffnet am 18. November eine Ausstellung zum Bilderschmuck des Parthenon-Tempels und lädt dazu ein, eigene Akropolis-Fotos einzusenden.",
+        "why": "Der Ausstellungstermin steht fest; wer ein passendes Urlaubsfoto hat, kann es dem Museum für die Schau anbieten.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Alkoholverbot gilt nun an allen Bahnhöfen",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/frankfurter-hauptbahnhof-alkoholverbot-hat-laut-bahn-positive-wirkung-accg-201323679.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Nach fünfeinhalb Monaten Alkoholverbot am Frankfurter Hauptbahnhof zieht die Bahn eine positive Bilanz; seit heute gilt das Verbot bundesweit an Bahnhöfen.",
+        "why": "Auch an Bahnhöfen außerhalb Frankfurts ist Alkoholkonsum ab sofort untersagt.",
+        "source": "FAZ Frankfurt"
+      }
+    ],
+    "also": [
+      {
+        "title": "Goethe-Universität bietet im Wintersemester 200 kostenlose Veranstaltungen an",
+        "url": "https://www.fnp.de/frankfurt/200-kostenlose-events-frankfurts-buerger-universitaet-startet-ins-wintersemester-94541294.html",
+        "horizon": "aktuell",
+        "summary": "Das öffentliche Wintersemesterprogramm der Goethe-Universität umfasst 200 meist kostenlose Veranstaltungen ohne Anmeldung, von Hirnforschung bis Kammermusik.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [
+      {
+        "title": "Senior Backend & Reliability Engineer bei Grab in Peking",
+        "url": "https://jobs.smartrecruiters.com/Grab/744000152067419",
+        "tag": "stelle",
+        "horizon": "aktuell",
+        "summary": "Grab sucht in Beijing, China, eine Senior Backend & Reliability Engineer; die Ausschreibung ist international veröffentlicht, nennt Englisch und weist die Erfahrungsstufe als Associate aus. Angaben zu Visum oder Umzug enthält der Kandidat nicht.",
+        "why": "Die englischsprachige internationale Ausschreibung und der Reliability-Anteil passen gut zum Profil; der Senior-Titel könnte jedoch mehr Erfahrung verlangen, als die angegebene Associate-Stufe nahelegt.",
+        "source": "Grab"
+      }
+    ],
+    "also": []
+  }
+}
