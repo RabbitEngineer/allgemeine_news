@@ -1,0 +1,80 @@
+{
+  "tldr": [
+    "Die S-Bahn-Linie S1 zwischen Frankfurt und Wiesbaden ist seit Freitagmorgen von mehrwöchigen Sperrungen betroffen; weitere Einschränkungen für Regionalzüge folgen.",
+    "Zwei Frankfurter Schulen bleiben nach einem Brand wegen Schäden an der Wasserversorgung geschlossen.",
+    "Die ABG plant laut einem Bericht 3.700 neue Mietwohnungen in Frankfurt."
+  ],
+  "immobilien": {
+    "top": [
+      {
+        "title": "ABG plant 3.700 neue Mietwohnungen in Frankfurt",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRTUyQjFPWHgtY09WMkpQajlPVXVvb0JZeUxJc2FwTTRUVV91dUNxNkdJRmlYTjczdVlpSjBkTThEMHQ2eHRJcVdhdGRxRi00R3RkUEhtOEVPSVdVamdWM3NaWl82MXVfZHlVekdRM2liVTVXVV9BelNPWkloOHJRRGZCOVdLb2cya2VaeTNaRjNsYzgzLWtRWEZiRzQ2MWtBa2pMNEU1RHRJZFBUZEppX2tKSG9BTVRS?oc=5",
+        "tag": "neubau",
+        "horizon": "monate",
+        "summary": "Die ABG Frankfurt plant 3.700 neue Mietwohnungen. Angaben zu Standorten, Zeitplan und Miethöhen enthält der vorliegende Auszug nicht.",
+        "why": "Das Vorhaben könnte das Mietangebot langfristig vergrößern, hilft aber ohne konkrete Standorte und Bezugstermine nicht bei einer kurzfristigen Wohnungssuche.",
+        "source": "fnp.de"
+      }
+    ],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": [
+      {
+        "title": "Frankfurter Buchmesse zeigt russischsprachige Exil-Verlage",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPUjFaR2VzdFY2N2FsZnRLaVRkZ01JS0tYZUZ5dTVCTDFvYnFxcldSQzJrV0poS2lBRzBrWEx6VU9nS0JPdDVtTGhuTnNaRmlYT0dIYkx3bFVrc3RkWW9kTHR5ak4xSGRHMU5UUkJMODJTR29xNjhZZlMwUHhRckRFWVpBdGRqamtvWTluLTBFRHcyRGlKZG9SYzNKQkVFS1hMNjBv?oc=5",
+        "horizon": "aktuell",
+        "summary": "Ein Beitrag stellt russischsprachige Exil-Verlage auf der Frankfurter Buchmesse vor.",
+        "source": "Börsenblatt"
+      }
+    ]
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Mehrwöchige Bahnsperrungen zwischen Frankfurt und Wiesbaden",
+        "url": "https://www.hessenschau.de/wirtschaft/bahn-sperrt-strecke-zwischen-frankfurt-und-wiesbaden---s1-faehrt-nicht-mehr-v1,bahnsperrung-frankfurt-wiesbaden-100.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Für den Bau eines neuen Stellwerks sperrt die Bahn in den kommenden Wochen mehrmals einen Abschnitt zwischen Frankfurt und Wiesbaden. Die S1 ist seit Freitagmorgen betroffen, Regionalzüge sollen ab Freitagabend ausfallen; Einschränkungen dauern bis in den November.",
+        "why": "Wer zwischen Frankfurt und Wiesbaden pendelt, sollte für die kommenden Wochen alternative Verbindungen und längere Reisezeiten einplanen.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "Zwei Frankfurter Schulen bleiben nach Brand geschlossen",
+        "url": "https://www.fnp.de/frankfurt/lagerbrand-legt-wasserversorgung-lahm-zwei-frankfurter-schulen-bleiben-zu-94543327.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Nach einem Brand in Dornbusch verhindern drei Leckagen in Wasserleitungen den Schulbetrieb an der Anne-Frank-Schule und der Viktor-Frankl-Schule; beide Einrichtungen können nach den Herbstferien nicht öffnen.",
+        "why": "Für Familien mit Kindern an den beiden Schulen ist der Unterrichtsbeginn vorerst unklar; aktuelle Hinweise der Schulen sind wichtig.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": [
+      {
+        "title": "Frankfurt sucht neue Schutzräume, hat aber keine konkreten Baupläne",
+        "url": "https://www.fnp.de/frankfurt/keine-bunker-mehr-frankfurt-sucht-neue-schutzraeume-fuer-den-ernstfall-94543319.html",
+        "horizon": "aktuell",
+        "summary": "Laut Magistrat gibt es in Frankfurt keine funktionsfähigen Bunkeranlagen mehr; die Stadt sucht seit Jahren nach geeigneten Liegenschaften, konkrete Baupläne bestehen nicht.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
