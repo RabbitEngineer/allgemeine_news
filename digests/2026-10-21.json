@@ -1,0 +1,96 @@
+{
+  "tldr": [
+    "Beim Frankfurt-Marathon am Sonntag, 25. Oktober, sind Busse und Straßenbahnen stark eingeschränkt; die Stadt empfiehlt U- und S-Bahnen.",
+    "Am Hauptbahnhof hat der Bau des neuen Gleises 25 begonnen; ab November müssen Anwohner mit Lärm rechnen.",
+    "Noah Kahan tritt am 26. November in Köln auf; Angaben zu Halle und Vorverkauf fehlen im Kandidatentext."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Noah Kahan spielt am 26. November in Köln",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPZURoOHI3WWZVZkZXWTR2cnZNX09Qb3RYYUpRWTJnYUc4aURRSEJ3NHhZXzlwR2k4Z0JaR2c3NDBfT1p5d0Z0ckRfR3JlZFliQU83NDRxTG9CbVMzS0FuYnVFakNxd1hXOGV3TUJoMUpSaVYySE50dXgzblp2WksyeHoxbDZGMzIwX0NqLXRxaG9JXzNBZjBVUFlpWXlLSmJSR2d3X0ZsV2VuY1dYQ1pPMENPQU1RRnhKajVV?oc=5",
+        "tag": "konzert",
+        "horizon": "wochen",
+        "summary": "Noah Kahan tritt am 26. November in Köln auf; die Meldung nennt weder die Halle noch den Vorverkaufsstart.",
+        "why": "Der Termin ist in gut fünf Wochen und damit für eine Fahrt aus Frankfurt planbar; vor einer Buchung müssen Halle und Kartenverfügbarkeit noch geprüft werden.",
+        "source": "AD HOC NEWS"
+      },
+      {
+        "title": "Korn spielt heute in Köln",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNajNLbWF3WWR4Ry01emRXS2NhaG5FWE1ZSGE3LUtLdXd2XzZvNngwV1hPcGY2aEkxSkw5X21jYWI1dmdRSG9BMEtWcWN3VjZra3gxa0tLSGVrNGlfQzIxT1BWZmd5ZGNVRm1rZlRFZ2RrVm5WNjZ5VXN6X3N0NHZYN19tVUVtdkpqOVczZGZaSzVLS2txcDlmUnY3YUpzdUYtWnZIdjEyTQ?oc=5",
+        "tag": "konzert",
+        "horizon": "aktuell",
+        "summary": "Korn spielt am 21. Oktober im Rahmen der EURO TOUR 2026 in Köln; eine Halle und Informationen zum Vorverkauf nennt die Meldung nicht.",
+        "why": "Der Auftritt ist heute und Köln von Frankfurt aus erreichbar, für eine spontane Fahrt fehlen aber Angaben zur Halle und zu verfügbaren Karten.",
+        "source": "AD HOC NEWS"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": [
+      {
+        "title": "Messe Frankfurt eröffnet einen neuen Zugang im Süden",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPSTJLX1hVYmgtSG43WHlmZW1fSEhnVDNJbnVtXzBBSkhpRExLV1lpak5TdU9DOEVPbXRaaV91eW0xaVpsdFZXZ3l0TGdja0JONk90YXpFZEluaEdScHZIX0FaOHliVHhHTzlBRG5OVG42d0JwVnd1RUtfTUJXRnJfeQ?oc=5",
+        "horizon": "aktuell",
+        "summary": "Die Messe Frankfurt hat einen neuen Zugang auf der Südseite des Messegeländes eröffnet.",
+        "source": "verbaende.com"
+      }
+    ]
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Frankfurt-Marathon am Sonntag bringt Einschränkungen im ÖPNV",
+        "url": "https://www.fr.de/frankfurt/frankfurt-marathon-so-fahren-busse-und-bahnen-am-sonntag-94549587.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Beim Frankfurt-Marathon am Sonntag, 25. Oktober, gibt es weitreichende Einschränkungen bei Straßenbahnen und Bussen; die Stadt empfiehlt den Umstieg auf U- und S-Bahnen.",
+        "why": "Wer am Sonntag in Frankfurt unterwegs ist, sollte für Bus- und Straßenbahnfahrten mehr Zeit einplanen und vorab auf U- oder S-Bahnverbindungen ausweichen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Bau des neuen Gleises 25 am Hauptbahnhof hat begonnen",
+        "url": "https://www.fr.de/frankfurt/bahnhofsviertel-ort904309/neues-gleis-25-in-frankfurt-40-millionen-bau-startet-fertig-erst-2028-94550535.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Am Frankfurter Hauptbahnhof laufen die Arbeiten für das 40 Millionen Euro teure Gleis 25 im nördlichen Bahnhofsbereich; die Fertigstellung ist für 2028 vorgesehen, ab November ist Baulärm zu erwarten und die Bahn stellt keine Lärmschutzwände auf.",
+        "why": "Anwohner im Bahnhofsviertel sollten sich ab November auf Baulärm einstellen; auch für Bahnreisende bleibt die Baustelle bis 2028 ein längerfristiges Thema.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": [
+      {
+        "title": "Einbaumstraße soll öffnen, aber ein Termin steht noch nicht fest",
+        "url": "https://www.fnp.de/frankfurt/einbaumstrasse-oeffnung-geplant-aber-kein-termin-in-sicht-94550654.html",
+        "horizon": "aktuell",
+        "summary": "Frankfurt hat für 350.000 Euro eine Rampe zur Gutleutstraße gebaut, kann aber noch keinen Termin für die Öffnung der Einbaumstraße nennen.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Lufthansa plant zehn neue Direktziele ab Frankfurt für 2027",
+        "url": "https://www.fr.de/frankfurt/lufthansa-nimmt-zehn-neue-ziele-fuer-2027-ab-flughafen-frankfurt-auf-94549595.html",
+        "horizon": "monate",
+        "summary": "Lufthansa hat den Sommerflugplan 2027 vorgestellt, der ab dem Flughafen Frankfurt zehn neue Ziele per Direktverbindung vorsieht.",
+        "source": "Frankfurter Rundschau"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
