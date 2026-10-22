@@ -1,0 +1,87 @@
+{
+  "tldr": [
+    "Amazon plant einen milliardenschweren Ausbau seiner KI-Cloud in Frankfurt.",
+    "Am 25. Oktober führt der Frankfurt-Marathon über 42,195 Kilometer durch die Stadt; am 31. Oktober ist eine Demonstration mit rund 1.700 Teilnehmenden angekündigt.",
+    "Frankfurter Theaterverbände beziffern ihren zusätzlichen Förderbedarf auf 7,4 Millionen Euro; bislang stellt die Stadt zwei Millionen Euro in Aussicht."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Amazon plant Milliarden-Ausbau seiner KI-Cloud in Frankfurt",
+        "url": "https://www.fr.de/frankfurt/warum-amazon-ausgerechnet-in-frankfurt-milliarden-in-die-ki-cloud-investiert-94552502.html",
+        "tag": "news",
+        "horizon": "monate",
+        "summary": "Amazon plant einen milliardenschweren Ausbau seiner KI-Cloud in Frankfurt; der Konzern nutzt die Stadt seit mehr als zehn Jahren als wichtigen europäischen Standort.",
+        "why": "Das stärkt Frankfurts Rolle als Rechenzentrums- und IT-Standort, verändert den Alltag vor Ort aber nicht unmittelbar.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Demonstration am 31. Oktober: Rund 1.700 Teilnehmende erwartet",
+        "url": "https://www.fnp.de/frankfurt/gen-steht-auf-700-demonstranten-erwartet-poseck-warnt-vor-frankreich-szenen-94552325.html",
+        "tag": "news",
+        "horizon": "wochen",
+        "summary": "Die Gruppe „Gen Z steht auf“ plant für den 31. Oktober einen Demonstrationszug durch die Frankfurter Innenstadt; erwartet werden rund 1.700 Teilnehmende, die Polizei kündigt einen starken Einsatz an.",
+        "why": "Wer an diesem Tag in der Innenstadt unterwegs ist, sollte mit einem größeren Polizeiaufgebot und möglichen Einschränkungen entlang der Route rechnen.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Frankfurt-Marathon führt am Sonntag über 42,195 Kilometer durch die Stadt",
+        "url": "https://www.fr.de/frankfurt/42-kilometer-durch-die-mainmetropole-die-highlights-beim-frankfurt-marathon-in-bildern-zr-94551775.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Der 46. Mainova Frankfurt-Marathon startet am 25. Oktober an der Messe; die 42,195 Kilometer lange Strecke führt durch die Innenstadt und vorbei an Sehenswürdigkeiten.",
+        "why": "Wer am Sonntag in der Innenstadt unterwegs ist, sollte die Strecke prüfen und mögliche Verkehrsbehinderungen einplanen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Frankfurter Theater sehen 7,4 Millionen Euro Förderbedarf",
+        "url": "https://www.fnp.de/frankfurt/frankfurter-theater-warnen-millionen-euro-fehlen-sonst-schliessen-haeuser-94552331.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Vier Verbände beziffern den zusätzlichen Förderbedarf der freien Theater in Frankfurt auf 7,4 Millionen Euro; die Stadt stellt bislang zwei Millionen Euro zusätzlich in Aussicht.",
+        "why": "Für das Frankfurter Kulturangebot ist entscheidend, ob die Finanzierungslücke geschlossen wird; konkrete Schließungen sind bislang nicht beschlossen.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": [
+      {
+        "title": "Neue Stadtpolizei-Wache an der Zeil hat im Winter eingeschränkte Öffnungszeiten",
+        "url": "https://www.fnp.de/frankfurt/frankfurter-innenstadtwache-eroeffnet-aber-nur-31-stunden-pro-woche-im-winter-94552337.html",
+        "horizon": "aktuell",
+        "summary": "Die neue Stadtpolizei-Wache in der Stiftstraße nahe der Zeil ist im Winter nur 31,5 Stunden pro Woche geöffnet.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Museum für Kommunikation eröffnet Ausstellung über Familienleben",
+        "url": "https://www.fr.de/frankfurt/museum-fuer-kommunikation-frankfurt-zeigt-wie-vielfaeltig-familie-sein-kann-94552362.html",
+        "horizon": "aktuell",
+        "summary": "Die interaktive Ausstellung „Familienbande. How to Family“ im Museum für Kommunikation bietet neurodivergenten Besuchern auf Wunsch Taschen mit Kopfhörern und Knautschball.",
+        "source": "Frankfurter Rundschau"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
