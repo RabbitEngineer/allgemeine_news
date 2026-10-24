@@ -1,0 +1,80 @@
+{
+  "tldr": [
+    "Der Frankfurt Marathon am Sonntag, 25. Oktober, bringt umfangreiche Straßensperrungen und Änderungen im ÖPNV.",
+    "Ab Sonntag gibt es bei nächtlichen U-Bahn-Fahrten wegen Arbeiten an einem neuen Sicherungssystem Einschränkungen.",
+    "Am Offenbacher Kreuz wird die A3 Richtung Köln am Samstagabend gesperrt; auch am kommenden Wochenende sind Einschränkungen angekündigt."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Frankfurt-Marathon bringt am Sonntag Sperrungen und ÖPNV-Änderungen",
+        "url": "https://www.hessenschau.de/sport/mehr-sport/frankfurt-marathon/frankfurt-marathon-2026-sperrungen-und-oepnv-einschraenkungen-v2,frankfurt-marathon-sperrungen-104.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Am Sonntag, 25. Oktober, führen der Frankfurt Marathon und seine Strecke zu zahlreichen Straßensperrungen; auch im öffentlichen Verkehr gibt es Änderungen.",
+        "why": "Wer am Sonntag durch Frankfurt fahren oder öffentliche Verkehrsmittel nutzen muss, sollte die Strecke und Verbindung vorher prüfen.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "U-Bahn-Arbeiten verlängern an mehreren Nächten den Heimweg",
+        "url": "https://www.fr.de/frankfurt/neue-technik-fuer-die-bahn-das-aendert-sich-ab-sonntag-im-oepnv-94556200.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Für ein neues Sicherungssystem finden ab Sonntag nachts Arbeiten an der Frankfurter U-Bahn statt; an mehreren Terminen im Oktober und November kann die Fahrt länger dauern.",
+        "why": "Wer abends mit der U-Bahn unterwegs ist, sollte für die betroffenen Nächte mehr Fahrzeit einplanen und die Verbindung prüfen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "A3 Richtung Köln wird am Offenbacher Kreuz gesperrt",
+        "url": "https://www.hessenschau.de/wirtschaft/sperrung-der-a3-am-offenbacher-kreuz-das-kommt-auf-autofahrer-zu-v2,offenbacher-kreuz-sperrung-102.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Am Samstagabend wird die A3 am Offenbacher Kreuz in Richtung Köln wegen Arbeiten an einer neuen Autobahnbrücke gesperrt; auch am kommenden Wochenende sind Einschränkungen angekündigt.",
+        "why": "Wer am Wochenende über die A3 Richtung Köln fährt, sollte eine Umleitung und zusätzliche Fahrzeit einplanen.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "Römerberg wird für Kranarbeiten an der Schirn zwei Tage gesperrt",
+        "url": "https://www.fr.de/frankfurt/frankfurt-sperrt-roemerberg-kran-fuer-schirn-sanierung-94556197.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Für die Sanierung der Schirn Kunsthalle wird der Römerberg zwei Tage gesperrt, während ein großer Turmdrehkran über die Dächer gehoben wird.",
+        "why": "Bei Wegen durch die Altstadt sollte der Römerberg für zwei Tage gemieden und eine Ausweichroute gewählt werden.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": [
+      {
+        "title": "Frankfurt plant in Heddernheim eine Ausstellungshalle für römische Funde",
+        "url": "https://www.fnp.de/frankfurt/frankfurt-plant-halle-fuer-2000-jahre-alte-nida-funde-kosten-zwei-millionen-euro-94556224.html",
+        "horizon": "monate",
+        "summary": "In Heddernheim sollen unter anderem Töpferöfen, ein Steinkeller und ein Mithras-Heiligtum aus der Römerzeit vor Ort ausgestellt werden; die geplante Halle soll zwei Millionen Euro kosten.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
