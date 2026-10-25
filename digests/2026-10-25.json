@@ -1,0 +1,80 @@
+{
+  "tldr": [
+    "Der Frankfurt-Marathon findet heute statt und bringt Straßensperrungen und Umleitungen mit sich; auch die A3 ist am Offenbacher Kreuz Richtung Köln bis Sonntagabend gesperrt.",
+    "Stevie Wonder tritt am Montag, 26. Oktober, in Köln auf; Angaben zu Halle und Vorverkauf fehlen im Kandidatenbeitrag."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Stevie Wonder spielt am 26. Oktober in Köln",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPbUx5WllTU3RtU2phOUpadDZSYjhvUG1DU183SmNvZjdqbEVneWxUZV9QNE9TZHh3aUUwazNqNGFBbGlRUl9STGhjTmVoMHlqZFRyX3pSeE1yU1ZVVXhua1NqcTZNWF91SndnM0pHTG9KTnhZUkkzdml2LW00ei1IY1FSdDZ1aWpDaUZkMWNGc2RjMmRWSXRDRWtSbUVwY3FmZnZHMzFZQ0xOa21PV3djNkFJWENIR2g2NEE?oc=5",
+        "tag": "konzert",
+        "horizon": "aktuell",
+        "summary": "Stevie Wonder soll am Montag, 26. Oktober 2026, in Köln im Rahmen seiner Jubiläumstour auftreten; eine Halle und Angaben zum Kartenverkauf nennt der Beitrag nicht.",
+        "why": "Der Termin ist bereits morgen; wer hinfahren möchte, sollte sofort prüfen, ob noch Karten verfügbar sind.",
+        "source": "ad-hoc-news.de"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Frankfurt-Marathon bringt heute Straßensperrungen und Umleitungen",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYWxHUk1zUFZ6REV0VTZNekRfZU1uanprV3BGZ0tBUWJxMGJrMl8xemRFVGFmTGdIeGdKZm5Hc3pBSHJ1cGpWakxuZGc4WElEVVhoR1VzZnE5b0EzRlpudVpkTTJ4MFRkbG9JQU9DM056Rlp0ZVNyQjRXNjlGVjhQZG1GYU55NjBoaU5FN2VsM1g4d2xrOVREV05IOWg1dnN3UjNN?oc=5",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Der Frankfurt-Marathon findet heute statt; für die Strecke gelten Straßensperrungen und Umleitungen. Der Beitrag bündelt die Verkehrsinfos.",
+        "why": "Wer heute mit dem Auto oder Bus unterwegs ist, sollte die Strecke und mögliche Umleitungen vor der Fahrt prüfen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "A3 am Offenbacher Kreuz Richtung Köln bis Sonntagabend gesperrt",
+        "url": "https://www.hessenschau.de/wirtschaft/sperrung-der-a3-am-offenbacher-kreuz-das-kommt-auf-autofahrer-zu-v5,offenbacher-kreuz-sperrung-102.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Die A3 ist am Offenbacher Kreuz Richtung Köln bis Sonntagabend gesperrt; Grund sind Arbeiten an der neuen Autobahnbrücke. Auch am kommenden Wochenende gibt es Einschränkungen.",
+        "why": "Für Fahrten aus Frankfurt Richtung Köln ist bis Sonntagabend eine andere Route nötig; auch für das nächste Wochenende sollte die Strecke geprüft werden.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "Regional- und Fernzüge in Frankfurt fallen aus",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOTXpqRjcyYmxMS3FVeWhSVTR5enRvRHRKYWxvY0JtNjVWSGY1SEN2UUxOQ3dWcnI5NkhwbXBoTXI1dDFmbGh3akttT2FocUtHaHNjRnhiLVJOd0FyQzgxWHhvTWp6cW5ES3g3b18takQ0SEtzc0ZQTG1qQW1tWjZsMlN5UTBFYmV2STNpNDkwN1hybGRpS3pWQU9ucUNuSk8wOXNoZUtpeUJSVjhMdUE?oc=5",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Laut Beitrag sind Regionalbahnen und der Fernverkehr in Frankfurt von Zugausfällen betroffen; konkrete Linien und Zeiträume nennt der Kandidatenauszug nicht.",
+        "why": "Vor einer Fahrt mit der Bahn empfiehlt sich ein aktueller Blick in die Verbindungsauskunft, da einzelne Verbindungen ausfallen.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": [
+      {
+        "title": "Städel und dm starten digitale Kunstpausen",
+        "url": "https://www.fr.de/frankfurt/frankfurter-staedel-museum-kooperiert-mit-drogeriekette-was-dahinter-steckt-94556415.html",
+        "horizon": "aktuell",
+        "summary": "Das Städel Museum und dm bieten ab sofort digitale Kunstpausen zu gesellschaftlichen Fragen an; jede dauert 30 Minuten.",
+        "source": "Frankfurter Rundschau"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
