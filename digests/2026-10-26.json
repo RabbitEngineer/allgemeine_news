@@ -1,0 +1,83 @@
+{
+  "tldr": [
+    "Discover Airlines will 2027 Direktflüge ab Frankfurt nach Edmonton, Belize und Seattle anbieten; konkrete Starttermine fehlen noch.",
+    "Noah Kahan spielt am 26. November in Köln, doch Halle und Vorverkaufsbeginn sind in der Meldung nicht genannt.",
+    "Ein Bericht nennt für KI-Stellen bei chinesischen Tech-Konzernen Gehälter von fast 150.000 US-Dollar; das ist kein Richtwert für DevOps- oder Backend-Rollen."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Noah Kahan spielt am 26. November in Köln",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPcjI5bkRrSFB3ZHVpNmhIak1tMlVUZmtucFB4QmZJOWRZVnltQmdkRXRDSjhvd0NjVWxQTGxjeFBPMms1SVBaSC1lYkMxZlVMVGZ3b0JyNEpPMWp2REEtZXFqZllzaFBGWGN5d0FCNjJLaE9mbDN2WFZpR2RWSlBPbmVoLWh2MVhvVGpvY0I1ZUtGYWFZUGY5bEM2LXhyazNvblRWOUoyRm5adW53QlBCUGlaSndNWEpKX2tQN2toT3M?oc=5",
+        "tag": "konzert",
+        "horizon": "wochen",
+        "summary": "Der US-Singer-Songwriter Noah Kahan gibt am 26. November seinen einzigen NRW-Termin in Köln. Halle und Vorverkaufsbeginn nennt die Meldung nicht.",
+        "why": "Der Termin liegt rund einen Monat voraus; für eine Anreise aus Frankfurt sollten Halle und Kartenverkauf noch geprüft werden.",
+        "source": "ad-hoc-news.de"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Discover Airlines plant neue Langstrecken ab Frankfurt",
+        "url": "https://www.fnp.de/frankfurt/mehr-fernweh-ab-frankfurt-airline-baut-langstreckenangebot-aus-94556948.html",
+        "tag": "news",
+        "horizon": "monate",
+        "summary": "Discover Airlines will ab 2027 von Frankfurt aus Direktflüge nach Edmonton, Belize und Seattle anbieten; konkrete Starttermine nennt die Meldung nicht.",
+        "why": "Für Reisen ab dem Frankfurter Flughafen kommen drei Direktziele hinzu, doch für eine konkrete Planung fehlen noch Flugtage und Buchungsstart.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": [
+      {
+        "title": "Frankfurt liegt bei einer Schlaf-Erhebung auf dem letzten Platz",
+        "url": "https://www.fr.de/frankfurt/frankfurt-bei-sleep-well-index-auf-dem-letzten-platz-wuppertal-schlafstoerung-bars-laerm-licht-nacht-94556945.html",
+        "horizon": "aktuell",
+        "summary": "Im Sleep-Well-Index-Germany landet Frankfurt unter den 20 größten Städten Deutschlands auf dem letzten Platz; der Beitrag verweist auf Lärm und Licht als mögliche Belastungen.",
+        "source": "Frankfurter Rundschau"
+      }
+    ]
+  },
+  "peking": {
+    "top": [
+      {
+        "title": "Chinesische Tech-Konzerne bieten KI-Fachkräften hohe Gehälter",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQ2ltSUhldGxzR0hZUkxGb2RVY3MyZE5SZkpCM2NMcWFMYVRfckVab2t1QXdkblBqMlRCNkpBcXhTTWJaTk80endrdVRiQkxVc2k0a09ZcXpIc1Y3Y1NpQmR1aUxXN2RLZmVVTXd5amV2MkI0RTBjQ21jS25RTTFueHlDNVByMm55SkdqUDhTb3FybVhRSjNncw?oc=5",
+        "tag": "jobs",
+        "horizon": "aktuell",
+        "summary": "Ein Bericht nennt für KI-Stellen bei chinesischen Tech-Riesen Gehälter von fast 150.000 US-Dollar; konkrete Rollen oder Anforderungen sind im Kandidatentext nicht aufgeführt.",
+        "why": "Das zeigt hohe Vergütung für bestimmte KI-Fachkräfte, ist aber kein belastbarer Gehaltsmaßstab für DevOps oder Backend und sagt nichts über Sprach- oder Visumsanforderungen.",
+        "source": "Berliner Zeitung"
+      }
+    ],
+    "also": []
+  },
+  "jobs": {
+    "top": [
+      {
+        "title": "Senior Software Engineer, Backend – Grab",
+        "url": "https://jobs.smartrecruiters.com/Grab/744000150939049",
+        "tag": "stelle",
+        "horizon": "aktuell",
+        "summary": "Grab sucht in Peking einen Senior Software Engineer im Backend-Bereich; die Ausschreibung ist international veröffentlicht, nennt Englisch und ordnet die Erfahrungsstufe als Associate ein. Angaben zu Visum oder Umzug fehlen.",
+        "why": "Die internationale Ausschreibung und Englisch als genannte Sprache machen die Stelle trotz rudimentärer Chinesischkenntnisse prüfenswert; fachlich ist Backend aber weniger passend als DevOps.",
+        "source": "Grab"
+      }
+    ],
+    "also": []
+  }
+}
