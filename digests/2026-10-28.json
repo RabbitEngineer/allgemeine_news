@@ -1,0 +1,86 @@
+{
+  "tldr": [
+    "Für Samstag, 31. Oktober, wird bei der Frankfurter Innenstadt-Demonstration „Gen Z regelt“ mit mehr Teilnehmenden gerechnet; erste Veranstaltungen im Umfeld wurden abgesagt.",
+    "Eine Vodafone-Störung beeinträchtigt weiterhin mehr als 28.000 Kabelkunden in Frankfurt und Bad Vilbel.",
+    "Bis Freitag werden in Frankfurt 102 Stolpersteine verlegt oder enthüllt; mehr als 140 Nachfahren reisen dafür an."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": [
+      {
+        "title": "Frankfurter Weihnachtsmarkt 2026: Bericht zu den Glühweinpreisen",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRzBGZFdzemllcUs5VzdTc0t6RzE2bXdGdkdYSGs2RWVQQWVSdkZZYUR2cWtqa3Q1UUh2UmZxWWY1eW5wZU9KZjE0V2MxOUI4ZTlRRjZCX2VFUm1jOG5KTm90em1qRjNRQ19xTmlpR2FMZ0ZrWjVIM0JWY2R0WDFFR1RFU0RKSnU1cjAyUXBMZEhEMi0yRWxMU280V28xWG1PZm1FYzhOOHM1Vm9UZVRULWdGZ2FNTmZRN19QWlF5NHd6N2J4c3E0X3NRUFEwZ3F3?oc=5",
+        "horizon": "wochen",
+        "summary": "Ein Beitrag zum Frankfurter Weihnachtsmarkt 2026 berichtet über die Glühweinpreise; der RSS-Auszug nennt keinen konkreten Betrag.",
+        "source": "t-online – Frankfurt"
+      }
+    ]
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Frankfurter Innenstadt: Demo am Samstag, erste Veranstaltungen abgesagt",
+        "url": "https://www.fr.de/frankfurt/frankfurt-gen-demo-am-31-oktober-sorgt-fuer-grossaufgebot-94562282.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Für Samstag, 31. Oktober, mobilisiert die Jugendinitiative „Gen Z regelt“ zu einer Großdemonstration in der Innenstadt. Die Polizei rechnet mit mehr Teilnehmenden als zunächst angemeldet; Veranstaltungen im Umfeld wurden vorsorglich abgesagt.",
+        "why": "Wer am Samstag in der Innenstadt unterwegs ist, sollte mit Einschränkungen rechnen und prüfen, ob geplante Veranstaltungen stattfinden.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Vodafone-Störung in Frankfurt und Bad Vilbel dauert an",
+        "url": "https://www.hessenschau.de/wirtschaft/grossstoerung-bei-vodafone-in-frankfurt-und-bad-vilbel-dauert-laenger-an-v5,vodafone-stoerung-102.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Eine Störung im Vodafone-Kabelnetz hat bei mehr als 28.000 Kunden in Frankfurt und Bad Vilbel Fernsehen und Internet beeinträchtigt; die Reparatur verzögert sich wegen unerwarteter Probleme.",
+        "why": "Vodafone-Kunden in den betroffenen Gebieten müssen weiter mit Ausfällen rechnen und gegebenenfalls auf mobile Daten oder andere Verbindungen ausweichen.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "Frankfurt verlegt bis Freitag 102 neue Stolpersteine",
+        "url": "https://www.hessenschau.de/gesellschaft/ueber-100-neue-stolpersteine-in-frankfurt---nachfahren-reisen-aus-aller-welt-an-v1,stolpersteine-frankfurt-ns-zeit-100.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Bis Freitag werden in Frankfurt 102 Stolpersteine verlegt oder enthüllt; mehr als 140 Nachfahren reisen dafür aus verschiedenen Ländern an.",
+        "why": "Die Verlegungen machen diese Woche an mehreren Orten in der Stadt die Erinnerung an die Opfer der NS-Zeit sichtbar.",
+        "source": "hessenschau.de"
+      }
+    ],
+    "also": [
+      {
+        "title": "Im Riederwald sind bis zu 40 neue Hortplätze im Gespräch",
+        "url": "https://www.fnp.de/frankfurt/nur-jedes-zweite-kind-bekommt-einen-hortplatz-jetzt-gibt-es-erste-gespraeche-94560593.html",
+        "horizon": "monate",
+        "summary": "Stadt und Kirche haben erste Planungsgespräche über bis zu 40 zusätzliche Hortplätze im Riederwald geführt; ein ungelöstes Problem bremst den Baubeginn.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Museum für Kommunikation zeigt die Ausstellung „Familienbande“",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOUXMwcll1UlV4ZHdFRTVocU1SS2xreUxib1IyTGo5Nlk0ckJZRFlHaG9zRkV4YzQ1SW02Q3pEdGxaY2pOWDdxVFZvTGlrVDZYM1M1OE53YjBLd3FMMFFIbmdBUTc4WGtzUmllSEZWM1Zpd2syc0xOSDNMRkJac0lzbHN5T2pwdnhYWUo3ajN2UkRzR2ZFNnhDZ0F5Qmp4TUM0b2tTQ1dZbEV4VHVidjNkazdYckVpYll4OW1oeHRGWVExTDJvclE?oc=5",
+        "horizon": "aktuell",
+        "summary": "Das Museum für Kommunikation Frankfurt kündigt die neue Ausstellung „Familienbande“ an.",
+        "source": "FAZ"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
