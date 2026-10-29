@@ -1,0 +1,100 @@
+{
+  "tldr": [
+    "Die 48 neuen FES-Werkswohnungen in Höchst sind bezugsfertig, stehen aber den eigenen Beschäftigten offen.",
+    "Eine Vodafone-Großstörung mit mehr als 28.000 betroffenen Kabelkunden in Frankfurt und Bad Vilbel ist offiziell behoben; vereinzelt gibt es noch Probleme.",
+    "Die Demonstration „Gen Z regelt“ startet am Samstag nun im Ostend statt am Mainkai."
+  ],
+  "immobilien": {
+    "top": [
+      {
+        "title": "FES-Wohnanlage in Höchst mit 48 Wohnungen ist bezugsfertig",
+        "url": "https://www.fr.de/frankfurt/hoechst-ort904325/fes-baut-48-werkswohnungen-miete-ab-fuenf-euro-pro-quadratmeter-94562627.html",
+        "tag": "fertig",
+        "horizon": "aktuell",
+        "summary": "Die FES hat in Frankfurt-Höchst 48 Wohnungen für eigene Beschäftigte eröffnet. Das Projekt kostete 28 Millionen Euro; die Miete beginnt laut Bericht bei fünf Euro pro Quadratmeter und wurde mit Fördermitteln ermöglicht.",
+        "why": "Die günstige Miete ist kein Angebot für den freien Wohnungsmarkt, weil die Wohnungen FES-Beschäftigten vorbehalten sind.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Noah Kahan spielt am 26. November in Köln",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPTG92Q2lqeWJsa281UUtiUlpFdFozR3o0S1RNLUNZN0R5T05GMUpHeFFCWWkzQ2xvOHFtSDEtTHJoQU1Dc3gxanFTMzlFYTJrV294emRickd4eHB5eUtqZmxyZTJMdGNlSkNKamQweFVfNnlyUXZZZHNDaF9TVTVod21Bb3hLVG54RGNiX2pxUjdWVVp4TUxidWc1LThVVFNHSThvM2tYOG1ZRHl2Tm92Y3hwVWcxWFpGdFJR?oc=5",
+        "tag": "konzert",
+        "horizon": "wochen",
+        "summary": "Noah Kahan tritt am 26. November in Köln auf; laut Meldung ist es sein einziger Termin in Nordrhein-Westfalen. Halle und Vorverkaufsinformationen nennt der vorliegende Auszug nicht.",
+        "why": "Der Kölner Termin kann eine Reise wert sein; für die Planung sollten Spielstätte und Ticketstatus noch geprüft werden.",
+        "source": "ad-hoc-news.de"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "„Gen Z regelt“-Demo startet am Samstag im Ostend",
+        "url": "https://www.fr.de/frankfurt/gen-regelt-protest-in-frankfurt-neue-route-fuer-demo-polizei-will-frueh-praesenz-zeigen-94564150.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Die Demonstration „Gen Z regelt“ beginnt am Samstag, 31. Oktober, nicht wie geplant am Mainkai, sondern an einem neuen Startpunkt im Ostend. Die Polizei rechnet mit vielen Teilnehmenden.",
+        "why": "Im Ostend und auf der geänderten Route kann es am Samstag voller werden; bei Wegen durch die Gegend sollte zusätzliche Zeit eingeplant werden.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Vodafone-Störung in Frankfurt offiziell behoben",
+        "url": "https://www.hessenschau.de/wirtschaft/vodafone-grossstoerung-fast-behoben-neue-probleme-bei-anderem-anbieter-v15,vodafone-stoerung-102.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Eine Glasfaserstörung bei Vodafone, von der mehr als 28.000 Kabelkunden in Frankfurt und Bad Vilbel betroffen waren, ist offiziell behoben; vereinzelt treten weiterhin Probleme auf.",
+        "why": "Bei anhaltenden Ausfällen lohnt sich eine erneute Prüfung des Anschlusses, auch wenn die Großstörung als behoben gilt.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "Sanierung der Kleinmarkthalle erneut gestoppt",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/frankfurter-kleinmarkthalle-18-jahre-planung-ohne-ergebnis-201628669.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Die Sanierung der Frankfurter Kleinmarkthalle ist wieder gestoppt worden. Nach 18 Jahren Planung sieht der Bericht die Stadt bei dem Vorhaben ohne externe Hilfe überfordert.",
+        "why": "Wer regelmäßig in der Kleinmarkthalle einkauft, sollte nicht mit einem baldigen Beginn der Sanierung rechnen.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Taunusanlage soll für 5,5 Millionen Euro erneuert werden",
+        "url": "https://www.fnp.de/frankfurt/taunusanlage-wird-fuer-millionen-euro-grunderneuert-94563144.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Frankfurt plant für 5,5 Millionen Euro neue Wege, Bäume und eine Bewässerungsanlage in der Taunusanlage. Die Bauzeit soll 16 Monate betragen; wann die Arbeiten beginnen, ist noch offen.",
+        "why": "Die Erneuerung dürfte den Park langfristig aufwerten, konkrete Einschränkungen lassen sich mangels Starttermin derzeit aber nicht einplanen.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": [
+      {
+        "title": "Tagesbaustelle auf der A5 bei Frankfurt-Süd",
+        "url": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxNQTFUdmZVLUtITk1kVFBRWWJXVUp4bzdnN1pRTG1GQUJTUlJpajk4ZFN5QXhFZ0hFeVNJekEwUjVpdldQMkgwRl9oVlpEOW8tTERwWnBRdTN6LXJNYXRwLW9PM2RhMlQzNXRDdXdEckVCOTV4N1ZrbDNCRmpRcHJQc3JyX1RtX0NGME9abF9PR05BMkZQWC1SNzRnN2NGQkZYNGJtRG5renBjV01GN0dzUjFTeFdmZDVZakxGcm9pUWJFWjF0ZWtkMGc5dXZtcVhWSGZXNG0wS011TzU4S3loTGg5Y3JKdHdjMEI0OWtTcWg4MkN0MURWUjVIUFJvSXlJWDM5eW1wcnZhRUd4MXcyTVVIbVQ4Z3VSajBfLWREaDZuX2NTQXVtYzl6c3dHVTZNUXpJdktDdVowYUJnd2hkNlU1cVQyazVBcGhlTE8xOXR4bXJMY0lfdXZqaENldw?oc=5",
+        "horizon": "aktuell",
+        "summary": "Für Donnerstag, den 29. Oktober, meldet die Quelle eine Tagesbaustelle auf der A5 bei Frankfurt-Süd.",
+        "source": "News.de"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
