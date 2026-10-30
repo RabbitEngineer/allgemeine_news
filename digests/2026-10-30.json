@@ -1,0 +1,99 @@
+{
+  "tldr": [
+    "Die U7 fährt am Wochenende verkürzt; die verlängerte U4 übernimmt als Ersatz.",
+    "Am Wochenende ist auch die A3 am Offenbacher Kreuz erneut gesperrt.",
+    "U2 kündigt für Sommer 2027 ein Konzert im Berliner Olympiastadion an."
+  ],
+  "immobilien": {
+    "top": [
+      {
+        "title": "FES-Wohnungen in Höchst sind bezugsfertig",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNX0ZUSHhOTHlPMHRDLWFXaS1xYlQwdk9oVFp2ODE1LWdISjNPZFBWR09IVWxYcU5GVFdFWHBHS1V2djZDQk9NaXpXNDRGdU9ESzZ4ZTRJYXJYVnJadFFmOGhXUkRIdmZ1ZGJXN3o0cHZLSWthTnpGZl9uZlpXYlRuUXAtbklUdmNySlVsUUlIbXdWUkZONmhuYllKcHpKWjNzVU44QVl1MjJvM3dwMTBaenJhMA?oc=5",
+        "tag": "fertig",
+        "horizon": "aktuell",
+        "summary": "In Frankfurt-Höchst sind 48 Werkswohnungen der FES bezugsfertig. Angaben zu Wohnungsgrößen, Mieten oder einer Vermietung an die Allgemeinheit liegen im Beitrag nicht vor.",
+        "why": "Die Wohnungen erweitern das Angebot in Höchst, dürften als Werkswohnungen aber nicht ohne Weiteres für private Wohnungssuchende zugänglich sein.",
+        "source": "ad-hoc-news.de"
+      }
+    ],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "U2 spielen im Sommer 2027 im Berliner Olympiastadion",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTE1QZnNLUGc0QXFLS0ltalpEN3Uwc2w0VkFpWWFNMDJmck1RcDdsZXFuTEJYa3g4bDBoa0NTQTMzdi1NU2gzOFgwYXN4UXNqLUZoQTBxSjZTQWhEVEZOUXpXUkxtM3pHcUpJT1owMmZWUnNuODJfdGlMRFJEYlhBQ3JoTEZuWFZxSW5aNmZKYm9QN0FHNF83U1J1RHc1eWRYam1FT2JYdEJKaDM1ZDVz?oc=5",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "U2 haben für den Sommer 2027 ein Konzert im Olympiastadion Berlin bestätigt. Ein genaues Datum und der Vorverkaufsstart sind im Kandidatentext nicht genannt.",
+        "why": "Für den Stadionauftritt ist eine Fahrt nach Berlin nötig; ein konkreter Termin und der Kartenstart müssen noch abgewartet werden.",
+        "source": "Ticketmaster DE Blog"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": [
+      {
+        "title": "Frankfurter Weihnachtsmarkt: Bericht zu den Glühweinpreisen 2026",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNUUZydWtvUlVNNHFpTzhLTHJUdV9kbjliMl8yVkVpOGxmY2U4blh3U1lDaUloUTlpZkxfVlZoYnotOUMtbHBFSU5DeWRZZU5GSXFLdkpBaE9xWkdoT0dDS2ZHS1VRcEhaX2x3SWRTWHZOMmVmcUM1ZFpGSlJMcFhUMTJia25uc2swVWRoQlNTLXhGcVZiYW9WUXJhcXhfTU45MnJ6THl1eXJCMnFtamEzZlVqNnVZWTczRXFUTkREVk9rR3ltSGt6UU92dXpjTVBIVWc?oc=5",
+        "horizon": "wochen",
+        "summary": "Ein Beitrag informiert über die Glühweinpreise auf dem Frankfurter Weihnachtsmarkt 2026; konkrete Preise stehen im Kandidatentext nicht.",
+        "source": "t-online – Frankfurt"
+      }
+    ]
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "U7 fährt am Wochenende verkürzt, U4 übernimmt als Ersatz",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObGdOSzFvWmJyUWM4dDdkRndEdUV3WFZUcFctTzNCMHdRNGZIMjJGRGdoaTBWWUpoeDZ4SGtJYzU2MWNCekhUVzJhVjRWX0cyQTRjeWNzRjB5c1dPUDBnel80Q0N6cFk1elJaemhTbTRPaFA5VDVYSnRWMEU0QU0xS1VJT2ZKc0FOQTZOSVJjcW5vOVhBS25rN1F4cw?oc=5",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Die U7 fährt am Wochenende verkürzt; als Ersatz wird die U4 verlängert.",
+        "why": "Wer am Wochenende mit der U7 unterwegs ist, sollte die geänderte Streckenführung prüfen und gegebenenfalls auf die U4 ausweichen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "A3 am Offenbacher Kreuz am Wochenende erneut gesperrt",
+        "url": "https://www.hessenschau.de/wirtschaft/a3-am-offenbacher-kreuz-erneut-gesperrt---auch-a643-nachts-dicht--v6,offenbacher-kreuz-sperrung-102.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Die A3 am Offenbacher Kreuz wird am Wochenende erneut gesperrt; zusätzlich gibt es nachts Einschränkungen auf der A643 zwischen Mainz-Gonsenheim und Mainz-Mombach.",
+        "why": "Autofahrten aus Frankfurt in Richtung Offenbach sollten am Wochenende mit Umwegen und zusätzlicher Fahrzeit geplant werden.",
+        "source": "hessenschau.de"
+      },
+      {
+        "title": "Cinestar Metropolis bleibt nach Brandschaden bis Ende Januar geschlossen",
+        "url": "https://www.fr.de/frankfurt/cinestar-metropolis-bleibt-nach-brand-bis-ende-januar-2027-geschlossen-94565966.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Das Frankfurter Cinestar Metropolis bleibt wegen eines Wasserschadens nach dem Brand bis Ende Januar 2027 geschlossen; der Schaden beläuft sich laut Polizei auf mindestens eine Million Euro.",
+        "why": "Für Kinobesuche im Metropolis muss bis zur Wiedereröffnung auf andere Frankfurter Kinos ausgewichen werden.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": [
+      {
+        "title": "Caricatura zeigt eine Ausstellung zu 60 Jahren Star Trek",
+        "url": "https://www.hessenschau.de/kultur/caricatura-frankfurt-zeigt-60-jahre-star-trek-kirks-kommandosessel-und-klingonen-v2,star-trek-caricatura-frankfurt-100.html",
+        "horizon": "aktuell",
+        "summary": "Die Caricatura in Frankfurt widmet Star Trek zum 60-jährigen Bestehen eine Ausstellung mit unter anderem Kirks Kommandosessel und Klingonen.",
+        "source": "hessenschau.de"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
