@@ -1,0 +1,65 @@
+{
+  "tldr": [
+    "Nach den Ausschreitungen in der Frankfurter Innenstadt meldet die Polizei mehr als 30 vorläufige Festnahmen und erhebliche Schäden.",
+    "U2 plant 2027 einen einzigen Deutschlandtermin im Berliner Olympiastadion; der Vorverkauf wird zum Thema gemacht.",
+    "Grab sucht in Peking einen Senior Backend & Reliability Engineer; die internationale Ausschreibung nennt Englisch."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "U2 plant einzigen Deutschlandtermin 2027 im Berliner Olympiastadion",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONWkzdVM4WHo0WFdyNTBNV2tYcGJ1LWx3X29POWQ5OWE4M1E2SXZ0V21pOFZSNF9VLWxNbF9Xamx4WDItaG9xRENrYUZNQ2NSUXNUTWcyMlZzTFlqNWJyYlNpaHR3QTR3V0M3YXp1azMyUW0xSUtxNl9XWm44MlFCZlh2LXJqWUwzR3dQLWJsNGVGOHZZZGo1Q1dyY2tCQzRfck5LdmZ3andzaGd2d0NtLTlKMFlSQ2Z0aXJv?oc=5",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "U2 soll 2027 ein einziges Konzert in Deutschland geben, im Berliner Olympiastadion. Der Beitrag behandelt Tickets und Vorverkauf; ein genaues Konzertdatum und Vorverkaufsbeginn stehen im Kandidatentext nicht.",
+        "why": "Für den Konzertbesuch ist eine Reise nach Berlin nötig; Datum und Vorverkaufsdetails sollten vor einer Planung noch geprüft werden.",
+        "source": "Netzwelt"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Nach Ausschreitungen in Frankfurt mehr als 30 vorläufige Festnahmen",
+        "url": "https://www.hessenschau.de/gesellschaft/krawalle-in-frankfurt-mehr-als-30-festnahmen-und-erhebliche-schaeden-v1,bilanz-frankfurt-100.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Nach den Ausschreitungen in der Frankfurter Innenstadt meldet die Polizei mehr als 30 vorläufige Festnahmen; das Ausmaß der erheblichen Schäden ist noch unklar.",
+        "why": "Die Meldung betrifft die Innenstadt nach den nächtlichen Vorfällen; konkrete fortdauernde Sperrungen oder Einschränkungen nennt sie nicht.",
+        "source": "hessenschau.de"
+      }
+    ],
+    "also": []
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [
+      {
+        "title": "Senior Backend & Reliability Engineer bei Grab in Peking",
+        "url": "https://jobs.smartrecruiters.com/Grab/744000152067419",
+        "tag": "stelle",
+        "horizon": "aktuell",
+        "summary": "Grab schreibt in Peking eine Stelle als Senior Backend & Reliability Engineer aus; die Erfahrungsstufe ist mit Associate angegeben. Die international veröffentlichte Ausschreibung erwähnt Englisch; Angaben zu Visum oder Umzug fehlen im Kandidatentext.",
+        "why": "Englisch und die internationale Ausschreibung sprechen für eine bessere Zugänglichkeit ohne fließendes Mandarin; Reliability passt zu DevOps-Erfahrung, Visumssponsoring ist aber nicht belegt.",
+        "source": "Grab"
+      }
+    ],
+    "also": []
+  }
+}
