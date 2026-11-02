@@ -1,0 +1,97 @@
+{
+  "tldr": [
+    "In Frankfurt wird nach den Krawallen über mögliche Einschränkungen künftiger Jugendproteste diskutiert; ein Protesttermin ist für den 20. November angekündigt.",
+    "Placebo kündigen einen Termin in der Frankfurter Festhalle an, während U2 2027 nur ein Deutschlandkonzert in Berlin spielen soll.",
+    "Am Frankfurter Flughafen wird ein digitales Test-Gate erprobt; ob das Verfahren auf weitere Gates ausgeweitet wird, ist offen."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "U2 spielt 2027 nur ein Deutschlandkonzert – in Berlin",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPU3dKV01OR1JRcWk3bWNmeDBLRERRSGZ1TVhyZHM3dUlsT0ozZC04azhoYzJ6Q2ZITGZ2OUFfYWpJWExiUHcxejVrR3VLMi12T2pFUDVuZllETV9yc2JoZ2VPWFBudmxqOGRkcGhnVktTcGtjbFNKQV9sZE1IMHpxY3AzXzBkamFWUEJhOFhqbVFjOXM4U09hSk83VVE4c0xTRl9oVHZ3?oc=5",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "U2 soll 2027 nur einen Auftritt in Deutschland spielen, in Berlin; der Vorverkauf wird als kompliziert beschrieben. Ein genaues Datum, die Halle und der Vorverkaufsstart stehen im vorliegenden Beitrag nicht.",
+        "why": "Für einen Konzertbesuch ist Berlin der einzige deutsche Anlaufpunkt; vor der Planung müssen Termin und Vorverkaufsregeln geprüft werden.",
+        "source": "MOPOP.de"
+      },
+      {
+        "title": "Placebo kündigen einen Auftritt in der Frankfurter Festhalle an",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNaFdBaFo1Z3ZwUGx5MDFGZndqTHVwOHZIWnBWV1lVSjBEbDRNdDBoWlVqankzRXFiRmx1UFRSWlF0TWhnNmNuRmxUdW5KY00tYm5VMDdadFYxazhYWld3MVRHb2NsZjVOVTBwdGw0SWlhWE9oZzlWXzVpTHh3TjNTYVE1dVNGaTJCc0hsV0luZVJMR0FpWlVXel93T1gxMzZUY2szcHBtRy1Od0lDcmxwLThUeldUQlhJeVJMS0djQQ?oc=5",
+        "tag": "konzert",
+        "horizon": "aktuell",
+        "summary": "Placebo spielen im Rahmen ihrer 30th Anniversary Tour in der Frankfurter Festhalle; im Kandidatentext fehlen Auftrittsdatum und Vorverkaufsinformationen.",
+        "why": "Der Termin liegt in Frankfurt, doch ohne Datum und Kartenstart lässt sich noch nicht entscheiden, wann der Besuch ansteht.",
+        "source": "FAZ"
+      },
+      {
+        "title": "Noah Kahan spielt am 26. November in Köln",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPM2ZET0hWUkpwYkd4SHRvOFVJdllWQ01TVTdjMkR3bjd5bnpndmRpNDY5MjBvUjlQSGtvUjVTQU8tQm9acHNlcGVuc2d2NXBEOEZqeUJaMFNlUTdLQWZ2WUR0ajlwTWdCMkRDQTJrNEJRMjVUMVpZeWFVTDlpMkhnU2tleThVamdlUGpwTDR1clZSWFNYaWI5YkpleXpPb1VGdmR5alFyZkZMNzNIQ3FLUW1oY2dKVFE?oc=5",
+        "tag": "konzert",
+        "horizon": "wochen",
+        "summary": "Noah Kahan ist für den 26. November in Köln angekündigt; Halle und Vorverkaufsangaben nennt der Kandidatentext nicht.",
+        "why": "Der Kölner Termin liegt in wenigen Wochen und ist für eine Fahrt aus Frankfurt erreichbar; vorab fehlen noch Halle und Karteninformationen.",
+        "source": "ad-hoc-news.de"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Nach Frankfurter Krawallen steht ein mögliches Verbot weiterer Demos im Raum",
+        "url": "https://www.fr.de/frankfurt/nach-tumulten-in-frankfurt-poseck-droht-jugend-protesten-mit-verbot-zr-94569160.html",
+        "tag": "news",
+        "horizon": "wochen",
+        "summary": "Nach den Krawallen bei einer Jugenddemo erwägt Hessens Innenminister Roman Poseck, weitere Proteste zu verbieten; eine Demonstration ist für den 20. November angekündigt.",
+        "why": "Für den 20. November ist noch keine Einschränkung beschlossen, aber wer zu einer Kundgebung möchte, sollte die weitere Entwicklung verfolgen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Flughafen Frankfurt testet ein digitales Gate am Flugsteig A16",
+        "url": "https://www.fr.de/frankfurt/mobiles-personal-statt-schalter-neues-test-gate-am-flughafen-frankfurt-94568554.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Am Gate A16 werden Tablets, Lounge-Möbel und digitales Boarding erprobt; das Testkonzept soll das Reisen am Frankfurter Flughafen komfortabler machen.",
+        "why": "Wer von A16 abfliegt, kann auf einen veränderten Boardingablauf treffen; ob der Versuch auf weitere Gates ausgeweitet wird, ist noch offen.",
+        "source": "Frankfurter Rundschau"
+      }
+    ],
+    "also": [
+      {
+        "title": "Der Nordteil der Schwedlerbrücke ist im Ostend eingesetzt worden",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/schwedlerbruecke-frankfurt-60-tonnen-stahlfachwerk-eingehoben-201639655.html",
+        "horizon": "aktuell",
+        "summary": "Kräne haben das neue Stahlfachwerk des nördlichen Brückenteils auf die alten Pfeiler der Schwedlerbrücke gehoben; damit beginnt die Revitalisierung der Fußgängerbrücke.",
+        "source": "FAZ Frankfurt"
+      },
+      {
+        "title": "Jüdische Akademie in Frankfurt mit Festakt eröffnet",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/juedische-akademie-in-frankfurt-eroeffnet-wir-lassen-uns-nicht-vertreiben-accg-201619489.html",
+        "horizon": "aktuell",
+        "summary": "Die Jüdische Akademie in Frankfurt ist mit einem Festakt eröffnet worden; Sabena Donath und Doron Kiesel sollen das Haus künftig prägen.",
+        "source": "FAZ Frankfurt"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
