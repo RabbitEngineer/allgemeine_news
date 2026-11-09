@@ -1,0 +1,86 @@
+{
+  "tldr": [
+    "In Peking ist eine international ausgeschriebene Ads-Automation-Stelle bei Grab offen; Englisch wird genannt, die Rolle liegt aber eher im Produkt- und Operationsbereich als im DevOps-Kern.",
+    "Die U5-Verlängerung ins Europaviertel kommt laut Bericht voran; ein Zeitplan für die Inbetriebnahme ist im Kandidatentext nicht genannt.",
+    "In Sachsenhausen gibt es mit dem ColorLab ein neues Kreativangebot ab 50 Euro pro Person und Stunde."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": [
+      {
+        "title": "Frankfurter Weihnachtsmarkt: Bericht zu den Glühweinpreisen",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQTHhsMVVuQnE1UlJKeWJqVWZWN1BRQkZRSC1Dd3ZxRVBXUUVxQVhqVndabWNNblhwU2VQQTV0RnpuekJzRmJPUHB6Vk9Dal9ub2MwbllTeEpENmlKWHRwYkZYSzhfZm5HTl94MFk2RWZEck9TUTB1TmFJUHU4d1BwelZRVml0TlBLd1NCYXlDWlV4cFVqUE9makMtMkdnNnMwM3ZGaS1kRXQwNzVYbWNTMV92eGh0cUpoOHRWQnVzV0RDODEtWjIxSXFVSERGMThNdnlLUGhQa3hqdw?oc=5",
+        "horizon": "wochen",
+        "summary": "Ein Beitrag kündigt die diesjährigen Glühweinpreise auf dem Frankfurter Weihnachtsmarkt an; im vorliegenden Auszug ist kein Betrag genannt.",
+        "source": "t-online – Frankfurt"
+      }
+    ]
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "U5-Ausbau ins Europaviertel kommt voran",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQaGJpa2ZNdDJ0cmdKUy1SanBFdVl5TUFDeEh6cUhYQ0hFSDZSX2NKV2RYNEFNbnJsTUpiaHRTSXRJaExKZm1KS0VOVDA2eTlBWWNmY2dfY2tFMmo5cTBMaVlyQUxUaHB3elg5V0hXMkVkcWxaWHFpOVhWaUFueVFzc0hfQXVyd3E1NXZPTTFEN2VycTI5OVFNY2dVX2ZKYVFURnZsRnJfXzJSUHE4MWtiNjlJSzNKQk9pZldpWmRnM3NWa2d0VHpSb1pfYmt5cWpzR1ZZQU43bw?oc=5",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Der Ausbau der U5 ins Europaviertel kommt laut Bericht gut voran; konkrete Baufristen oder ein Eröffnungstermin sind im Auszug nicht genannt.",
+        "why": "Die Verlängerung soll das Europaviertel an die U-Bahn anbinden, bringt aber noch keine kurzfristige Änderung des Alltagsverkehrs.",
+        "source": "Rhein Main Verlag"
+      },
+      {
+        "title": "ColorLab in Sachsenhausen bietet Action Painting ab 50 Euro",
+        "url": "https://www.fnp.de/frankfurt/action-painting-in-frankfurt-mit-klobuerste-und-pistole-zur-eigenen-kunst-94579618.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Im Sachsenhäuser ColorLab können Besucher seit zwei Monaten mit Farbe schießen, schleudern und schmieren; das Erlebnis kostet ab 50 Euro pro Person und Stunde.",
+        "why": "Das ist ein buchbares Freizeitangebot in Frankfurt, dessen Preis und Ort eine konkrete Entscheidung für einen Ausflug ermöglichen.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": [
+      {
+        "title": "Neue Bahnbrücke neben der Deutschherrnbrücke geplant",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRUZvamM0N1pMRTFrbHBIbHRYNXZNbmxzZVNjN2xBX2JiVGRoSzdaVXRXMW9wcEw5ZUpOd1A0ZTVDS3dGMVp2alhvTDZBZjRhY1RCb1ozV1BvMklHYXFZVENtWmJIWkR2SDhPY0d1d05CY3hMRV9IbERpS3NMVVdfV2tIQWxxTGwxd2NmN2t2M2hlZkpLV1pheWN5S2U3NEdvOU5nSE1iaWVZdHZMYlRBSFNkd0ZXVmsxR0ZiMkNHX2VBZE0?oc=5",
+        "horizon": "monate",
+        "summary": "Neben der Frankfurter Deutschherrnbrücke ist eine neue Bahnbrücke geplant; weitere Angaben zum Zeitplan enthält der Kandidatentext nicht.",
+        "source": "main-echo.de"
+      },
+      {
+        "title": "Tagesbaustelle auf der A5 bei Nieder-Eschbach",
+        "url": "",
+        "horizon": "aktuell",
+        "summary": "Am 9. November gab es Montagearbeiten auf der A5 bei Nieder-Eschbach; Angaben zu Uhrzeiten oder möglichen Einschränkungen fehlen im Auszug."
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [
+      {
+        "title": "Ads Automation Product Management & Ops Lead bei Grab in Peking",
+        "url": "https://jobs.smartrecruiters.com/Grab/744000150284849",
+        "tag": "stelle",
+        "horizon": "aktuell",
+        "summary": "Grab sucht in Peking einen Ads Automation Product Management & Ops Lead auf Mid-Senior-Niveau. Die Stelle ist international ausgeschrieben und nennt Englisch; Angaben zu Visum oder Umzug stehen im Kandidatentext nicht.",
+        "why": "Die internationale Ausschreibung und Englisch als genannte Sprache passen besser als eine nur chinesisch veröffentlichte Stelle; fachlich ist die Rolle mit Automatisierung und Operations angrenzend an DevOps, aber kein klarer Infrastrukturjob.",
+        "source": "Grab"
+      }
+    ],
+    "also": []
+  }
+}
