@@ -1,0 +1,90 @@
+{
+  "tldr": [
+    "Frankfurts Weihnachtsmarkt wächst 2026 auf 250 Stände und beginnt Ende November; die Öffnungszeiten ändern sich.",
+    "Der zeitweise Flugstopp in den USA führt am Frankfurter Flughafen zu Ausfällen und Verspätungen."
+  ],
+  "immobilien": {
+    "top": [
+      {
+        "title": "Abwärme aus Rechenzentrum soll 2.500 Wohnungen heizen",
+        "url": "https://www.faz.net/aktuell/rhein-main/frankfurt/rechenzentrum-heizt-wohnhaeuser-vorhaben-in-frankfurt-ist-teuer-aber-richtig-201680414.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "In Frankfurt sollen insgesamt 2.500 Wohnungen mit Abwärme aus einem benachbarten Rechenzentrum beheizt werden. Laut Bericht ist das Vorhaben trotz über viele Jahre verteilter Kosten nicht wirtschaftlich.",
+        "why": "Für Bewohner der betroffenen Wohnungen könnte das Vorhaben langfristig die Wärmeversorgung verändern; ein konkreter Zeitplan oder unmittelbarer Handlungsbedarf ist nicht genannt.",
+        "source": "FAZ Frankfurt"
+      }
+    ],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "„Star Wars“ kehrt 2027 mit dem ersten Film in die Kinos zurück",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaV9GUDZzT3FncFJmQTNUaFBrbUVwTUlkVDJ3Xy11QTlsUnNGR2hXQmo3V2h6elVRaEY3R1U0ZGVxQ1NMajJnbE5FbmdLaWp0b2pCMkFqLTEtZXBrSnFWSHJxLTlEakVTMmFyM0h5SmRrN0VxOUNQa0tSeDVyRlVZNTU5alZQZldKRXQ3U1lrZVFKSVQxb1BNS3FXM2prakdfNHFzaEt2NFpXTDBuRUJia0NOMWNTd2VRSjJPTVVCVjQ3ZnNTZGZIcTV3?oc=5",
+        "tag": "kino",
+        "horizon": "monate",
+        "summary": "Der erste „Star Wars“-Film soll 2027 wieder in die Kinos kommen; ein genauer Starttermin wird im Kandidatenbeitrag nicht genannt.",
+        "why": "Ein Kinobesuch in Frankfurt kommt erst mit einem konkreten Starttermin infrage; bis dahin ist keine Buchung nötig.",
+        "source": "Spiegel"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Frankfurter Weihnachtsmarkt wächst 2026 auf 250 Stände",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOX0VJQ0tQX3NEeDA1R3JmQWRjN21IWFRjME1sdEoxczNjWHpVRnhSei1XM1BjbFlSSVhucS1nX3B5ZnhYN09PWnVRdTItRVNUaFNjTmIyaWZnVlBnZHVNOGwwNmljUlFibDJUY1BlMzJKV1VaY2tsWTJ3ekZWamMwM21DUS1JdHFlQmV3X3hQbDEycXhIY2xqZlZ6NjNVZy1uX0YtV3ZTRGVEZldMaHpZRm9yRGdEYjNy?oc=5",
+        "tag": "fest",
+        "horizon": "wochen",
+        "summary": "Der Frankfurter Weihnachtsmarkt startet Ende November mit einem Rekord von 250 Ständen. Für 2026 sind außerdem veränderte Öffnungszeiten angekündigt; konkrete Zeiten nennt der Kandidatenauszug nicht.",
+        "why": "Der Markt dürfte mehr Auswahl bieten; vor einem Besuch lohnt sich ein Blick auf die aktuellen Öffnungszeiten.",
+        "source": "Hit Radio FFH"
+      }
+    ],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Flugstopp in den USA bringt Ausfälle und Verspätungen ab Frankfurt",
+        "url": "https://www.hessenschau.de/wirtschaft/flugstopp-in-den-usa-ausfaelle-und-verspaetungen-auch-ab-frankfurt-v2,usa-fluege-gestrichen-100.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Ein vorübergehender Flugstopp in den USA beeinträchtigt den Flugplan am Frankfurter Flughafen; einzelne Verbindungen sind bereits ausgefallen, weitere Verspätungen sind möglich.",
+        "why": "Wer von Frankfurt in die USA fliegt, sollte den Flugstatus vor der Abfahrt zum Flughafen prüfen.",
+        "source": "hessenschau.de"
+      }
+    ],
+    "also": [
+      {
+        "title": "Frankfurt testet zwei KI-Assistenten in der Verwaltung",
+        "url": "https://www.fnp.de/frankfurt/frankfurt-testet-ki-assistenten-erst-100-nutzer-neun-stellen-noch-unbesetzt-94589843.html",
+        "horizon": "aktuell",
+        "summary": "Die Stadt erprobt zwei KI-Systeme, darunter einen Chatbot auf Basis eines großen Sprachmodells; ob eines davon später breiter eingesetzt wird, ist noch offen.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": [
+      {
+        "title": "BMW-Stellenabbau trifft auch Chinas Autoindustrieregionen",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPQ1U4Q1lnSExrcnZaSDJXNjBaQTNYQTlNVF9HYnhqbDlSQnE1dXpIRjQwMzNTRG55bFRWQUFZQlNzTkV4cHVzZmNLZVppVFBqbEF0M203ZjVvRzhUMmpKbHNUNl9uSWMxUmFKbEZCSW9FOHBjQmpiZkRVbkFDRVRmSksxbHJRVlhuVXZRb2NVbllSRV92T3JfcXJxZHpIM0gtN2Q3NjgzZjl1d0lJWFp2ZHI3c08xR1liY21fNWJwWnJHSWdYV1pHQkE4aGFBQdIBzgFBVV95cUxNdHVvNkdKU2IyQ3dEWGtNZ3czeDA2RkFNSWhnbDRERlREUnZwTFdVZFIteUtfRnkyX0t1OHU0RC1Yd2czM0wzclJfYmNOMlZaanU4SGFjUEVNZzR6OEJsdlpvVGQxcEdWX2d1bnpyLXZFWVdLV0tqNUpKV3hBZnFyWHZxRnAtNFA5WmRjbGs4ZjEzZGRMS1pmQTY2aWVzM0gtVHNhbFU0VmdGZVhtQ0pvODVWZUg4MkhQdnRkT21VcW1aVFN5NXFpZXlzdjAzZw?oc=5",
+        "horizon": "aktuell",
+        "summary": "Ein Bericht führt Stellenabbau bei BMW auf den starken Wettbewerb zurück und beschreibt Folgen für Chinas Autoindustrieregionen; konkrete Zahlen oder betroffene Standorte nennt der Auszug nicht.",
+        "source": "South China Morning Post"
+      }
+    ]
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
