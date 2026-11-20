@@ -1,0 +1,88 @@
+{
+  "tldr": [
+    "Mehrere Demonstrationen und VGF-Sperren schränken den Verkehr in Frankfurt heute ein; vor Fahrten in die Innenstadt lohnt ein Blick auf die aktuelle Verbindungslage.",
+    "Der Vorverkauf für die Deutschlandtour von „KPop Demon Hunters“ beginnt heute; konkrete Städte und Termine nennt der vorliegende Auszug nicht.",
+    "Die Deutsche Bahn plant einen Fernbahntunnel unter Frankfurt und prüft drei Varianten für die Station – ein langfristiges Infrastrukturvorhaben, keine kurzfristige Änderung für Pendler."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [
+      {
+        "title": "Tickets für die „KPop Demon Hunters“-Tour gibt es ab heute",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPT3UxUWhWcnByY1Y0dVQ3RkhpVEtQNFBlcTMyOEtwTkRBdDFHd0JETTRzcG40VWxZb0ZwNWxtVDBtSVRzNTc2RktJYnRCYWNZZS01SzA2bWN2b1o4dWxWWFJORFBsUjM2N0M2aVVHYnZRNDA1Y000WE9RS0hxWWZZVUJqSE5rQnlrR3NXWXNDRk5JWWl3aGs4?oc=5",
+        "tag": "konzert",
+        "horizon": "aktuell",
+        "summary": "Der Vorverkauf für die Konzerttour von „KPop Demon Hunters“ startet am Freitag, 20. November. Der vorliegende Auszug nennt weder Städte noch Hallen oder Konzerttermine.",
+        "why": "Wer die Tour besuchen möchte, sollte sich heute über Termine und Verkaufsbedingungen informieren; aus dem Auszug lässt sich noch kein konkreter Reise- oder Ticketplan ableiten.",
+        "source": "Anime2You"
+      },
+      {
+        "title": "Stray Kids kündigen ihre einzige Deutschland-Show in München an",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQmtqaGpvNVBtY0lrNm9Ma0VCcjktbTZFWVg5bzEwU2dkcHdMeUNfYWNsZXdHSFRpY3dYaV80cXIxd2k1aktXMFBaSUNqdDJHMnhJMVlhZjViZVBqT0w5NGhsc2NLX3pmQXJxOWVfTzNnVW9XSzV1ZERpQ1c0NzFFYUpiZkI4UGFGQ3l3Uk1pamxFTi0zcFZPYS02Z3J6UFUyVGw5Z2dGSktqbkNVX1FZcmcwaUJSeXNmUTJV?oc=5",
+        "tag": "konzert",
+        "horizon": "monate",
+        "summary": "Die K-Pop-Gruppe Stray Kids spielt laut Meldung ihre einzige Deutschland-Show in München; Datum und Halle sind im vorliegenden Auszug nicht angegeben.",
+        "why": "Für den Besuch ist eine Reise nach München nötig; für die Planung fehlen im Auszug noch Konzertdatum und Veranstaltungsort.",
+        "source": "t-online – München"
+      }
+    ],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Demonstrationen führen heute zu VGF-Sperren und Verkehrseinschränkungen",
+        "url": "https://www.fr.de/frankfurt/demos-in-frankfurt-polizei-aufgebot-vgf-sperren-und-regeln-94598249.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Für Freitag sind in Frankfurt mehrere Demonstrationen und Schulstreiks angekündigt. Wegen eines großen Polizeiaufgebots und VGF-Sperren kommt es laut Bericht zu weitreichenden Einschränkungen.",
+        "why": "Wer heute durch die Innenstadt fährt, sollte vorab die Verbindung prüfen und mögliche Umleitungen oder Sperren einplanen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Fernbahntunnel unter Frankfurt: Drei Stationsvarianten werden geprüft",
+        "url": "https://www.fnp.de/frankfurt/fernbahntunnel-frankfurt-was-sich-fuer-pendler-aendert-94599404.html",
+        "tag": "news",
+        "horizon": "monate",
+        "summary": "Die Deutsche Bahn plant einen Fernbahntunnel unter Frankfurt und prüft drei Varianten für die Station. Der Bericht erläutert, welche Folgen die Pläne langfristig für Pendler haben könnten.",
+        "why": "Das Vorhaben könnte den Bahnverkehr im Rhein-Main-Gebiet später verändern, bringt aber keine unmittelbare Änderung für den täglichen Weg.",
+        "source": "Frankfurter Neue Presse"
+      }
+    ],
+    "also": [
+      {
+        "title": "Sechs Stolpersteine erinnern in Oberrad an die Familie Wolf",
+        "url": "https://www.fnp.de/frankfurt/sechs-stolpersteine-erinnern-an-juedische-familie-die-nie-zurueckkehrte-94599853.html",
+        "horizon": "aktuell",
+        "summary": "In Oberrad wurden sechs Stolpersteine für die jüdische Familie Wolf verlegt; der Recherche dazu ging ein Jahr Arbeit voraus.",
+        "source": "Frankfurter Neue Presse"
+      },
+      {
+        "title": "Großrazzia im Bahnhofsviertel: Crackküche und Millionenwerte entdeckt",
+        "url": "https://www.fr.de/frankfurt/razzia-im-frankfurter-bahnhofsviertel-crackkueche-entdeckt-94599586.html",
+        "horizon": "aktuell",
+        "summary": "Bei einem Einsatz mit mehr als 350 Kräften gingen Polizei, Justiz und Steuerfahndung gegen mutmaßliche kriminelle Strukturen im Bahnhofsviertel vor und beschlagnahmten Vermögenswerte in Millionenhöhe.",
+        "source": "Frankfurter Rundschau"
+      }
+    ]
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [],
+    "also": []
+  }
+}
