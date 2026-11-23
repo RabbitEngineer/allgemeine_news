@@ -1,0 +1,92 @@
+{
+  "tldr": [
+    "In Sachsenhausen fahren wegen Gleisarbeiten mehrere Straßenbahnen Umleitungen; Busse und eine Sonderlinie ersetzen die Verbindungen.",
+    "Der Frankfurter Weihnachtsmarkt öffnet heute, die Stadt gibt 682.000 Euro für Sicherheitsdienste aus.",
+    "Frankfurt hat die Zahl möglicher Mietpreisüberhöhungen deutlich nach unten korrigiert – wegen eines Rechenfehlers."
+  ],
+  "immobilien": {
+    "top": [],
+    "also": []
+  },
+  "events": {
+    "top": [],
+    "also": []
+  },
+  "sport": {
+    "top": [],
+    "also": []
+  },
+  "messen": {
+    "top": [
+      {
+        "title": "Frankfurter Weihnachtsmarkt öffnet mit Sicherheitsausgaben von 682.000 Euro",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQY2k5NFF5ZHZ4YjdacXdFWnRNUWs3QWRHV0Q1bEVsUkxhNHlVVUtGV0ZlcjZpX2FPdnNSSE1nR1dZVFViVnEzLUNYam1FMFhaRzA1aGdaTTVYdXEwLWRnbEVkWnB2dUNOWjhiN0UwaWl5d1E3NWdYcElicDJiNzJQMHVkSG9Sejc4QjA0RE9uVDkwaFFuajg1X3VrTDhIQXRJYmtpc21OZElMTWtGUGJjMVR1aVROT0l6T05qOEtnZ0s3cmxoZGUxVlF3?oc=5",
+        "tag": "fest",
+        "horizon": "aktuell",
+        "summary": "Der Frankfurter Weihnachtsmarkt öffnet heute; die Stadt gibt 682.000 Euro für Sicherheitsdienste aus.",
+        "why": "Der Markt ist ab heute geöffnet; wer hingeht, sollte mit umfangreichen Sicherheitsmaßnahmen rechnen.",
+        "source": "fnp.de"
+      }
+    ],
+    "also": []
+  },
+  "stadt": {
+    "top": [
+      {
+        "title": "Gleisarbeiten unterbrechen Straßenbahnverkehr in Sachsenhausen",
+        "url": "https://www.fr.de/frankfurt/bahnhofsviertel-ort904309/frankfurt-strassenbahnen-in-sachsenhausen-unterbrochen-94602200.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Wegen Gleisbauarbeiten in der Gartenstraße fahren mehrere Straßenbahnlinien Umleitungen; für Pendler gibt es Busse und eine Sonderlinie.",
+        "why": "Wer durch Sachsenhausen fährt, sollte mit Umwegen rechnen und prüfen, welche Ersatzverbindung zur eigenen Strecke passt.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Frankfurt korrigiert Zahlen zu möglichen Mietpreisüberhöhungen",
+        "url": "https://www.fr.de/politik/fdp-org26312/frankfurt-korrigiert-zahlen-weniger-hinweise-auf-mietpreisueberhoehungen-94604342.html",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Das Frankfurter Amt für Wohnungswesen hat seine Zahlen zu möglichen Mietpreisüberhöhungen stark nach unten korrigiert; Ursache ist ein Rechenfehler des beauftragten Instituts.",
+        "why": "Die bisher berichtete Zahl möglicher überhöhter Mieten ist keine verlässliche Grundlage mehr; bei einem konkreten Verdacht bleibt eine individuelle Prüfung nötig.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Streik in Belgien lässt Flüge zwischen Frankfurt und Brüssel ausfallen",
+        "url": "https://www.fr.de/frankfurt/flughafen-frankfurt-alle-bruessel-fluege-wegen-streik-gestrichen-94603220.html",
+        "tag": "verkehr",
+        "horizon": "aktuell",
+        "summary": "Ein landesweiter Streik der Fluglotsen in Belgien führt am heutigen Montag zu Ausfällen von Flugverbindungen zwischen Frankfurt und Brüssel.",
+        "why": "Wer heute von oder nach Brüssel fliegt, sollte den Flugstatus prüfen und gegebenenfalls eine Alternative einplanen.",
+        "source": "Frankfurter Rundschau"
+      },
+      {
+        "title": "Finanzierung für Frankfurts Opern- und Theaterneubau bleibt offen",
+        "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPLWpvbDI5ZUJ1WGhUODBRZmhYbXE4dUw5YlRWa0tjZTdub09leWJHVlN0Q3k0Z1BFR1ZoTXRCTGw3azFBRHpNQl9xcE84bXcyaDl5anpJbVg2YlpTTk5Pd3JPSktRMnB4dWNwcWRKdk9oVjBsOGttblpXdG9QalVUWVJyLVFnelZGQzRIZDV6dEFEd1dnbzZLbzFmamlvdWtnV3k4VWpTajZpcDZQeFZ0S1hIV0RmamdqZ0ZNbDJiUXVrT2N6SzlMLTAySExrOXVlZ0Y4N2hlQkxGRlBBdW1EdVV1LUFWdw?oc=5",
+        "tag": "news",
+        "horizon": "aktuell",
+        "summary": "Die Stadt will die Neubaupläne für Oper und Theater weiterverfolgen; das hessische Ministerium stellt angesichts der Kosten in Milliardenhöhe die Finanzierung infrage.",
+        "why": "Das Vorhaben ist noch nicht finanziell geklärt; für die Stadtbevölkerung bleibt entscheidend, wer die Kosten trägt.",
+        "source": "hessenschau.de"
+      }
+    ],
+    "also": []
+  },
+  "peking": {
+    "top": [],
+    "also": []
+  },
+  "jobs": {
+    "top": [
+      {
+        "title": "Senior Site Reliability Engineer bei Grab in Peking",
+        "url": "https://jobs.smartrecruiters.com/Grab/744000163153009",
+        "tag": "stelle",
+        "horizon": "aktuell",
+        "summary": "Grab sucht in Beijing, China, einen Senior Site Reliability Engineer; die Ausschreibung ist international veröffentlicht, nennt Englisch und führt die Erfahrungsstufe als Associate.",
+        "why": "Die internationale Ausschreibung und der Hinweis auf Englisch passen zur Sprachsituation; Site Reliability liegt nahe am DevOps-Schwerpunkt, auch wenn die ausgewiesene Erfahrungsstufe zum Senior-Titel ungewöhnlich wirkt.",
+        "source": "Grab"
+      }
+    ],
+    "also": []
+  }
+}
